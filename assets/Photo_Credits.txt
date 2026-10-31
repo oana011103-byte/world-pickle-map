@@ -1,0 +1,512 @@
+PHOTO CREDITS
+
+Photographs retain the individual licenses below. Existing photographs retain their source image content. Display copies may be source-provided thumbnails. New display-size reductions, if any, are recorded in assets/新增图片来源-20261031.json; no food subjects were generated or composited. Keep credits and license links when reusing images.
+
+Napa cabbage
+Photographer: Sous Chef / Sous Chef Photos
+License: CC BY 2.0 https://creativecommons.org/licenses/by/2.0/
+Source: https://commons.wikimedia.org/wiki/File:Napa_cabbage.jpg
+Caption: Napa cabbage, a raw ingredient for northeastern Chinese suancai and several other cabbage preserves.
+Identity notes: Commons identifies this as napa cabbage and places it in Brassica rapa subsp. pekinensis. The photographer's Flickr license was reviewed on Commons. Representative raw ingredient, not a claimed Chinese local cultivar. Original is 634 × 423 px.
+
+Raw leaf mustard greens
+Photographer: thebittenword.com
+License: CC BY 2.0 https://creativecommons.org/licenses/by/2.0/
+Source: https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg
+Caption: Leaf mustard greens before preservation.
+Identity notes: Commons categorizes this raw ingredient photo as Brassica juncea var. integrifolia. Use as a representative leaf-mustard image; it does not establish the exact cultivar used by a particular regional producer. Do not use it for swollen-stem zhacai or mustard-root datoucai. Original is 852 × 1,279 px.
+
+Swollen-stem mustard for zhacai
+Photographer: okia / Okia
+License: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Tumida.jpg
+Caption: The swollen mustard stem used for zhacai, before salting and pressing.
+Identity notes: File description calls it Tumida and Japanese zhasai; Commons places it in Brassica juncea subsp. tsatsai var. tumida. This is the appropriate swollen-stem mustard category, not kohlrabi. Camera metadata is present. Original is 768 × 576 px.
+
+Fresh yardlong beans
+Photographer: David E Mead
+License: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Yard-long_beans_(marketed).jpg
+Caption: Fresh yardlong beans, the bean pods used to make fermented sour beans.
+Identity notes: Own-work photograph explicitly described as fresh yardlong beans for sale at Ereke market in Indonesia. It illustrates the ingredient, not a Chinese market or finished pickle. Original is 2,592 × 1,944 px.
+
+Young ginger
+Photographer: Fumikas Sagisavas
+License: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Young_ginger.jpg
+Caption: Young ginger before brine fermentation.
+Identity notes: The source identifies young or tender ginger, photographed on 18 May 2024. This is a representative ingredient photograph, not a claim about a particular Chinese regional cultivar.
+
+Fresh red chili peppers
+Photographer: Nicholas Gemini (Nicholas Frisardi)
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://commons.wikimedia.org/wiki/File:Red_Chili_peppers.JPG
+Caption: Red chilies before chopping, salting or fermentation.
+Identity notes: Own-work photograph dated 3 September 2014, identified as red chili peppers. Illustrates the broad ingredient, not a claimed specific Hunan or Guizhou chili cultivar. Original is 4,000 × 3,000 px.
+
+Raw white daikon radishes
+Photographer: Eric Polk (Epolk)
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://commons.wikimedia.org/wiki/File:Daikon_radish_-_Minowase.jpg
+Caption: Three raw white Minowase daikon radishes, with trimmed green tops and fine roots.
+Identity notes: Visually verified on downloaded 960px thumbnail: three unprocessed white radish roots in a basket, not yellow takuan or packaged pickles. Commons describes Minowase daikon displayed in a produce contest, photographed 16 August 2024. Representative raw ingredient, not a local Chinese cultivar claim. Thumbnail 960 × 1,280 px; original 3,000 × 4,000 px.
+
+Fresh bamboo shoots
+Photographer: Fumikas Sagisavas
+License: CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Source: https://commons.wikimedia.org/wiki/File:Bamboo_shoots.jpg
+Caption: Marketed bamboo shoots with outer sheaths partly removed.
+Identity notes: Visually inspected the original: elongated tapered shoots with overlapping outer sheaths, cut bases and some sheaths removed; no claim about tenderness or readiness to eat. Commons description explicitly identifies bamboo shoots / mao sun, photographed 12 September 2024, with camera EXIF. The image does not establish the exact species or suitability of every part for a regional fermentation. It shows marketed shoots before peeling or further processing, not finished suansun. Original is 3,000 × 4,000 px.
+
+Winter melon
+Photographer: WingkLEE
+License: Public domain — author release (PD-self) https://commons.wikimedia.org/wiki/File:Winter_melon.jpg#Licensing
+Source: https://commons.wikimedia.org/wiki/File:Winter_melon.jpg
+Caption: Winter melon, the raw vegetable used in Ningbo fermented winter melon.
+Identity notes: Own-work photograph taken in Hong Kong in June 2007; file category identifies Benincasa hispida. This is winter melon, not a sweet muskmelon. Original is 1,212 × 1,781 px.
+
+Taro leaf stalks
+Photographer: Chiring chandan
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://commons.wikimedia.org/wiki/File:Stems_of_taro_leaves_ready_for_sale.jpg
+Caption: Taro leaf stalks sold as a vegetable ingredient.
+Identity notes: Own-work 2021 photograph described as stems of taro leaves for sale in Barpeta; structured data identifies Colocasia. Botanically these are petioles / leaf stalks, not taro corms. Representative ingredient, not a photograph of Ningbo or proof of a local taro cultivar. Original is 1,872 × 4,160 px. A different file, Taro sticks for sale.jpg, was rejected because Commons carries an unresolved source-review warning.
+
+Uncooked cornmeal
+Photographer: Popo le Chien
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Source: https://commons.wikimedia.org/wiki/File:Polenta_uncooked.jpg
+Caption: Cornmeal before cooking; grain meal is mixed with chilies in zha guangjiao.
+Identity notes: Commons explicitly identifies uncooked polenta / cornmeal, not cooked porridge. A representative cornmeal texture, not proof of the precise grind used by a Chinese maker. Original is 4,160 × 3,120 px.
+
+Suancai fermentation crock
+Photographer: Yoshi Canopus
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Source: https://commons.wikimedia.org/wiki/File:Suan_cai,_Chinese_food.jpg
+Caption: A suancai crock weighted with a stone, with cabbage visible at the opening.
+Identity notes: The actual photograph shows a crock and cabbage rather than a plated preserved ingredient. Commons identifies suan cai but does not specify the regional method; use as generic fermentation context, not an authenticated Chongqing or Hakka product.
+
+Northeastern sour-cabbage stew
+Photographer: Techyan
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Suan_cai,_pork,_and_Chinese_blood_sausage_stew.jpg
+Caption: Sour cabbage stewed with pork and Chinese blood sausage.
+Identity notes: The category explicitly identifies northeastern Chinese cuisine. This is a finished dish rather than a photograph of uncooked suancai.
+
+Sichuan paocai
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Sichuan_pickles_in_Beijing_(20161122163831).jpg
+Caption: A small plate of Sichuan paocai photographed in Beijing.
+Identity notes: Specific vegetables and fermentation maturity are not named. Suitable for the Sichuan paocai parent tradition, not a precise ingredient subtype.
+
+Quick-pickled tiaoshui paocai
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Tiaoshui_Paocai_at_a_restaurant_in_Jiang%27an,_Yibin_(20250117112257).jpg
+Caption: Tiaoshui paocai served at a restaurant in Jiang'an, Yibin.
+Identity notes: The photographer explicitly describes several-hours quick pickling. Do not label it long-fermented paocai; it illustrates the process-dependent quick-pickle branch.
+
+Zhacai in a bowl
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Zhacai_in_a_bowl_(20210622125217).jpg
+Caption: Zhacai in a bowl with pieces of meat.
+Identity notes: The file confirms zhacai, but not whether it was produced in Fuling or Yuyao. Use as a zhacai-family image with no false regional provenance. The thumbnail shows a prepared bowl with meat, not a plant-only isolated ingredient.
+
+Dried meigancai bundle
+Photographer: Sjschen
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Source: https://commons.wikimedia.org/wiki/File:MeiganCaiBundle.jpg
+Caption: Meigancai tied into a dried bundle.
+Identity notes: The file identifies the broad meigancai ingredient but not a specific Shaoxing or Hakka process. Caption as a representative dried-mustard form, not an authenticated regional sample.
+
+Chopped dried preserved greens
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Chopped_dried_plum_vegetables.jpg
+Caption: Finely chopped dried meigancai.
+Identity notes: Despite the literal English filename, this is categorized as meigan cai, not fruit. Exact regional method is unspecified.
+
+Tianjin dongcai
+Photographer: Glane23
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Source: https://commons.wikimedia.org/wiki/File:D%C5%8Dngc%C3%A0i.jpg
+Caption: Tianjin preserved vegetable, dongcai.
+Identity notes: The file description explicitly identifies Tianjin preserved vegetable. It is a crop extracted from the original photographer's larger image; license remains CC BY-SA 3.0.
+
+Preserved dried radish
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Dried_radishes_(20240929).jpg
+Caption: Preserved dried radish, a form known as chaipo or caipu.
+Identity notes: Commons categorizes it as chaipo and pickled radish, but does not establish Chaoshan versus Xiaoshan provenance or fermentation history. Use at family level only. The thumbnail shows whole or round dried radishes, not the characteristic strips of Xiaoshan luobogan; do not reuse it as a specific Xiaoshan product photo.
+
+Yibin-style ranmian serving
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Ranmian_at_Beijing_Yibin_Hostel_(20210401111937).jpg
+Caption: A serving of ranmian at Beijing Yibin Hostel.
+Identity notes: Useful as a serving-occasion image for the Yibin yacai entry. The photograph shows the noodle dish, not an isolated yacai ingredient; do not present it as a jar or pile of yacai.
+
+Spicy sour cowpeas
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Spicy_and_sour_cowpea.jpg
+Caption: Chopped spicy and sour cowpeas.
+Identity notes: The file identifies the food as spicy sour cowpea and categorizes pickled vegetable texture. It does not document the production region or distinguish fermentation from acidification.
+
+Instant luosifen components
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Components_of_instant_Luosifen_(20200710184923).jpg
+Caption: The component packets of an instant luosifen meal, including a pickled-bamboo-shoot component.
+Identity notes: The Commons image has annotations identifying pickled bamboo shoots. This is a commercial meal-component set, not loose sour bamboo shoots and not a traditional production scene. Optional serving-context image.
+
+Suancai, pork and glass-noodle stew
+Photographer: Cecikierk
+License: Public domain, released by the author (PD-self) https://commons.wikimedia.org/wiki/Template:PD-self
+Source: https://commons.wikimedia.org/wiki/File:Suan_cai_pork_stew.jpg
+Caption: Suancai stewed with pork and glass noodles, photographed as a northeastern Chinese specialty.
+Identity notes: The source identifies a northeastern dish, not a specific Hetao preparation; use the Hetao association only as a related serving example. Commons description explicitly identifies suancai, pork and cellophane noodles; author and public-domain release were checked on the file page.
+
+Fish fillets in pickled-mustard soup
+Photographer: alchen_x
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0/
+Source: https://commons.wikimedia.org/wiki/File:Pickled_mustard_fish_filet_soup.jpg
+Caption: Fish fillets served in a soup with pickled mustard greens.
+Identity notes: The source identifies the dish but not the precise mustard cultivar, place of production or fermentation duration. The source caption identifies pickled mustard fish-fillet soup. Commons records the Flickr author and a confirmed CC BY-SA 2.0 review.
+
+Steamed pork with dried greens in Yongding
+Photographer: Hhaithait
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Source: https://commons.wikimedia.org/wiki/File:Pork_dried_vegetable_Yongding.jpg
+Caption: Steamed pork with dried greens, photographed in Yongding, Fujian.
+Identity notes: This is a Fujian regional serving example. Do not relabel it as a verified Huizhou or Taiwanese recipe, and do not infer the exact dried-green cultivar from appearance. The multilingual file description identifies pork with dried greens in Yongding, Fujian. Author and CC BY-SA 3.0 license were checked.
+
+Rice congee with zhacai and pork floss
+Photographer: Daiju Azuma; color-balance edit by Ubcule
+License: CC BY-SA 2.5 https://creativecommons.org/licenses/by-sa/2.5/
+Source: https://commons.wikimedia.org/wiki/File:Chinese_rice_congee.jpg
+Caption: Plain rice congee topped with zhacai and pork floss, photographed in Kobe, Japan.
+Identity notes: The Japanese source description identifies zhacai on top of the congee. It does not identify the preserve's production region, so do not label it specifically as Fuling or Yuyao zhacai. The English caption identifies congee with meat floss and pickled vegetables; the Japanese description specifies zhacai. The author, later color-balance edit and CC BY-SA 2.5 license were checked.
+
+Dan-dan noodles in Chengdu
+Photographer: Alpha
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0/
+Source: https://commons.wikimedia.org/wiki/File:Dandannoodles.jpg
+Caption: Dan-dan noodles served in Chengdu, Sichuan.
+Identity notes: The source does not identify yacai or verify which preserved vegetable was used. Caption only as dan-dan noodles; do not claim this photograph proves the presence of Yibin yacai. The file caption identifies dan-dan noodles served in Chengdu. Commons records the Flickr author and a confirmed CC BY-SA 2.0 review.
+
+Lei cha rice with preserved radish
+Photographer: Alpha from Melbourne, Australia
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Kenny%27s_Mum%27s_%E6%93%82%E8%8C%B6%E9%A5%AD_Lei_Cha_Rice_(1576303537).jpg
+Caption: Hakka-style tea rice with vegetables, peanuts, tofu and diced preserved radish.
+Identity notes: The photographer lists preserved radish among the toppings. This is a related Hakka-style serving example; the source does not identify the radish as a Chaoshan-made product.
+
+Whole preserved mustard stems
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Pickled_mustard.jpg
+Caption: A close-up of whole preserved mustard stems before slicing.
+Identity notes: The source labels these pickled mustard and categorizes them with swollen-stem mustard. It does not establish a Fuling or Yuyao producer.
+
+Sliced preserved mustard stems
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Pickled_mustard_slices.jpg
+Caption: Glossy preserved mustard-stem slices seasoned with red chili oil.
+Identity notes: The source identifies pickled mustard slices and categorizes them with swollen-stem mustard. The exact seasoning recipe and regional origin are not supplied.
+
+Savory tofu with preserved-radish toppings
+Photographer: Jpatokal
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Tofu_brains_doufunao.jpg
+Caption: Soft tofu topped with chili paste, coriander and preserved radish.
+Identity notes: The source identifies northern Chinese-style doufunao and preserved radish. It does not identify the radish as a Chaoshan product or document its fermentation method.
+
+Gua bao in a bamboo steamer
+Photographer: Kent Wang
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Taiwanese_Gua_Bao_@_Bao_%26_Bing,_London.jpg
+Caption: Taiwanese-style filled buns photographed at Bao & Bing in London.
+Identity notes: Serving context only: the source identifies the dish and restaurant, but does not name the particular pickle in these buns or establish its fermentation process.
+
+Braised pork with preserved vegetables
+Photographer: Ceeseven
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Braised_Pork_with_Preserved_Vegetables.jpg
+Caption: Glossy slices of pork belly over dark preserved vegetables, served in a shallow bowl.
+Identity notes: The photographer identifies braised pork with preserved vegetables. This Hong Kong serving example does not establish a Huizhou, Taiwanese or Shaoxing recipe, exact mustard cultivar or preservation method.
+
+Meigancai guokui flatbread
+Photographer: Fumikas Sagisavas
+License: CC0 1.0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Dried_mustard_greens_pot_cake.jpg
+Caption: A large toasted guokui flatbread made with dried mustard greens.
+Identity notes: The Chinese source description explicitly identifies meigancai guokui. Photographed in Jiangsu; do not label this as an authenticated Shaoxing local bread or infer the meigancai producer.
+
+Suancai and pork hotpot
+Photographer: bryan... from Taipei, Taiwan
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Food_%E8%80%81%E8%88%85%E7%9A%84%E5%AE%B6%E9%84%89%E5%91%B3,_%E9%85%B8%E8%8F%9C%E7%99%BD%E8%82%89%E9%8D%8B,_%E8%80%81%E8%88%85%E9%85%B8%E8%8F%9C%E7%99%BD%E8%82%89%E9%8D%8B,_%E5%8F%B0%E5%8C%97_(19450311409).jpg
+Caption: Sour cabbage and sliced pork simmering around the chimney of a hotpot.
+Identity notes: The source identifies suancai bairou guo at Lao Jiu restaurant in Taipei. This is a Taiwanese restaurant serving of the northern-style dish, not a photograph taken in Northeast China.
+
+Suancai hotpot set
+Photographer: bryan... from Taipei, Taiwan
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Food_%E9%85%B8%E8%8F%9C%E7%99%BD%E8%82%89%E9%8D%8B%E5%A5%97%E9%A4%90,_%E6%88%90%E5%AE%B6,_%E5%8D%97%E9%96%80%E5%B8%82%E5%A0%B4,_%E5%8F%B0%E5%8C%97_(14627087196).jpg
+Caption: A small suancai-and-pork hotpot served with greens and dipping sauces.
+Identity notes: The source identifies suancai bairou guo at Cheng Jia, Nanmen Market, Taipei. The pictured set is a restaurant serving example; it does not document the cabbage fermentation itself.
+
+Suancai dumplings
+Photographer: Zhang Zhantong (Zt610152145)
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Source: https://commons.wikimedia.org/wiki/File:Jiaozi_with_suan_cai_in_a_plate.JPG
+Caption: Boiled dumplings filled with suancai, arranged on a white plate.
+Identity notes: The photographer explicitly identifies suancai-filled jiaozi. Their intact wrappers hide the filling; the identity comes from the primary source description. No particular regional recipe or meat content is claimed.
+
+Home-style mui choy pork belly
+Photographer: Peachyeung316
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Old_Father%27s_Mui_Choi_Pork_Belly.jpg
+Caption: A home-cooked bowl of pork belly and preserved mustard greens.
+Identity notes: The photographer calls this a village-style mui choi pork belly made at home. Use as a home-cooking example; exact regional provenance and salt or fermentation method are not documented.
+
+Pork intestines with suancai
+Photographer: Fumikas Sagisavas
+License: CC0 1.0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Pork_Intestines_with_sour_cabbage_(suancai).jpg
+Caption: A sizzling dark bowl of pork intestines cooked with sour cabbage and chilies.
+Identity notes: The photographer identifies pork intestines with sour cabbage. The exact suancai cultivar and regional fermentation process are not specified.
+
+Suancai and pork dumplings
+Photographer: avlxyz
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%85%B8%E8%8F%9C%E7%8C%AA%E8%82%89%E9%A5%BA%E5%AD%90_Preserved_Vegetable_and_Pork_Dumplings_-_Original_Taste.jpg
+Caption: Suancai-and-pork dumplings, including one opened to show the filling.
+Identity notes: The source title identifies suancai-and-pork dumplings at Original Taste Northern China Cuisine, Box Hill, Australia. The diner did not independently identify the vegetable by taste; do not infer an exact cabbage cultivar or recipe from the filling.
+
+Fish soup with preserved mustard greens
+Photographer: Alpha from Melbourne, Australia
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%85%B8%E8%8F%9C%E9%B1%BC_Preserved_Mustard_Green_with_Fish_-_Charming_Spice_AUD24.80_(4104355401).jpg
+Caption: A generous bowl of fish fillets and preserved mustard greens, with colorful garnishes.
+Identity notes: The photographer identifies suancaiyu and explicitly describes sour preserved mustard greens with fish at Charming Spice, Melbourne. It is a Chinese restaurant dish photographed abroad, not a Sichuan-location photograph.
+
+Xuecai and shredded pork
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Xuecai_Rousi_on_K1035_(20260315124754).jpg
+Caption: A colorful plate of shredded pork stir-fried with xuecai, served beside rice.
+Identity notes: The source identifies xuecai rousi and Brassica juncea var. multiceps on train K1035. This is a serving example, not documentation of Ningbo production or a verified fermentation method.
+
+Preserved mustard and seafood rice noodles
+Photographer: Alpha from Melbourne, Australia
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%9B%AA%E8%8F%9C%E6%B5%B7%E9%B2%9C%E7%B1%B3%E7%BA%BF_Preserved_Mustard_and_Seafood_Rice_Noodle_Soup_-_Soup,_Box_Hill_(2171031233).jpg
+Caption: Seafood rice-noodle soup topped with preserved mustard greens and herbs.
+Identity notes: The source explicitly identifies preserved mustard and seafood rice-noodle soup at a restaurant in Box Hill, Australia. Do not relabel it as an authenticated Ningbo or Chaoshan recipe.
+
+Taipei pork belly with dried preserved greens
+Photographer: bryan... from Taipei, Taiwan
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Food_%E6%A2%85%E5%B9%B2%E6%89%A3%E8%82%89,_%E5%8F%81%E5%92%8C%E9%99%A2,_%E5%8F%83%E5%92%8C%E9%99%A2,_%E5%8F%B0%E7%81%A3%E9%A2%A8%E6%A0%BC%E9%A3%B2%E9%A3%9F,_%E5%8F%B0%E5%8C%97_(14645873828).jpg
+Caption: Pork belly served over dried preserved greens at San Ho Yuan in Taipei.
+Identity notes: The original title identifies this as meigan kourou at a Taipei restaurant. This is a photographed restaurant serving, not proof of one household preservation method.
+
+Green beans with olive-and-mustard relish
+Photographer: Jpatokal
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Green_beans_with_olive_vegetable.jpg
+Caption: A glossy green-bean stir-fry seasoned with olive-and-mustard relish and red chili.
+Identity notes: The photographer identifies this as Hunan-style green beans with olive vegetable at Xiang Signature, Singapore. It shows a Chinese relish used in a cooked dish; the fresh green beans themselves are not fermented.
+
+Luosifen in Liuzhou
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Luosifen_at_Guangya,_Liuzhou_(20190420141814).jpg
+Caption: Rice noodles with rich broth and generous toppings, photographed in Liuzhou.
+Identity notes: The source identifies luosifen at Guangya in Liuzhou. Use as a serving example for the sour-bamboo-shoot tradition; the source does not separately label every topping in the photographed bowl.
+
+Luosifen with egg and crisp tofu skin
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Luosifen_w_egg_(20150507131810).JPG
+Caption: A black bowl of luosifen topped with crisp tofu skin and egg.
+Identity notes: The source identifies this as luosifen with egg. The visible tofu skin and egg are dish components; this photo does not independently verify how the bamboo shoots were fermented.
+
+Luosifen with chicken feet
+Photographer: Hhhlx
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Luosifenfen.jpg
+Caption: Luosifen with tofu skin, chicken feet, peanuts and other toppings.
+Identity notes: The source identifies this as luosifen. Chicken feet and tofu skin are visible; the picture illustrates a serving variation and does not establish the recipe of each individual ingredient.
+
+Preserved-radish omelet
+Photographer: JeanneChang
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Preserved_radish_omelet-omelette.jpg
+Caption: Golden preserved-radish omelet, lifted with chopsticks.
+Identity notes: The photographer identifies a preserved-radish omelet. The photo is used on Taiwanese-cuisine references; it is a serving example for preserved radish, not a claim that the specific radish was produced in Chaoshan.
+
+Meizhou pork belly with preserved greens
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Steamed_Sliced_Pork_Belly_with_Preserved_Vegetable_in_Meizhou_(20200928174231).jpg
+Caption: Sliced pork belly arranged over dark preserved greens in Meizhou.
+Identity notes: The source identifies steamed sliced pork belly with preserved vegetables, photographed in Meizhou. It is a Hakka-area restaurant dish and is not presented as a verified photograph of Huizhou-produced meicai.
+
+Zaocai noodle soup in Sibu
+Photographer: Bubucar7879
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E7%B3%9F_%E8%8F%9C_%E7%B2%89_%E5%B9%B2.jpg
+Caption: A bowl of zaocai rice-noodle soup photographed in Sibu, Sarawak.
+Identity notes: The file title identifies zaocai fen gan and the photographer locates the dish in Sibu, Sarawak. It illustrates a related Chinese-diaspora serving, not a photographed Minqing-local preparation.
+
+Fish with pickled mustard greens
+Photographer: Alpha from Melbourne, Australia
+License: CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0
+Source: https://commons.wikimedia.org/wiki/File:Flake_and_Pickled_Mustard_Greens_(3697782134).jpg
+Caption: White fish and golden pickled mustard greens in a savory home-cooked dish.
+Identity notes: The source title identifies flake and pickled mustard greens; the photographer specifies gummy shark. Use as a serving example for sour mustard greens, without claiming a specific Chaoshan recipe or source of the greens.
+
+Chicken wings and sour greens over rice
+Photographer: Anonymous Hong Kong Photographer 1 (Wikimedia user: 酸菜 卤水翼 煲仔飯)
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Source: https://commons.wikimedia.org/wiki/File:HK_food_%E9%85%B8%E8%8F%9C_%E5%8D%A4%E6%B0%B4_Chicken_Wings_%E9%9B%9E%E7%BF%BC_bowl_%E9%8D%8B%E9%A3%AF_rice_Nov-2013.jpg
+Caption: Soy-braised chicken wings and sour greens over rice in Hong Kong.
+Identity notes: The source identifies sour greens, master-stock chicken wings and rice. It does not specify the greens cultivar or preservation recipe. A broad serving example, not a verified image of one Chaoshan xiancai product.
+
+Yibin burning noodles
+Photographer: ZixuanHE
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:5651760935285_.pic.jpg
+Caption: Yibin burning noodles with separate piles of chopped toppings.
+Identity notes: The photographer identifies Yibin burning noodles. This is dish context for yacai; the caption does not independently provide a recipe or verify every topping.
+
+Yibin ranmian with minced pork
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Ranmian_with_minced_pork_at_Beijing_Yibin_Hostel_(20210401111955).jpg
+Caption: Ranmian served with minced pork, peanuts and chopped toppings at Beijing Yibin Hostel.
+Identity notes: The source specifically identifies ranmian with minced pork. This is a serving example for yacai traditions, rather than a photograph of pure yacai.
+
+Sichuan paocai and its jar
+Photographer: Zhimin He / AngyHe
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Sichuan_Pao_Cai_and_Pao_Cai_Jar.jpg
+Caption: A decorated fermentation jar with a small plate of Sichuan paocai.
+Identity notes: The photographer identifies Sichuan paocai and its jar. Do not infer a precise fermentation time, brine formula or cultivar from the photograph.
+
+Sichuan pickle side dish
+Photographer: N509FZ
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:Sichuan_pickles_at_Beijing_Yibin_Hostel_(20210401111017).jpg
+Caption: Pink radish pieces and other vegetables served as a Sichuan pickle side dish at Beijing Yibin Hostel.
+Identity notes: The source identifies Sichuan pickles. The exact vegetable mixture and fermentation duration are not specified.
+
+Fuyuan sour-soup pork trotters
+Photographer: Ruilijiang de Heshui
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E5%AF%8C%E6%BA%90%E9%85%B8%E6%B1%A4%E7%8C%AA%E8%84%9A_-_2024-05-22.jpg
+Caption: A shared pot of Fuyuan sour-soup pork trotters in Yunnan.
+Identity notes: The file identifies Fuyuan sour-soup pork trotters. Regional government food reporting separately documents Fuyuan sour greens with pork trotters; this photograph does not establish one fixed recipe.
+
+Burning noodles with aromatic toppings
+Photographer: Suginami
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E7%87%83%E9%9D%A2.jpg
+Caption: A bowl of burning noodles with dark chopped toppings, peanuts and scallions.
+Identity notes: The photographer identifies ranmian from a restaurant in Shijiazhuang, not a verified Yibin location. Use as a dish example; the exact preserved-green ingredient is not independently specified.
+
+Suancai and egg fried rice
+Photographer: Auongkinghe
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%85%B8%E8%8F%9C%E8%9B%8B%E7%82%92%E9%A5%AD_20251018.jpg
+Caption: Fried rice with suancai and ribbons of egg, served at Cai Lin Ji.
+Identity notes: The source identifies suancai egg fried rice at a Cai Lin Ji restaurant. It does not identify the suancai producer, cultivar or exact regional fermentation method.
+
+Suancai rice-noodle meal
+Photographer: Liuxingy
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%85%B8%E8%8F%9C%E9%AA%A8%E6%B1%A4%E7%B1%B3%E7%BA%BF%EF%BC%88%E6%9C%AA%E6%B7%B7%E5%90%88%EF%BC%89.jpg
+Caption: Suancai bone-broth rice noodles with the accompanying ingredients presented separately before mixing.
+Identity notes: The photographer identifies suancai bone-broth rice noodles at a restaurant in Xi’an. Use as a rice-noodle serving example, not proof that the greens are specifically Midu-made.
+
+Golden pickled peppers
+Photographer: Fumikas Sagisavas
+License: CC0 http://creativecommons.org/publicdomain/zero/1.0/deed.en
+Source: https://commons.wikimedia.org/wiki/File:Golden_pickled_peppers.jpg
+Caption: A close view of golden pickled chilies in liquid.
+Identity notes: The photographer identifies golden pickled peppers. The source does not specify brine versus vinegar, fermentation duration, or production region. Use as a preserved-pepper reference rather than evidence of a particular fermentation method.
+
+Qianjiang chicken-giblet pot
+Photographer: Wuzhiya
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Source: https://commons.wikimedia.org/wiki/File:%E9%B8%A1%E6%9D%82.jpg
+Caption: A bubbling Qianjiang chicken-giblet pot with colorful pickled vegetables.
+Identity notes: The file identifies Qianjiang chicken giblets. A Qianjiang government food guide documents pickled radish and chilies fermented in established sour brine as defining accompaniments; the photograph does not supply this restaurant’s exact recipe.
+
+--- 2026-10-31 补齐的 23 张（维基共享资源，逐条核对过画面） ---
+WORLD-01	File:Korean Kimchi.jpg	AhmadElq · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Korean_Kimchi.jpg
+WORLD-02	File:Kiszona kapusta.JPG	Alina Zienowicz Ala z · CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Kiszona_kapusta.JPG
+WORLD-03	File:Polish style pickled cucumbers IMGP0413.jpg	Nikodem Nijaki · CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Polish_style_pickled_cucumbers_IMGP0413.jpg
+WORLD-04	File:Nukazuke.jpg	DoWhile · CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Nukazuke.jpg
+WORLD-05	File:Suguki.jpg	農林水産省 · CC BY 4.0 · https://commons.wikimedia.org/wiki/File:Suguki.jpg
+WORLD-06	File:Shibazuke (4357771471).jpg	Vegan Feast Catering · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Shibazuke_(4357771471).jpg
+WORLD-07	File:Pickled Takana Mustard.JPG	博多からきた女 · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Pickled_Takana_Mustard.JPG
+WORLD-08	File:Dưa cải muối.JPG	Casablanca1911 at Vietnamese Wikipedia · Public domain · https://commons.wikimedia.org/wiki/File:D%C6%B0a_c%E1%BA%A3i_mu%E1%BB%91i.JPG
+WORLD-10	File:Gundruk 1.jpg	Gaurav Dhwaj Khadka · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Gundruk_1.jpg
+WORLD-11	File:Sinki ko jhol (Fermented radish soup).jpg	Eastern Himalayas · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Sinki_ko_jhol_(Fermented_radish_soup).jpg
+WORLD-12	File:Soibum, a traditional Meitei ethnic food, derived from bamboo shoots, is a Manipuri delicacy.jpg	Shantikh · CC BY-SA 3.0 · https://commons.wikimedia.org/wiki/File:Soibum,_a_traditional_Meitei_ethnic_food,_derived_from_bamboo_shoots,_is_a_Manipuri_delicacy.jpg
+WORLD-13	File:DFC 3933 A close-up of a pile of pitted green olives showing their smooth glossy skins and hollow centers.jpg	PattayaPatrol · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:DFC_3933_A_close-up_of_a_pile_of_pitted_green_olives_showing_their_smooth_glossy_skins_and_hollow_centers.jpg
+WORLD-B01	File:Mixed Pickles (9370-72).jpg	Raimond Spekking · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Mixed_Pickles_(9370-72).jpg
+WORLD-B02	File:Haitian Pikliz.jpg	Aliceba · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Haitian_Pikliz.jpg
+WORLD-B03	File:Gari (Pickled sushi ginger).jpg	CNEcija12345 · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Gari_(Pickled_sushi_ginger).jpg
+WORLD-14	File:Kawal, after fermentation.jpg	Sacred Agriculture · CC BY 3.0 · https://commons.wikimedia.org/wiki/File:Kawal,_after_fermentation.jpg
+cn-xiangyang-datoucai	File:Zhacai in a bowl (20210622125217).jpg	N509FZ · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Zhacai_in_a_bowl_(20210622125217).jpg
+cn-tianshui-jiangshuicai	File:浆水面 (175157609).jpg	Qingning Jia from Lanzhou, China · CC BY-SA 2.0 · https://commons.wikimedia.org/wiki/File:%E6%B5%86%E6%B0%B4%E9%9D%A2_(175157609).jpg
+cn-yn-gan-yancai	File:Dried pickled mustard greens served as seasoning at a restaurant in Mangshi.jpg	Janinga Chang · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Dried_pickled_mustard_greens_served_as_seasoning_at_a_restaurant_in_Mangshi.jpg
+cn-shaoxing-ningbo-fermented-amaranth-stalk	File:2025-01-30 Stinky Chinese spinach with Tofu, Anchi, Chekiang.jpg	源義信 · CC BY 4.0 · https://commons.wikimedia.org/wiki/File:2025-01-30_Stinky_Chinese_spinach_with_Tofu,_Anchi,_Chekiang.jpg
+cn-beijing-jiangcai	File:Liubiju pickles at CIFTIS (20250910163843).jpg	N509FZ · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Liubiju_pickles_at_CIFTIS_(20250910163843).jpg
+cn-hangzhou-shuangchagua	File:Yonghui pickled cucumber.jpg	Fumikas Sagisavas · CC0 · https://commons.wikimedia.org/wiki/File:Yonghui_pickled_cucumber.jpg
+cn-nanning-suanye-adjacent	File:酸嘢.jpg	EditQ · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:%E9%85%B8%E5%98%A2.jpg
+
+--- 2026-10-31 Codex 补图与纠错 ---
+本次补图用于本地风味资料页。开放许可与未声明开放许可的原站图片分别记录，未将原站版权图片标作 CC 授权。
+
+cn-hanzhong-jiangshuicai
+Local file: assets/photos/cn-hanzhong-jiangshuicai.jpg
+Caption: 成品实拍：汉中浆水菜。来源为原站「汉中浆水菜」配图。
+Credit: 梭罗果田间记事 · 原站版权，未标注开放许可 · https://suoluoguo.com/%E6%B5%86%E6%B0%B4%E8%8F%9C
+
+cn-ziyang-liaosuancai
+Local file: assets/photos/cn-ziyang-liaosuancai.jpg
+Caption: 成品实拍：紫阳油菜酸菜，来源为紫阳县人民政府「撩酸菜——紫阳野油菜」。
+Credit: 紫阳县人民政府网站 · 原站版权，未标注开放许可 · https://www.zyx.gov.cn/Content-2562596.html
+
+cn-zhejiang-daoducai
+Local file: assets/photos/cn-zhejiang-daoducai.jpg
+Caption: 成品实拍：杭州市场上出售的倒笃菜。
+Credit: 潮新闻记者黄葆青／浙江在线 · 原站版权，未标注开放许可 · https://zjnews.zjol.com.cn/zjnews/202307/t20230704_25930877.shtml
+
+cn-yangzhou-jiangcai
+Local file: assets/photos/cn-yangzhou-jiangcai.jpg
+Caption: 商品实拍示例：扬州三和四美的多种酱菜，不代表全部扬州酱菜。
+Credit: 三和四美官方旗舰店（苏宁易购） · 原站版权，未标注开放许可 · https://product.suning.com/0070096370/172125930.html
+
+WORLD-09
+Local file: assets/photos/world-09.jpg
+Caption: 成品实拍：Pak-sian-dorng（腌白花菜），图片来源为 JIRCAS 泰国发酵食品数据库。
+Credit: JIRCAS 泰国发酵食品数据库 · JIRCAS 网站使用条款 · https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng
+Terms: https://www.jircas.go.jp/en/about/guide
+
+cn-xiangyang-datoucai
+Local file: assets/photos/cn-xiangyang-datoucai-correct.jpg
+Caption: 成品实拍：襄阳大头菜。原图分辨率较低，保留完整画面。
+Credit: 湖北经济学院湖北楚菜研究院 · 原站版权，未标注开放许可 · https://ccyjy.hbue.edu.cn/b1/36/c8562a241974/page.htm
+
+Correction: cn-xiangyang-datoucai previously used a zhacai photograph. It is now replaced with the Xiangyang datoucai photograph from Hubei Cuisine Research Institute; the previous credit above remains as historical documentation, not the current image attribution.

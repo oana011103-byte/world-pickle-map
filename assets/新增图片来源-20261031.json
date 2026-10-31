@@ -1,0 +1,69 @@
+[
+  {
+    "entry_id": "cn-hanzhong-jiangshuicai",
+    "photo": "assets/photos/cn-hanzhong-jiangshuicai.jpg",
+    "photoCaption": "成品实拍：汉中浆水菜。来源为原站「汉中浆水菜」配图。",
+    "photoKind": "成品实拍",
+    "credit": "梭罗果田间记事 · 原站版权，未标注开放许可 · https://suoluoguo.com/%E6%B5%86%E6%B0%B4%E8%8F%9C",
+    "photoSource": "https://suoluoguo.com/%E6%B5%86%E6%B0%B4%E8%8F%9C",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page."
+  },
+  {
+    "entry_id": "cn-ziyang-liaosuancai",
+    "photo": "assets/photos/cn-ziyang-liaosuancai.jpg",
+    "photoCaption": "成品实拍：紫阳油菜酸菜，来源为紫阳县人民政府「撩酸菜——紫阳野油菜」。",
+    "photoKind": "地方实拍",
+    "credit": "紫阳县人民政府网站 · 原站版权，未标注开放许可 · https://www.zyx.gov.cn/Content-2562596.html",
+    "photoSource": "https://www.zyx.gov.cn/Content-2562596.html",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page.",
+    "originalImageUrl": "https://www.zyx.gov.cn/UploadFiles/akjyhfj72/image/20230427/20230427170713_8137.jpg"
+  },
+  {
+    "entry_id": "cn-zhejiang-daoducai",
+    "photo": "assets/photos/cn-zhejiang-daoducai.jpg",
+    "photoCaption": "成品实拍：杭州市场上出售的倒笃菜。",
+    "photoKind": "成品实拍",
+    "credit": "潮新闻记者黄葆青／浙江在线 · 原站版权，未标注开放许可 · https://zjnews.zjol.com.cn/zjnews/202307/t20230704_25930877.shtml",
+    "photoSource": "https://zjnews.zjol.com.cn/zjnews/202307/t20230704_25930877.shtml",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page."
+  },
+  {
+    "entry_id": "cn-yangzhou-jiangcai",
+    "photo": "assets/photos/cn-yangzhou-jiangcai.jpg",
+    "photoCaption": "商品实拍示例：扬州三和四美的多种酱菜，不代表全部扬州酱菜。",
+    "photoKind": "商品实拍",
+    "photoFit": "contain",
+    "credit": "三和四美官方旗舰店（苏宁易购） · 原站版权，未标注开放许可 · https://product.suning.com/0070096370/172125930.html",
+    "photoSource": "https://product.suning.com/0070096370/172125930.html",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page."
+  },
+  {
+    "entry_id": "WORLD-09",
+    "photo": "assets/photos/world-09.jpg",
+    "photoCaption": "成品实拍：Pak-sian-dorng（腌白花菜），图片来源为 JIRCAS 泰国发酵食品数据库。",
+    "photoKind": "成品实拍",
+    "credit": "JIRCAS 泰国发酵食品数据库 · JIRCAS 网站使用条款 · https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
+    "licenseUrl": "https://www.jircas.go.jp/en/about/guide",
+    "photoSource": "https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
+    "sourceUrl": "https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
+    "sourceTitle": "JIRCAS：Pak-sian-dorng",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page.",
+    "displayEdit": "等比例缩小至 1280px；未裁切内容，保留原图于工作文件/新增图片原图。"
+  },
+  {
+    "entry_id": "cn-xiangyang-datoucai",
+    "photo": "assets/photos/cn-xiangyang-datoucai-correct.jpg",
+    "photoCaption": "成品实拍：襄阳大头菜。原图分辨率较低，保留完整画面。",
+    "photoKind": "成品实拍",
+    "photoFit": "contain",
+    "credit": "湖北经济学院湖北楚菜研究院 · 原站版权，未标注开放许可 · https://ccyjy.hbue.edu.cn/b1/36/c8562a241974/page.htm",
+    "photoSource": "https://ccyjy.hbue.edu.cn/b1/36/c8562a241974/page.htm",
+    "checked_on": "2026-10-31",
+    "image_checked": "Visually inspected local photograph against the source page."
+  }
+]

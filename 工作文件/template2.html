@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>World Pickle Map</title>
+<link rel="preload" href="assets/fonts/fredoka.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/fonts/nunito.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+  @font-face{font-family:"Fredoka";src:url("assets/fonts/fredoka.ttf") format("truetype");font-weight:300 700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Nunito";src:url("assets/fonts/nunito.ttf") format("truetype");font-weight:200 1000;font-style:normal;font-display:swap}
+  :root{
+    --paper:#fdf1ec;
+    --ink:#4a3f3d;
+    --ink-soft:#6f625f;
+    --muted:#786762;
+    --orange:#e8845c;
+    --orange-deep:#ac492d;
+    --pin:#f2b53c;
+    --pin-deep:#e0a02a;
+    --pin-ink:#6b4a1a;
+    --rule:rgba(74,63,61,.12);
+    --card:#fffaf6;
+    --sea-lo:#f9e7df;
+    --sea-mid:#f6ded5;
+    --sea-hi:#f0d3c8;
+    --cn-fill:#F5DFB3;
+    --cn-edge:#E0B77E;
+    --land-a:#a9d4bf;
+    --land-b:#d2c1e6;
+    --sans:"Nunito","PingFang SC",system-ui,sans-serif;
+    --round:"Fredoka","Nunito",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow:hidden;
+    background-image:
+      radial-gradient(58% 54% at 50% 46%,rgba(255,252,250,.92),rgba(255,252,250,0) 72%),
+      radial-gradient(42% 40% at 88% 8%,rgba(210,193,230,.26),rgba(210,193,230,0) 70%),
+      radial-gradient(46% 46% at 6% 90%,rgba(169,212,191,.30),rgba(169,212,191,0) 70%),
+      radial-gradient(38% 34% at 18% 12%,rgba(246,222,213,.55),rgba(246,222,213,0) 70%);
+  }
+  .stage{position:relative;height:100%;height:100dvh;width:100%;overflow:hidden}
+
+  header{position:absolute;left:clamp(20px,4vw,54px);top:clamp(20px,4vh,46px);z-index:4;pointer-events:none}
+  .kicker{margin:0 0 8px;font-family:var(--round);font-size:11px;letter-spacing:.18em;color:var(--muted)}
+  h1{margin:0;font-size:clamp(26px,3.4vw,42px);line-height:1.15;font-weight:600;letter-spacing:.02em}
+  h1 .en{display:block;margin-top:6px;font-size:clamp(11px,1vw,13px);letter-spacing:.06em;color:var(--muted);font-weight:400}
+
+  header{max-width:calc(100vw - 2 * clamp(20px,4vw,54px))}
+  header h1{max-width:100%}
+  @media(min-width:760px){body.detail-open header{max-width:calc(100vw - var(--detail-width) - clamp(20px,4vw,54px) - 40px)}}
+  .site-intro{max-width:min(440px,100%);margin:10px 0 0;color:var(--ink-soft);font-size:13px;line-height:1.65;text-wrap:pretty}
+  @media(max-width:759px){.site-intro{font-size:12px;max-width:min(360px,100%)}body.detail-open .site-intro{display:none}}
+
+  /* 小卡预览，原地展开；一次只阅读一种风味 */
+  .peek{position:absolute;z-index:7;width:min(300px,calc(100vw - 24px));max-height:min(380px,50dvh,var(--peek-limit,50dvh));
+    display:flex;flex-direction:column;padding:0;overflow:hidden;border-radius:16px;background:var(--card);
+    box-shadow:0 16px 48px -12px rgba(92,65,60,.25);opacity:0;visibility:hidden;pointer-events:none;
+    transform:translateY(4px);transition:none}
+  .peek.show{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+  .peek.expanded{max-height:min(50dvh,var(--peek-limit,50dvh))}
+  .peek-head{flex:none;padding:14px 16px 10px;border-bottom:1px solid var(--rule);position:relative}
+  .peek-title{margin:0;font-size:19px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+
+  .peek-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:14px 16px;scrollbar-width:thin;scrollbar-color:#cbb6b0 transparent}
+  .peek-grid{min-width:0}
+  .food-entry{min-width:0;overflow-wrap:anywhere}
+  .peek .photo-figure{margin:0;min-width:0}
+  .peek .food-photo,.peek .noimg{display:block;width:100%;height:140px;aspect-ratio:auto;object-fit:cover;border-radius:9px;background:#f7ece7}
+  .peek .photo-caption{font-size:10px;line-height:1.5;margin:6px 0 0;color:var(--muted)}
+  .food-place{margin:0 0 5px;font-size:11px;color:var(--muted);line-height:1.6}
+  .food-entry h3{margin:0;font-size:18px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+  .food-local{margin:6px 0 0;color:var(--ink-soft);font-size:12px;line-height:1.5}
+  .food-facts{margin:18px 0 0;display:grid;gap:10px}
+  .food-fact{display:grid;grid-template-columns:78px minmax(0,1fr);gap:12px;font-size:13px;line-height:1.8}
+  .food-fact dt{color:var(--muted)}.food-fact dd{margin:0;color:var(--ink)}
+  .food-sources{margin:16px 0 0;padding-top:10px;border-top:1px solid var(--rule);font-size:10px;line-height:1.7;color:var(--muted)}
+  .food-sources p{margin:3px 0}.food-sources a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+  .peek-map-link{margin-top:10px}
+  .peek-empty{padding:12px 0;color:var(--ink-soft);font-size:14px;line-height:1.8}
+  .peek-empty button{display:block;margin-top:12px}
+  .peek .image-fallback{min-height:96px;padding:8px;font-size:11px}
+  .peek:not(.expanded) .photo-caption{display:none}
+  .food-summary{font-size:13px;line-height:1.7;color:var(--ink-soft);margin:12px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .peek-expand{margin-top:12px;padding:7px 0;border:0;background:none;color:var(--orange-deep);font:inherit;font-size:12px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+
+  .china-intro{margin:0 0 10px;font-size:13px;line-height:1.8;color:var(--ink-soft)}
+  @media(max-width:680px){
+
+    .peek-expand{min-height:40px}
+  }
+
+  /* 中国版图：从地球里点进来 */
+  .cnview{position:absolute;inset:0;z-index:4;opacity:0;pointer-events:none;
+    transform:scale(1.035);transform-origin:50% 46%;
+    transition:opacity .42s ease, transform .62s cubic-bezier(.22,.61,.36,1)}
+  .cnview.show{opacity:1;transform:none;pointer-events:auto}
+  body.china-mode header,
+  body.china-mode .globe-wrap,
+  body.china-mode .spark{opacity:0;pointer-events:none;transition:opacity .28s ease}
+  #cnCanvas{position:absolute;inset:0;width:100%;height:100%;cursor:default}
+  .cnpins{position:absolute;inset:0;pointer-events:none}
+  .cn-top{position:absolute;left:clamp(20px,4vw,54px);top:clamp(20px,4vh,46px);pointer-events:none}
+  .cn-kicker{margin:0 0 8px;font-family:var(--round);font-size:11px;letter-spacing:.18em;color:var(--muted)}
+  .cn-top h2{margin:0;font-size:clamp(20px,2.4vw,30px);font-weight:600;letter-spacing:.02em}
+  .cn-actions{position:absolute;right:clamp(18px,3.6vw,56px);top:clamp(20px,4vh,46px);display:flex;gap:8px}
+  .cn-btn{padding:8px 15px 9px;border-radius:999px;border:0;
+    background:rgba(255,250,246,.9);color:var(--ink-soft);font-family:inherit;font-size:12.5px;
+    letter-spacing:.04em;cursor:pointer;transition:color .2s ease,border-color .2s ease,background .2s ease}
+  .cn-btn:hover{color:var(--ink)}
+  .cn-btn span{font-size:13px;line-height:1;opacity:.7}
+
+  .cpin{position:absolute;left:0;top:0;display:flex;align-items:center;pointer-events:auto;
+    cursor:pointer;opacity:0;animation:pinIn .5s ease forwards}
+  @keyframes pinIn{from{opacity:0;transform:translate(-50%,-40%) scale(.7)}
+    to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+  .cpin .cdot{position:relative;width:6px;height:6px;border-radius:50%;background:var(--pin);
+    border:0;box-shadow:0 1px 4px rgba(126,92,94,.32);
+    transition:transform .16s ease,background .16s ease}
+  .cpin.cluster .cdot{width:20px;height:20px;display:grid;place-items:center;font-size:9.5px;
+    color:var(--pin-ink);font-weight:600}
+  .cpin .ctag{position:absolute;left:14px;top:50%;transform:translateY(-50%) translateX(-4px);
+    padding:4px 9px 5px;border-radius:999px;background:#fffaf6;border:1px solid var(--rule);
+    box-shadow:0 6px 14px -10px rgba(126,92,94,.55);font-size:12px;color:var(--ink);
+    white-space:nowrap;opacity:0;transition:opacity .16s ease,transform .16s ease;pointer-events:none}
+  .cpin.cluster .ctag{left:24px}
+  .cpin:hover .ctag{opacity:1;transform:translateY(-50%) translateX(0)}
+  .cpin.flip .ctag{left:auto;right:14px;transform:translateY(-50%) translateX(4px)}
+  .cpin.flip.cluster .ctag{right:24px}
+  .cpin.flip:hover .ctag{transform:translateY(-50%) translateX(0)}
+
+  .globe-wrap{position:absolute;inset:0;display:grid;place-items:center;z-index:1}
+  canvas{display:block;touch-action:none;cursor:grab}
+  canvas.dragging{cursor:grabbing}
+
+  .spark{position:absolute;color:rgba(226,180,172,.85);pointer-events:none;font-size:14px;line-height:1}
+  .spark.s1{left:16%;top:26%;font-size:12px;opacity:.75}
+  .spark.s2{left:78%;top:20%;font-size:16px;opacity:.6}
+  .spark.s3{left:88%;top:62%;font-size:11px;opacity:.7}
+  .spark.s4{left:26%;top:74%;font-size:13px;opacity:.55}
+
+  /* 地图上的点 */
+  .marker{position:absolute;left:0;top:0;transform:translate(-50%,-50%);display:flex;align-items:center;
+    z-index:3;cursor:pointer;transition:opacity .18s linear}
+  .marker .dot{position:relative;width:7px;height:7px;border-radius:50%;background:var(--pin);
+    border:0;box-shadow:0 1px 3px rgba(126,92,94,.26);
+    transition:transform .16s ease,background .16s ease;display:grid;place-items:center;
+    font-size:8.5px;color:var(--pin-ink);line-height:1}
+  .marker.big .dot{width:10px;height:10px;font-size:0;font-weight:600}
+  .marker .tag{position:absolute;left:16px;top:50%;transform:translateY(-50%) translateX(-4px);
+    padding:4px 9px 5px;border-radius:999px;background:#fffaf6;border:1px solid var(--rule);
+    box-shadow:0 6px 14px -10px rgba(126,92,94,.55);
+    font-size:12px;color:var(--ink);white-space:nowrap;opacity:0;transition:opacity .16s ease,transform .16s ease;pointer-events:none}
+  .marker.big .tag{left:24px}
+  .marker:hover .tag{opacity:1;transform:translateY(-50%) translateX(0)}
+  .marker.active .tag{opacity:1;transform:translateY(-50%) translateX(0);border-color:rgba(224,160,42,.55)}
+  .marker.active .dot::after{content:"";position:absolute;inset:-7px;border-radius:50%;
+    border:1.5px solid rgba(224,160,42,.55);animation:pulse 2s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+  .marker.flip .tag{left:auto;right:16px;transform:translateY(-50%) translateX(4px)}
+  .marker.flip .tag{right:24px}
+  .marker.flip:hover .tag,.marker.flip.active .tag{transform:translateY(-50%) translateX(0)}
+  .marker.china .dot{box-shadow:0 1px 3px rgba(126,92,94,.22)}
+  .marker.china .dot::before{content:"";position:absolute;inset:-13px;border-radius:50%;
+    border:1px solid rgba(220,170,87,.5);animation:pulse 3.4s ease-out infinite}
+
+  @media (max-width:820px){
+    header{top:16px;left:18px}
+
+    .cn-actions{right:auto;left:14px;top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+    .cn-top{top:calc(env(safe-area-inset-top,0px) + 16px);left:18px}
+    .cn-top h2{font-size:21px}
+    .cpin .ctag{font-size:11.5px}
+    .spark{display:none}
+
+  }
+  @media (prefers-reduced-motion:reduce){
+
+    .marker.active .dot::after{animation:none;opacity:.5}
+  }
+
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  ::selection{background:#ebcba8;color:var(--ink)}
+  button,input{font-family:inherit}button:focus-visible,a:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid #9a652b;outline-offset:4px}
+  [hidden]{display:none!important}
+
+    .marker,.cpin{appearance:none;padding:0;border:0;background:none;color:inherit;font:inherit;justify-content:center;min-width:32px;min-height:32px;touch-action:manipulation}
+  .marker .tag,.cpin .ctag{left:calc(50% + 12px)}
+  .marker.big .tag,.cpin.cluster .ctag{left:calc(50% + 16px)}
+  .marker.flip .tag,.cpin.flip .ctag{left:auto;right:calc(50% + 12px)}
+  .marker.flip.big .tag,.cpin.flip.cluster .ctag{right:calc(50% + 16px)}
+  .marker:focus-visible .tag,.cpin:focus-visible .ctag{opacity:1;transform:translateY(-50%)}
+  .marker .dot,.cpin .cdot{flex-shrink:0}
+
+  .photo-figure{margin:0}.fit-contain{object-fit:contain!important;background:#fffdf9}.photo-caption{font-size:12px;line-height:1.6;color:var(--muted);margin:8px 0 0}
+  .image-failed img{display:none!important}.image-fallback{display:none;min-height:110px;place-items:center;padding:16px;background:#f7ece7;color:var(--muted);font-size:12px;border-radius:9px;text-align:center;line-height:1.8}
+  .image-failed .image-fallback{display:grid}.image-fallback a{text-decoration:underline}
+
+  .category-label{display:inline-block;background:#f2e2cf;color:#745331;font-size:11px;border-radius:5px;padding:3px 7px;margin-top:9px}
+  @media(max-width:820px){.marker,.cpin{min-width:44px;min-height:44px}.cn-actions .cn-btn{min-height:44px}.cn-top h2{font-size:20px}}
+  @media(prefers-reduced-motion:reduce){.cpin,.marker.active .dot::after,.marker.china .dot::before{animation:none;opacity:1}.cnview,.peek,.marker,.cpin{transition:none}}
+
+  .peek .food-place{margin:10px 0 0}.peek.expanded .food-photo{height:160px}
+  .cn-return{position:absolute;left:clamp(18px,4vw,54px);top:24px;z-index:6}
+  .cn-top{top:86px}.cn-top .cn-kicker{display:none}.cn-top h2{font-size:21px}
+  .cn-actions{left:auto;bottom:auto;right:24px;top:24px;z-index:6}
+  .cn-directory{position:absolute;right:18px;top:80px;bottom:22px;width:170px;z-index:5;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#cbb6b0 transparent;}
+  .cn-directory button{display:block;width:100%;text-align:left;padding:5px 8px;border:0;background:transparent;color:var(--ink-soft);font:inherit;font-size:12px;line-height:1.6;cursor:pointer}
+  .cn-directory button:hover,.cn-directory button.active{color:var(--orange-deep);text-decoration:underline;text-underline-offset:4px}
+  .marker,.cpin{min-width:26px;min-height:26px}.cpin{animation:none;opacity:1}
+  @media(max-width:820px){.cn-directory{right:8px;width:120px}.cn-directory button{padding:5px 6px;font-size:11px}.cn-return{left:18px;top:18px}.cn-actions{right:18px;top:18px}.cn-top{top:80px}.cn-top h2{font-size:18px}}
+  @media(max-width:600px){
+    .cn-directory{left:12px;right:12px;top:auto;bottom:12px;width:auto;height:min(180px,30dvh);background:var(--paper);border-top:1px solid var(--rule);padding-top:6px}
+    .cn-directory button{min-height:36px;font-size:12px;padding:7px 10px}
+    body.china-mode.directory-open .peek{width:min(300px,calc(100vw - 24px))}
+  }
+  :root{--detail-width:clamp(320px,38vw,440px)}
+  .detail-pane{position:absolute;z-index:9;right:0;top:0;bottom:0;width:var(--detail-width);background:transparent;border:0;display:flex;flex-direction:column;padding:28px 28px 40px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
+  .detail-pane::-webkit-scrollbar{display:none;width:0;height:0}
+  @media(min-width:760px){.detail-pane{top:var(--detail-top,0px);bottom:auto;height:var(--detail-height,100%);padding-block:0}}
+  .detail-content{width:100%;max-width:360px;flex-shrink:0;margin:auto;text-align:center}
+  .detail-content .food-facts{text-align:left}
+  .detail-pane h2{font-size:26px;line-height:1.35;margin:0 0 8px;overflow-wrap:anywhere}
+  .detail-pane .detail-place{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 18px}
+  .detail-pane .food-photo{display:block;width:100%;height:210px;object-fit:cover;border-radius:10px;background:#f7ece7}
+  .detail-pane .food-facts{margin-top:22px;gap:16px}.detail-pane .food-fact{font-size:14px}
+  body.detail-open .cn-directory,body.detail-open .cn-actions{visibility:hidden}
+  @media(max-width:759px){
+    .detail-pane{top:auto;left:0;width:100%;height:58dvh;border:0;padding:20px 22px 32px}
+    .detail-pane h2{font-size:22px}.detail-pane .food-photo{height:180px}
+    body.detail-open header .kicker,body.detail-open header .en,body.detail-open .cn-top{display:none}
+    body.detail-open header h1{font-size:22px}
+  }
+  .marker.active .dot::after,.marker.china .dot::before{content:none}
+  .marker .dot,.marker.china .dot,.cpin .cdot{box-shadow:0 0 5px rgba(255,195,106,.65),0 0 10px rgba(255,195,106,.28)}
+  /* All map markers use the same star in default and interactive states. */
+  .marker.world .dot,.marker.china .dot,.cpin .cdot,
+  .marker:hover .dot,.marker.active .dot,.marker:focus-visible .dot,
+  .cpin:hover .cdot,.cpin.active .cdot,.cpin:focus-visible .cdot{
+    width:12px;height:12px;border-radius:0;background:var(--pin);transform:none;box-shadow:none;
+    clip-path:polygon(50% 0%,64% 36%,100% 50%,64% 64%,50% 100%,36% 64%,0% 50%,36% 36%);
+  }
+  .marker[aria-pressed="true"] .dot,.cpin[aria-pressed="true"] .cdot{background:#E99BAF}
+  .cpin:hover .cdot,.cpin.active .cdot,.cpin:focus-visible .cdot{background:#E99BAF}
+  .peek-connector{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-events:none;overflow:visible}
+  .peek-connector path{fill:none;stroke:#CB93A3;stroke-width:1;stroke-dasharray:3 5;stroke-linecap:round;vector-effect:non-scaling-stroke}
+  .nearby-flavors{margin:12px 0;text-align:left}
+  .nearby-flavors p{font-size:11px;color:var(--muted);margin:0 0 4px}
+  .nearby-flavors button{display:block;max-width:100%;min-height:30px;padding:5px 0;border:0;background:none;color:var(--orange-deep);font:inherit;font-size:12px;line-height:1.4;text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  .peek-footer{flex:none;padding:10px 16px 12px;border-top:1px solid var(--rule);background:var(--card)}
+  .peek-more{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:30px;padding:0;border:0;background:none;color:var(--orange-deep);font:inherit;font-size:13px;font-weight:700;text-align:left;cursor:pointer}
+  .peek-more:hover span{text-decoration:underline;text-underline-offset:3px}
+  /* Soft English lettering, with compact, readable long food names. */
+  h1,.cn-top h2,.peek-title,.detail-pane h2{font-family:var(--round);font-weight:500;letter-spacing:0;text-wrap:balance}
+  h1{font-size:clamp(28px,3.5vw,44px);max-width:100%}
+  .peek-title{font-size:20px;line-height:1.25}
+  .cn-directory button{overflow-wrap:anywhere;hyphens:auto;line-height:1.45;padding-top:7px;padding-bottom:7px}
+  .peek .food-fact{grid-template-columns:minmax(0,1fr);gap:2px}
+  .food-fact dt{font-weight:700}
+  /* Labels size to their text, independently of the tiny absolute-positioned pin. */
+  .marker .tag,.cpin .ctag{display:block;width:max-content;max-width:var(--label-width,min(210px,55vw));white-space:normal;overflow-wrap:break-word;word-break:normal;hyphens:none;text-align:left;line-height:1.4;border-radius:10px}
+  .cn-top{left:0;right:0;top:24px;height:44px;display:grid;place-items:center;text-align:center;padding-inline:110px}
+  .cn-top h2{font-size:32px;line-height:1.15}
+  .cn-return,.cn-actions .cn-btn{height:44px;display:flex;align-items:center;justify-content:center;padding-block:0}
+  @media(max-width:820px){.cn-top{top:18px;padding-inline:100px}.cn-top h2{font-size:clamp(18px,3.2vw,26px)}}
+  .marker.world .tag,.cpin .ctag{display:none}
+  .marker.china .tag::after{content:attr(data-hint);display:none;margin-top:4px;font-size:11px;line-height:1.45;color:var(--ink-soft)}
+  .marker.china:hover .tag::after,.marker.china:focus-visible .tag::after{display:block}
+  /* Chromium/WebKit: 3 px instead of the previous thin (~6 px) scrollbar. */
+  @supports selector(::-webkit-scrollbar){
+    .cn-directory{scrollbar-width:auto}
+    .cn-directory::-webkit-scrollbar{width:3px;height:3px}
+    .cn-directory::-webkit-scrollbar-track{background:transparent}
+    .cn-directory::-webkit-scrollbar-thumb{background:#cbb6b0;border-radius:3px}
+    .cn-directory::-webkit-scrollbar-thumb:hover{background:#ac928a}
+  }
+  /* Touch layouts retain the map above a separately scrollable reading area. */
+  @media(max-width:820px){
+    .cn-top,.cn-return,.cn-actions{top:max(18px,env(safe-area-inset-top,0px))}
+    .cn-return{left:max(12px,env(safe-area-inset-left,0px))}
+    .cn-actions{right:max(12px,env(safe-area-inset-right,0px))}
+    .cn-directory button{min-height:44px}
+  }
+  @media(max-width:759px){
+    header{left:max(20px,env(safe-area-inset-left,0px));top:max(18px,env(safe-area-inset-top,0px));right:max(20px,env(safe-area-inset-right,0px));max-width:none}
+    .detail-pane{height:58%;padding:18px max(20px,env(safe-area-inset-right,0px)) max(28px,env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));-webkit-overflow-scrolling:touch;touch-action:pan-y}
+    .detail-pane .food-photo{height:clamp(130px,24dvh,200px)}
+    .detail-content{min-width:0;overflow-wrap:break-word}
+    .peek-more,.peek-expand,.nearby-flavors button{min-height:44px}
+    .peek-head{padding:10px 14px}
+    .peek-title{font-size:18px}
+    .peek-footer{padding:4px 14px}
+    .cn-directory{touch-action:pan-y;-webkit-overflow-scrolling:touch}
+  }
+  @media(max-width:600px){
+    .cn-directory{bottom:max(12px,env(safe-area-inset-bottom,0px));left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px))}
+  }
+  @media(max-width:420px){
+    .detail-pane .food-fact{grid-template-columns:minmax(0,1fr);gap:2px}
+    .cn-top{padding-inline:96px}
+    .cn-top h2{font-size:18px}
+  }
+  @media(max-width:759px) and (max-height:500px){
+    header h1{font-size:26px}
+    .site-intro{font-size:11px;line-height:1.4;max-width:560px;margin-top:6px}
+    .detail-pane{padding-top:12px}
+    .detail-pane h2{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <header>
+    <h1>World Pickle Map</h1>
+    <p class="site-intro">A little journey through China’s pickled vegetables and their cousins around the world. Discover the ingredients, traditions, and flavors behind each jar.</p>
+  </header>
+
+  <div class="globe-wrap">
+    <canvas id="globe" tabindex="0" role="img" aria-label="Interactive pickle globe. Drag or use arrow keys to rotate; plus and minus to zoom. Press Enter to explore China."></canvas>
+  </div>
+
+  <span class="spark s1">✦</span>
+  <span class="spark s2">✦</span>
+  <span class="spark s3">✧</span>
+  <span class="spark s4">✦</span>
+
+  <svg class="peek-connector" id="peekConnector" aria-hidden="true" hidden><path></path></svg>
+  <div class="peek" id="peek" role="region" aria-label="Pickle preview" aria-hidden="true" inert></div>
+
+  <aside class="detail-pane" id="foodDetail" role="region" aria-labelledby="detailTitle" tabindex="-1" hidden></aside>
+
+  <section class="cnview" id="cnView" aria-label="Pickles of China" aria-hidden="true" inert>
+    <canvas id="cnCanvas"></canvas>
+    <div class="cnpins" id="cnPins"></div>
+    <button class="cn-btn cn-return" id="cnBack" type="button">← Back</button>
+    <nav class="cn-directory" id="cnDirectory" aria-label="Chinese pickle catalog" hidden></nav>
+    <div class="cn-top">
+      <p class="cn-kicker">CHINA · 47 varieties</p>
+      <h2>A taste of China</h2>
+    </div>
+    <div class="cn-actions">
+      <button class="cn-btn" id="cnList" type="button" aria-expanded="false" aria-controls="cnDirectory">Catalog</button>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+const DATA = __DATA__;
+const LAND = __LAND__;
+const CHINA = __CHINA__;
+const PROV = __PROV__;
+
+const JD = __JD__;
+
+/* 世界条目的落点（纬度, 经度） */
+const COORDS = {
+  'WORLD-01':[37.6,127.0], 'WORLD-02':[51.0,10.5], 'WORLD-03':[52.2,21.0],
+  'WORLD-04':[35.02,135.76], 'WORLD-05':[35.06,135.75], 'WORLD-06':[35.12,135.72],
+  'WORLD-07':[33.3,130.5], 'WORLD-08':[16.5,107.6], 'WORLD-09':[16.5,102.8],
+  'WORLD-10':[27.7,85.3], 'WORLD-11':[27.6,85.4], 'WORLD-12':[24.8,93.9],
+  'WORLD-13':[38.0,23.0], 'WORLD-14':[13.0,24.0], 'WORLD-B01':[39.0,35.0],
+  'WORLD-B02':[18.5,-72.3], 'WORLD-B03':[35.7,139.7]
+};
+const CN_PIN = { lat:34.3, lon:108.9 };
+
+/* ---------- 小罐子（没有照片时用） ---------- */
+function jarSVG(size, a, b){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 76 76" fill="none" aria-hidden="true">
+    <rect x="25" y="26" width="26" height="7" rx="3" fill="#e2b482"/>
+    <rect x="27.5" y="22" width="21" height="5" rx="2.4" fill="#efc79b"/>
+    <rect x="17" y="32" width="42" height="38" rx="9" fill="#eef5f0" fill-opacity=".72"/>
+    <circle cx="29" cy="45" r="8" fill="${a}"/><circle cx="47" cy="41" r="7" fill="${b}"/>
+    <circle cx="38" cy="57" r="9" fill="${a}"/><circle cx="53" cy="55" r="6" fill="${b}"/>
+    <rect x="17" y="32" width="42" height="38" rx="9" stroke="#b9c9bf" stroke-width="1.4"/>
+    <path d="M21 44c0-4 2-7 5-8" stroke="#fff" stroke-opacity=".85" stroke-width="2.4" stroke-linecap="round"/>
+  </svg>`;
+}
+
+/* ---------- 球面投影 ---------- */
+const canvas = document.getElementById('globe');
+const ctx = canvas.getContext('2d');
+const D2R = Math.PI / 180;
+
+let W = 0, H = 0, cx = 0, cy = 0, baseR = 0, zoom = 1, renderDpr = 1;
+let detailEntry=null,globeTop=0;
+function detailWidth(){return Math.min(440,Math.max(320,window.innerWidth*.38));}
+function detailMapRight(){return detailEntry?(W<760?W*.84:W-detailWidth()-24):W;}
+function detailMapBottom(){return detailEntry&&W<760?H*.42:H;}
+// Center the visible map and reading column; use a compact, explicit globe gap.
+function centerDetailPair(mapLeft,mapRight=null){
+  const pane=document.getElementById('foodDetail');
+  if(!detailEntry||W<760){pane.style.right='0px';return 0;}
+  const paneWidth=detailWidth();
+  const measured=pane.querySelector('.detail-content')?.getBoundingClientRect().width;
+  const contentWidth=measured>0&&measured<=paneWidth?measured:Math.min(360,paneWidth-56);
+  const cardInset=(paneWidth-contentWidth)/2;
+  if(!cnOpen&&mapRight!==null){
+    const gap=Math.max(72,Math.min(128,W*.095));
+    const mapWidth=mapRight-mapLeft;
+    const left=(W-mapWidth-gap-contentWidth)/2;
+    const contentRight=left+mapWidth+gap+contentWidth;
+    pane.style.right=(W-contentRight-cardInset)+'px';
+    return mapLeft-left;
+  }
+  const shift=(mapLeft-cardInset)/2;
+  pane.style.right=shift+'px';
+  return shift;
+}
+// The desktop reading viewport shares the map's visible top and bottom edges.
+function fitDetailHeight(top,bottom){
+  const pane=document.getElementById('foodDetail');
+  if(!detailEntry||W<760){
+    pane.style.removeProperty('--detail-top');pane.style.removeProperty('--detail-height');return;
+  }
+  const start=Math.max(0,top),end=Math.min(H,bottom);
+  pane.style.setProperty('--detail-top',start+'px');
+  pane.style.setProperty('--detail-height',Math.max(0,end-start)+'px');
+}
+const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+let motionEnabled = !motionPreference.matches, rafId = 0, idleTimer = 0;
+const CN_VIEW = { yaw: 108.9, pitch: 26, zoom: 1 };
+let yaw = CN_VIEW.yaw, pitch = CN_VIEW.pitch, vYaw = 0, vPitch = 0;
+let dragging = false, lastX = 0, lastY = 0, lastMove = 0;
+let hoverPin = false;   // 鼠标停在图钉上时地球不转，点才不会跑掉
+let hoverEl = null;
+let focus = null, activePin = null;
+
+const QUALITY = [1, 0.8, 0.66, 0.5];
+let qualityTier = 0;
+
+function resize(){
+  const dpr = renderDpr = Math.min(window.devicePixelRatio || 1, 2) * QUALITY[qualityTier];
+  const stage=document.querySelector('.stage');
+  W = stage.clientWidth || window.innerWidth; H = stage.clientHeight || window.innerHeight;
+  canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  // Reserve actual text height, including wrapping and the final loaded fonts.
+  const headerBottom=document.querySelector('header').getBoundingClientRect().bottom;
+  const gap=W<=600?16:18;
+  globeTop=headerBottom+gap;
+  const bottom=detailMapBottom()-(detailEntry&&W<760?12:28);
+  const availableHeight=Math.max(0,bottom-globeTop);
+  const fitRadius=Math.max(0,Math.min(detailMapRight()*.43,availableHeight/2));
+  cx=detailMapRight()/2;
+  cy=globeTop+availableHeight/2;
+  // Keep zoomed geometry below the introduction too, not just the initial sphere.
+  baseR=Math.min(fitRadius*(detailEntry?.78:.96),fitRadius/zoom);
+  if(!detailEntry)cy=Math.max(globeTop+baseR*zoom,cy-Math.min(32,H*.04));
+  cx-=centerDetailPair(cx-baseR*zoom,cx+baseR*zoom);
+  fitDetailHeight(cy-baseR*zoom,cy+baseR*zoom);
+  layerUnder = null;
+}
+function refreshLayout(){hidePeek(true);resize();if(cnOpen)layoutChina();else requestRender();}
+window.addEventListener('resize',refreshLayout);
+window.visualViewport?.addEventListener('resize',refreshLayout);
+
+function toSphere(lon, lat){
+  const lam = (lon - yaw) * D2R, phi = lat * D2R, cp = Math.cos(phi);
+  const X = cp * Math.sin(lam), Y = Math.sin(phi), Z = cp * Math.cos(lam);
+  const ct = Math.cos(pitch * D2R), st = Math.sin(pitch * D2R);
+  return { x: X, y: Y * ct - Z * st, z: Y * st + Z * ct };
+}
+/* 轮廓摊平成定型数组：每帧只算数、不新建对象，转起来才不卡 */
+const RING_N = LAND.length;
+const RSTART = new Int32Array(RING_N), RLEN = new Int32Array(RING_N);
+const TOTAL = LAND.reduce((a, r) => a + r.length, 0);
+const SINLON = new Float32Array(TOTAL), COSLON = new Float32Array(TOTAL);
+const SINLAT = new Float32Array(TOTAL), COSLAT = new Float32Array(TOTAL);
+const XS = new Float32Array(TOTAL), YS = new Float32Array(TOTAL), ZS = new Float32Array(TOTAL);
+const CXB = new Float32Array(TOTAL + 8), CYB = new Float32Array(TOTAL + 8);
+const HOR = new Uint8Array(TOTAL + 8);   // 1 = 地平线上插出来的点，连线要沿球缘走圆弧
+const RING_LON = new Float32Array(RING_N);   // 每组轮廓的平均经度，用来分欧亚非 / 美洲大洋洲
+{
+  let k = 0;
+  LAND.forEach((ring, i) => {
+    RSTART[i] = k; RLEN[i] = ring.length;
+    let lonSum = 0;
+    for (const [lon, lat] of ring){
+      lonSum += lon;
+      const l = lon * D2R, p = lat * D2R;
+      SINLON[k] = Math.sin(l); COSLON[k] = Math.cos(l);
+      SINLAT[k] = Math.sin(p); COSLAT[k] = Math.cos(p);
+      k++;
+    }
+    RING_LON[i] = lonSum / ring.length;
+  });
+}
+function projectLand(){
+  const sinY = Math.sin(yaw * D2R), cosY = Math.cos(yaw * D2R);
+  const ct = Math.cos(pitch * D2R), st = Math.sin(pitch * D2R);
+  for (let i = 0; i < TOTAL; i++){
+    const cp = COSLAT[i], sp = SINLAT[i];
+    const sl = SINLON[i] * cosY - COSLON[i] * sinY;
+    const cl = COSLON[i] * cosY + SINLON[i] * sinY;
+    const X = cp * sl, Y = sp, Z = cp * cl;
+    XS[i] = X; YS[i] = Y * ct - Z * st; ZS[i] = Y * st + Z * ct;
+  }
+}
+
+/* 裁剪后的多边形：夹在球缘上的那几段要沿圆弧走，直接拉直线就像被切了一刀 */
+function traceClipped(ctx, cx, cy, R, m){
+  ctx.moveTo(cx + R * CXB[0], cy - R * CYB[0]);
+  for (let k = 1; k < m; k++){
+    if (HOR[k] && HOR[k - 1]){
+      const a0 = Math.atan2(-CYB[k - 1], CXB[k - 1]);
+      const a1 = Math.atan2(-CYB[k], CXB[k]);
+      let d = a1 - a0;
+      while (d > Math.PI) d -= Math.PI * 2;
+      while (d < -Math.PI) d += Math.PI * 2;
+      ctx.arc(cx, cy, R, a0, a1, d < 0);
+    } else {
+      ctx.lineTo(cx + R * CXB[k], cy - R * CYB[k]);
+    }
+  }
+  if (HOR[m - 1] && HOR[0]){
+    const a0 = Math.atan2(-CYB[m - 1], CXB[m - 1]);
+    const a1 = Math.atan2(-CYB[0], CXB[0]);
+    let d = a1 - a0;
+    while (d > Math.PI) d -= Math.PI * 2;
+    while (d < -Math.PI) d += Math.PI * 2;
+    ctx.arc(cx, cy, R, a0, a1, d < 0);
+  }
+  ctx.closePath();
+}
+
+/* 中国轮廓：和世界海岸线一样预先摊平，每帧只算数 */
+const C_N = CHINA.length;
+const C_START = new Int32Array(C_N), C_LEN = new Int32Array(C_N);
+const C_TOT = CHINA.reduce((a, r) => a + r.length, 0);
+const CSINLON = new Float32Array(C_TOT), CCOSLON = new Float32Array(C_TOT);
+const CSINLAT = new Float32Array(C_TOT), CCOSLAT = new Float32Array(C_TOT);
+const CX = new Float32Array(C_TOT), CY = new Float32Array(C_TOT), CZ = new Float32Array(C_TOT);
+{
+  let k = 0;
+  CHINA.forEach((ring, i) => {
+    C_START[i] = k; C_LEN[i] = ring.length;
+    for (const [lon, lat] of ring){
+      const l = lon * D2R, p = lat * D2R;
+      CSINLON[k] = Math.sin(l); CCOSLON[k] = Math.cos(l);
+      CSINLAT[k] = Math.sin(p); CCOSLAT[k] = Math.cos(p);
+      k++;
+    }
+  });
+}
+function projectChina(){
+  const sinY = Math.sin(yaw * D2R), cosY = Math.cos(yaw * D2R);
+  const ct = Math.cos(pitch * D2R), st = Math.sin(pitch * D2R);
+  for (let i = 0; i < C_TOT; i++){
+    const cp = CCOSLAT[i], sp = CSINLAT[i];
+    const sl = CSINLON[i] * cosY - CCOSLON[i] * sinY;
+    const cl = CCOSLON[i] * cosY + CSINLON[i] * sinY;
+    const X = cp * sl, Y = sp, Z = cp * cl;
+    CX[i] = X; CY[i] = Y * ct - Z * st; CZ[i] = Y * st + Z * ct;
+  }
+}
+function paintChina(gx, cyc, R){
+  projectChina();
+  // 填一层暖色，把中国从薄荷色的亚洲里拎出来
+  ctx.beginPath();
+  for (let r = 0; r < C_N; r++){
+    const s0 = C_START[r], n = C_LEN[r];
+    let m = 0;
+    for (let k = 0; k < n; k++){
+      const i = s0 + k, j = s0 + ((k + n - 1) % n);
+      const zc = CZ[i], zp = CZ[j];
+      if (zc >= 0){
+        if (zp < 0){
+          const t = zp / (zp - zc);
+          CXB[m] = CX[j] + (CX[i] - CX[j]) * t; CYB[m] = CY[j] + (CY[i] - CY[j]) * t; HOR[m] = 1; m++;
+        }
+        CXB[m] = CX[i]; CYB[m] = CY[i]; HOR[m] = 0; m++;
+      } else if (zp >= 0){
+        const t = zp / (zp - zc);
+        CXB[m] = CX[j] + (CX[i] - CX[j]) * t; CYB[m] = CY[j] + (CY[i] - CY[j]) * t; HOR[m] = 1; m++;
+      }
+    }
+    if (m < 3) continue;
+    traceClipped(ctx, gx, cyc, R, m);
+  }
+  ctx.fillStyle = cssVar('--cn-fill');
+  ctx.fill();
+
+  // 只描看得见的那半圈边界
+  ctx.beginPath();
+  for (let r = 0; r < C_N; r++){
+    const s0 = C_START[r], n = C_LEN[r];
+    let open = false;
+    for (let k = 0; k < n; k++){
+      const i = s0 + k, j = s0 + ((k + 1) % n);
+      if (CZ[i] > 0.02 && CZ[j] > 0.02){
+        const ax = gx + R * CX[i], ay = cyc - R * CY[i];
+        const bx = gx + R * CX[j], by = cyc - R * CY[j];
+        if (!open){ ctx.moveTo(ax, ay); open = true; }
+        ctx.lineTo(bx, by);
+      } else open = false;
+    }
+  }
+  ctx.strokeStyle = cssVar('--cn-edge');
+  ctx.lineWidth = Math.max(0.65, R * 0.0025);
+  ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  ctx.stroke();
+}
+
+function paintRings(gx, cyc, R, keep, color){
+  ctx.beginPath();
+  let any = false;
+  for (let r = 0; r < RING_N; r++){
+    if (!keep(r)) continue;
+    if (RING_LON[r] === 0 && false) continue;
+    const s0 = RSTART[r], n = RLEN[r];
+    let m = 0;
+    for (let k = 0; k < n; k++){
+      const i = s0 + k, j = s0 + ((k + n - 1) % n);
+      const zc = ZS[i], zp = ZS[j];
+      if (zc >= 0){
+        if (zp < 0){
+          const t = zp / (zp - zc);
+          CXB[m] = XS[j] + (XS[i] - XS[j]) * t; CYB[m] = YS[j] + (YS[i] - YS[j]) * t; HOR[m] = 1; m++;
+        }
+        CXB[m] = XS[i]; CYB[m] = YS[i]; HOR[m] = 0; m++;
+      } else if (zp >= 0){
+        const t = zp / (zp - zc);
+        CXB[m] = XS[j] + (XS[i] - XS[j]) * t; CYB[m] = YS[j] + (YS[i] - YS[j]) * t; HOR[m] = 1; m++;
+      }
+    }
+    if (m < 3) continue;
+    traceClipped(ctx, gx, cyc, R, m);
+    any = true;
+  }
+  if (!any) return;
+  ctx.fillStyle = color;
+  ctx.fill();
+}
+
+const cssVarCache = {};
+function cssVar(name){
+  if (!cssVarCache[name]) cssVarCache[name] = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return cssVarCache[name];
+}
+
+function pointInPoly(x, y, pts){
+  let inside = false;
+  for (let i = 0, j = pts.length - 1; i < pts.length; j = i++){
+    const xi = pts[i][0], yi = pts[i][1], xj = pts[j][0], yj = pts[j][1];
+    if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) inside = !inside;
+  }
+  return inside;
+}
+/* 点在球面上的中国范围里吗 */
+function hitChina(px, py){
+  const R = baseR * zoom, gx = cx + viewX, cyc = cy + viewY;
+  if (Math.hypot(px - gx, py - cyc) > R) return false;
+  projectChina();
+  for (let r = 0; r < C_N; r++){
+    const s0 = C_START[r], n = C_LEN[r];
+    const pts = [];
+    for (let k = 0; k < n; k++){
+      const i = s0 + k;
+      if (CZ[i] > 0.03) pts.push([gx + R * CX[i], cyc - R * CY[i]]);
+      else if (pts.length) break;
+    }
+    if (pts.length >= 3 && pointInPoly(px, py, pts)) return true;
+  }
+  return false;
+}
+
+let viewX = 0, viewY = 0;   // 悬浮卡不挪动地球，保持点位稳定
+function updateCenter(){viewX=0;viewY=0;}
+
+/* 海、投影、光影在旋转时不变：一次画进离屏画布，每帧只贴图 + 画陆地 */
+let noiseCanvas = null;
+function noiseTile(){
+  if (noiseCanvas) return noiseCanvas;
+  const n = document.createElement('canvas');
+  n.width = n.height = 140;
+  const g = n.getContext('2d');
+  const img = g.createImageData(140, 140);
+  for (let i = 0; i < img.data.length; i += 4){
+    const v = 196 + Math.random() * 59;
+    img.data[i] = img.data[i+1] = img.data[i+2] = v; img.data[i+3] = 255;
+  }
+  g.putImageData(img, 0, 0);
+  noiseCanvas = n;
+  return n;
+}
+
+let layerUnder = null, layerOver = null;
+function buildLayers(){
+  const R = baseR * zoom;
+  const dpr = renderDpr;
+  const mk = () => {
+    const c = document.createElement('canvas');
+    c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+    const g = c.getContext('2d');
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { c, g };
+  };
+
+  const under = mk();
+  const u = under.g;
+  u.save();
+  u.beginPath();
+  u.ellipse(cx, cy + R * 0.97, R * 0.8, R * 0.095, 0, 0, Math.PI * 2);
+  u.fillStyle = 'rgba(176,140,140,.17)';
+  u.filter = 'blur(9px)';
+  u.fill();
+  u.restore();
+  const seaGrad = u.createRadialGradient(cx - R*0.36, cy - R*0.42, R*0.12, cx, cy, R*1.02);
+  seaGrad.addColorStop(0, '#f9e7df'); seaGrad.addColorStop(.62, '#f6ded5'); seaGrad.addColorStop(1, '#eccabd');
+  u.beginPath(); u.arc(cx, cy, R, 0, Math.PI * 2); u.fillStyle = seaGrad; u.fill();
+  layerUnder = under.c;
+
+  const over = mk();
+  const o = over.g;
+  o.save();
+  o.beginPath(); o.arc(cx, cy, R, 0, Math.PI * 2); o.clip();
+  // 马卡龙：几乎没有光影，只在右下沉一点点，让球面立住
+  const hi = o.createRadialGradient(cx - R*.4, cy - R*.44, 0, cx - R*.4, cy - R*.44, R*1.15);
+  hi.addColorStop(0, 'rgba(255,255,255,.22)'); hi.addColorStop(.5, 'rgba(255,255,255,.04)');
+  hi.addColorStop(1, 'rgba(255,255,255,0)');
+  o.fillStyle = hi; o.fillRect(cx - R, cy - R, R*2, R*2);
+  const sh = o.createRadialGradient(cx + R*.44, cy + R*.48, R*.28, cx + R*.08, cy + R*.08, R*1.1);
+  sh.addColorStop(0, 'rgba(176,142,144,.15)'); sh.addColorStop(1, 'rgba(176,142,144,0)');
+  o.fillStyle = sh; o.fillRect(cx - R, cy - R, R*2, R*2);
+  // 颗粒，压在整颗球上
+  o.globalCompositeOperation = 'multiply';
+  o.globalAlpha = 0.05;
+  o.fillStyle = o.createPattern(noiseTile(), 'repeat');
+  o.fillRect(cx - R, cy - R, R*2, R*2);
+  o.globalAlpha = 1;
+  o.globalCompositeOperation = 'source-over';
+  o.restore();
+  o.beginPath(); o.arc(cx, cy, R, 0, Math.PI * 2);
+  o.strokeStyle = 'rgba(203,164,158,.34)'; o.lineWidth = 1; o.stroke();
+  layerOver = over.c;
+
+  layerDpr = dpr;
+}
+let layerDpr = 1;
+let layerZoom = 0;
+
+function drawGlobe(){
+  const R = baseR * zoom;
+  const gx = cx + viewX, cyc = cy + viewY;
+  if (!layerUnder || Math.abs(zoom - layerZoom) > 0.001){ buildLayers(); layerZoom = zoom; }
+  ctx.clearRect(0, 0, W, H);
+  ctx.save();
+  ctx.drawImage(layerUnder, 0, 0, layerUnder.width, layerUnder.height, viewX, viewY, W, H);
+  ctx.restore();
+
+  projectLand();
+  // 陆地按大洲分两种淡色，同类合成一条路径只填一次
+  const A = cssVar('--land-a'), B = cssVar('--land-b');
+  const isA = lon => lon > -28 && lon < 122;
+  paintRings(gx, cyc, R, r => isA(RING_LON[r]), A);
+  paintRings(gx, cyc, R, r => !isA(RING_LON[r]), B);
+  paintChina(gx, cyc, R);
+
+  ctx.save();
+  ctx.drawImage(layerOver, 0, 0, layerOver.width, layerOver.height, viewX, viewY, W, H);
+  ctx.restore();
+}
+
+/* ---------- 落点：一种酸菜一个点，中国是地方地图入口 ---------- */
+const clusters = DATA.world.filter(e=>COORDS[e.id]).map(e=>({key:e.id,lat:COORDS[e.id][0],lon:COORDS[e.id][1],entries:[e],label:e.name}));
+clusters.push({key:'CN',lat:CN_PIN.lat,lon:CN_PIN.lon,entries:DATA.china,china:true,label:'China'});
+
+const markers = {};
+clusters.forEach(c => {
+  const el = document.createElement('button');
+  el.type = 'button'; el.setAttribute('aria-label', c.china ? 'China. Click to explore all ' + c.entries.length + ' varieties' : c.label + '. Hover or focus to preview; click for the full story.');
+  el.className = 'marker' + (c.entries.length > 1 || c.china ? ' big' : '') + (c.china ? ' china' : ' world');
+  el.innerHTML = `<span class="dot">${c.china ? c.entries.length : (c.entries.length > 1 ? c.entries.length : '')}</span>
+                  <span class="tag">${c.china ? `China · ${c.entries.length} varieties` : c.label}</span>`;
+  if(c.china)el.querySelector('.tag').dataset.hint=`Click to explore all ${c.entries.length} varieties`;
+  el.addEventListener('pointerdown', e => e.stopPropagation());
+  el.addEventListener('pointerenter', event => {
+    lastPointerType=event.pointerType||'mouse';if(lastPointerType==='touch')return;
+    hoverPin = true; hoverEl = el;
+    clearTimeout(peekTimer);
+    keyboardMode=false;if(c.china){hidePeek();return;}
+    peekShow(c.entries,el,c.label);
+  });
+  el.addEventListener('pointerleave', event => {
+    hoverPin = false; hoverEl = null;
+    scheduleHidePeek(event); scheduleIdle();
+  });
+  el.addEventListener('focus', () => { hoverPin = true; hoverEl = el; requestRender(); if(keyboardMode&&!c.china)peekShow(c.entries,el,c.label); });
+  el.addEventListener('blur', () => { hoverPin = false; hoverEl = null; scheduleHidePeek(); scheduleIdle(); });
+  el.addEventListener('click', e => {
+    e.stopPropagation();if(e.pointerType)lastPointerType=e.pointerType;
+    if (c.china){ openChina(); return; }
+    openFoodDetail(c.entries[0]);
+  });
+  document.querySelector('.globe-wrap').appendChild(el);
+  markers[c.key] = { el, c };
+});
+
+// Separate nearby pins gently, keeping each food near its geographic origin.
+function spreadPins(points,distance,bounds){
+  const placed=[];
+  for(const p of points){
+    let chosen=null;
+    for(let i=0;i<900;i++){
+      const radius=i?distance*.52*Math.sqrt(i):0,angle=i*2.399963229728653;
+      const x=Math.max(bounds.left,Math.min(bounds.right,p.x+Math.cos(angle)*radius));
+      const y=Math.max(bounds.top,Math.min(bounds.bottom,p.y+Math.sin(angle)*radius));
+      if(placed.every(q=>Math.hypot(q.x-x,q.y-y)>=distance)){chosen={...p,originX:p.x,originY:p.y,x,y};break;}
+    }
+    placed.push(chosen||{...p,originX:p.x,originY:p.y});
+  }
+  return placed;
+}
+// All pin labels share intrinsic sizing and choose the roomier side near an edge.
+function fitPinLabel(el,x,rightEdge,scale=1){
+  const gap=16,edge=12;
+  const leftRoom=x-edge,rightRoom=rightEdge-x-edge;
+  const preferred=Math.min(210,window.innerWidth*.55);
+  const flip=rightRoom<(preferred+gap)*scale&&leftRoom>rightRoom;
+  const room=(flip?leftRoom:rightRoom)/scale-gap;
+  el.classList.toggle('flip',flip);
+  el.style.setProperty('--label-width',Math.max(60,Math.min(preferred,room))+'px');
+}
+function updateMarkers(R){
+  const gx=cx+viewX,cyc=cy+viewY,front=[];
+  for(const k in markers){
+    const {el,c}=markers[k],sphere=toSphere(c.lon,c.lat),edge=Math.min(1,(sphere.z-.06)/.22);
+    if(edge>.35)front.push({el,c,sphere,edge,x:gx+R*sphere.x,y:cyc-R*sphere.y});
+  }
+  // Geographic anchors must never be nudged or clamped in screen space.
+  const groups=front,shown=new Set(groups.map(g=>g.c.key));
+  for(const key in markers){if(!shown.has(key)){const el=markers[key].el;el.hidden=true;el.tabIndex=-1;el.setAttribute('aria-hidden','true');}}
+  for(const group of groups){
+    const {el,c,sphere,edge,x,y}=group,entries=c.entries;
+    const scopes=[...new Set(entries.map(e=>(e.place||'').split(' · ')[0].split('及')[0]))];
+    const label=c.china?'China':entries.length===1?c.label:scopes.join(' · ');
+    el.hidden=false;el.tabIndex=0;el.setAttribute('aria-hidden','false');
+    el.style.opacity=edge*(c.china?1:.75);el.style.pointerEvents='auto';
+    el.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%) scale(${.82+.28*sphere.z})`;
+    el.classList.toggle('active',detailEntry?.id===c.key);el.setAttribute('aria-pressed',String(detailEntry?.id===c.key));
+    el.classList.toggle('big',entries.length>1||!!c.china);fitPinLabel(el,x,detailMapRight(),.82+.28*sphere.z);
+    el.style.zIndex=String(3+Math.round(sphere.z*10));
+    const number=c.china||entries.length>1?String(entries.length):'';
+    if(el.querySelector('.dot').textContent!==number)el.querySelector('.dot').textContent=number;
+    const text=c.china?`China · ${entries.length} varieties`:label;
+    if(el.querySelector('.tag').textContent!==text)el.querySelector('.tag').textContent=text;
+    el.setAttribute('aria-label',c.china?'China. Click to explore all '+entries.length+' varieties':label+'. Hover or focus to preview; click for the full story.');
+  }
+}
+
+/* ---------- 中国版图：从地球上点进来 ---------- */
+const cnView = document.getElementById('cnView');
+const cnCanvas = document.getElementById('cnCanvas');
+const cnPins = document.getElementById('cnPins');
+const cnCe = cnCanvas.getContext('2d');
+const cnEls = [];
+let cnProj = null, cnOpen = false, directoryOpen = false;
+
+function albers(lon, lat){
+  const RD = Math.PI / 180;
+  const p1 = 25 * RD, p2 = 47 * RD, l0 = 105 * RD;
+  const n = (Math.sin(p1) + Math.sin(p2)) / 2;
+  const C = Math.cos(p1) ** 2 + 2 * n * Math.sin(p1);
+  const rho = Math.sqrt(Math.max(0, C - 2 * n * Math.sin(lat * RD))) / n;
+  const rho0 = Math.sqrt(C) / n;
+  const th = n * (lon * RD - l0);
+  return [rho * Math.sin(th), rho0 - rho * Math.cos(th)];
+}
+
+function layoutChina(){
+  const W2 = cnView.clientWidth, H2 = cnView.clientHeight;
+  if (!W2 || !H2) return;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  cnCanvas.width = Math.round(W2 * dpr); cnCanvas.height = Math.round(H2 * dpr);
+  cnCe.setTransform(dpr, 0, 0, dpr, 0, 0);
+  cnCe.clearRect(0, 0, W2, H2);
+
+  const mobile = W2 <= 820;
+  const pad = mobile ? { l:18, r:directoryOpen&&W2>600?138:18, t:140, b:directoryOpen&&W2<=600?directoryBottomHeight()+28:64 } : { l:76, r:directoryOpen?210:76, t:132, b:80 };
+  if(detailEntry){pad.r=W2<760?W2*.16:detailWidth()+40;pad.l=W2<760?16:40;pad.t=W2<760?88:132;pad.b=W2<760?H2*.58+20:80;}
+  const availW = W2 - pad.l - pad.r, availH = Math.max(60,H2 - pad.t - pad.b);
+  const MAIN_MINLAT = 17.2;   // 主图只画到这个纬度，南海诸岛单开小图
+
+  const pvR = PROV.map(r => r.map(([lon, lat]) => albers(lon, lat)));
+  const cnR = CHINA.map(r => r.map(([lon, lat]) => albers(lon, lat)));
+
+  // 主图范围：只用主图范围内的点定缩放
+  let minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+  PROV.forEach(r => r.forEach(([lon, lat]) => {
+    if (lat < MAIN_MINLAT) return;
+    const [x, y] = albers(lon, lat);
+    if (x < minX) minX = x; if (x > maxX) maxX = x;
+    if (y < minY) minY = y; if (y > maxY) maxY = y;
+  }));
+  const w = maxX - minX, h = maxY - minY;
+  const s = Math.min(availW / w, availH / h)*(detailEntry?.78:1);
+  const detailShift=centerDetailPair(pad.l+(availW-w*s)/2);
+  const ox = pad.l + (availW - w * s) / 2 - minX * s - detailShift;
+  const oy = pad.t + (availH - h * s) / 2 + maxY * s;
+  cnProj = ([x, y]) => [ox + x * s, oy - y * s];
+  fitDetailHeight(oy-maxY*s,oy-minY*s);
+
+  const trace = (rings, proj) => {
+    cnCe.beginPath();
+    for (const r of rings){
+      r.forEach((p, i) => { const [x, y] = proj(p); i ? cnCe.lineTo(x, y) : cnCe.moveTo(x, y); });
+      cnCe.closePath();
+    }
+  };
+  cnCe.lineJoin = 'round'; cnCe.lineCap = 'round';
+
+  // ---- 主图 ----
+  cnCe.save();
+  cnCe.beginPath(); cnCe.rect(pad.l - 8 - detailShift, pad.t - 8, availW + 16, availH + 16); cnCe.clip();
+
+  cnCe.save();
+  cnCe.shadowColor = 'rgba(176,140,140,.32)';
+  cnCe.shadowBlur = 24; cnCe.shadowOffsetY = 11;
+  trace(pvR, cnProj); cnCe.fillStyle = cssVar('--cn-fill'); cnCe.fill();
+  cnCe.restore();
+
+
+  trace(pvR, cnProj);
+  cnCe.strokeStyle = 'rgba(224,183,126,.40)'; cnCe.lineWidth = 0.75; cnCe.stroke();
+
+
+  trace(cnR, cnProj);
+  cnCe.strokeStyle = cssVar('--cn-edge'); cnCe.lineWidth = 0.85; cnCe.stroke();
+
+  cnCe.restore();   // 主图裁剪结束，下面画附图，别再被主图矩形切掉
+
+  // ---- 南海诸岛小图（标准做法：右下角附图）----
+  const box = detailEntry&&W2<760?{w:56,h:72}:mobile ? { w: 84, h: 112 } : { w: 132, h: 170 };
+  const bx = W2 - pad.r + (mobile ? 12 : 20) - box.w - detailShift;
+  const by = H2 - (detailEntry&&W2<760?H2*.58+20:directoryOpen&&W2<=600?directoryBottomHeight()+28:mobile?70:78) - box.h;
+  let jMinX = 1e9, jMaxX = -1e9, jMinY = 1e9, jMaxY = -1e9;
+  for (const r of JD) for (const [lon, lat] of r){
+    const p = albers(lon, lat);
+    if (p[0] < jMinX) jMinX = p[0]; if (p[0] > jMaxX) jMaxX = p[0];
+    if (p[1] < jMinY) jMinY = p[1]; if (p[1] > jMaxY) jMaxY = p[1];
+  }
+  const jw = jMaxX - jMinX, jh = jMaxY - jMinY;
+  const js = Math.min((box.w - 16) / jw, (box.h - 16) / jh);
+  const jox = bx + 8 + ((box.w - 16) - jw * js) / 2 - jMinX * js;
+  const joy = by + 8 + ((box.h - 16) - jh * js) / 2 + jMaxY * js;
+  const projJ = ([lon, lat]) => { const p = albers(lon, lat); return [jox + p[0] * js, joy - p[1] * js]; };
+  const traceLL = (rings, proj) => {
+    cnCe.beginPath();
+    for (const r of rings){
+      r.forEach((ll, i) => { const [x, y] = proj(ll); i ? cnCe.lineTo(x, y) : cnCe.moveTo(x, y); });
+      cnCe.closePath();
+    }
+  };
+
+  cnCe.save();
+  cnCe.beginPath(); cnCe.rect(bx, by, box.w, box.h); cnCe.clip();
+  cnCe.fillStyle = 'rgba(249,231,223,.5)'; cnCe.fillRect(bx, by, box.w, box.h);
+  traceLL(PROV, projJ); cnCe.fillStyle = cssVar('--cn-fill'); cnCe.fill();
+  traceLL(PROV, projJ);
+  cnCe.strokeStyle = 'rgba(224,183,126,.42)'; cnCe.lineWidth = 0.7; cnCe.stroke();
+  traceLL(CHINA, projJ);
+  cnCe.strokeStyle = cssVar('--cn-edge'); cnCe.lineWidth = 0.65; cnCe.stroke();
+  traceLL(JD, projJ);
+  cnCe.strokeStyle = cssVar('--cn-edge'); cnCe.lineWidth = 0.85; cnCe.lineCap = 'round';
+  cnCe.stroke();
+  cnCe.restore();
+
+  cnCe.beginPath(); cnCe.rect(bx, by, box.w, box.h);
+  cnCe.strokeStyle = 'rgba(224,183,126,.5)'; cnCe.lineWidth = 0.9; cnCe.stroke();
+  cnCe.fillStyle = cssVar('--muted');
+  cnCe.font = '10px Nunito,system-ui,sans-serif';
+  cnCe.textAlign = 'center'; cnCe.textBaseline = 'top';
+  cnCe.fillText('S. China Sea islands', bx + box.w / 2, by + box.h + 7, box.w);
+
+  buildCnPins();
+}
+function directoryBottomHeight(){
+  const bottom=parseFloat(getComputedStyle(document.getElementById('cnDirectory')).getPropertyValue('bottom'))||12;
+  return Math.min(180,H*.30)+Math.max(0,bottom-12);
+}
+const chinaPinProvince=new Map(DATA.china.map(e=>[e.id,PROV.find(r=>pointInPoly(e.lon,e.lat,r))]));
+function spreadChinaPins(raw,distance){
+  const projected=new Map(),placed=[];
+  for(const p of raw){
+    const region=chinaPinProvince.get(p.e.id);
+    if(!region){placed.push(p);continue;}
+    if(!projected.has(region))projected.set(region,region.map(([lon,lat])=>cnProj(albers(lon,lat))));
+    const ring=projected.get(region);
+    const inside=(x,y)=>pointInPoly(x,y,ring);
+    const clearance=(x,y)=>[[3.5,0],[-3.5,0],[0,3.5],[0,-3.5]].every(([dx,dy])=>inside(x+dx,y+dy));
+    const candidates=[];let chosen=null;
+    // Search nearby land in the original province, never push a point across the sea.
+    for(let i=0;i<=420;i++){
+      const radius=i?2.5*Math.sqrt(i):0,angle=i*2.399963229728653;
+      const x=p.x+Math.cos(angle)*radius,y=p.y+Math.sin(angle)*radius;
+      if(!inside(x,y))continue;
+      const gap=Math.min(Infinity,...placed.map(q=>Math.hypot(q.x-x,q.y-y)));
+      const safe=clearance(x,y),candidate={x,y,gap,safe};
+      candidates.push(candidate);
+      if(safe&&gap>=distance){chosen=candidate;break;}
+    }
+    if(!chosen){
+      const safe=candidates.filter(c=>c.safe),pool=safe.length?safe:candidates;
+      for(const gap of [22,16,10,6]){chosen=pool.find(c=>c.gap>=gap);if(chosen)break;}
+      chosen ||= pool.reduce((best,c)=>!best||c.gap>best.gap?c:best,null);
+    }
+    placed.push({...p,x:chosen?.x??p.x,y:chosen?.y??p.y});
+  }
+  return placed;
+}
+function buildCnPins(){
+  cnPins.innerHTML='';cnEls.length=0;
+  const raw=DATA.china.filter(e=>e.lat!=null).map(e=>{const [x,y]=cnProj(albers(e.lon,e.lat));return {e,x,y};});
+  const points=spreadChinaPins(raw,cnView.clientWidth<=820?28:30);
+  for(const [i,p] of points.entries()){
+    const e=p.e,el=document.createElement('button');el.type='button';el.className='cpin';el.dataset.key=e.id;
+    el.innerHTML=`<span class="cdot"></span><span class="ctag">${esc(e.name)}</span>`;
+    el.style.left=p.x+'px';el.style.top=p.y+'px';el.style.animationDelay='0ms';el.style.transform='translate(-50%,-50%)';
+    const nearest=Math.min(Infinity,...points.filter(q=>q!==p).map(q=>Math.hypot(q.x-p.x,q.y-p.y)));
+    const hitSize=Math.max(8,Math.min(26,nearest*.9))+'px';
+    el.style.width=el.style.height=el.style.minWidth=el.style.minHeight=hitSize;
+    const labelRight=detailEntry?detailMapRight():cnView.clientWidth-(directoryOpen&&cnView.clientWidth>600?(cnView.clientWidth<=820?142:214):0);
+    fitPinLabel(el,p.x,labelRight);
+    el.classList.toggle('active',detailEntry?.id===e.id);el.setAttribute('aria-pressed',String(detailEntry?.id===e.id));
+    el.setAttribute('aria-label',e.name+'. Hover to preview; click for the full story.');
+    bindFoodHover(el,e);
+    cnPins.appendChild(el);cnEls.push(el);
+  }
+}
+function bindFoodHover(el,entry){
+  el.addEventListener('pointerenter',event=>enterFoodHover(el,entry,event));
+  el.addEventListener('pointerleave',event=>{if(pendingHover?.el===el)cancelHoverSwitch();scheduleHidePeek(event);});
+  el.addEventListener('focus',()=>{if(keyboardMode)peekShow([entry],el,entry.name);});
+  el.addEventListener('blur',scheduleHidePeek);
+  el.addEventListener('click',event=>{if(event.pointerType)lastPointerType=event.pointerType;cancelHoverSwitch();openFoodDetail(entry);});
+}
+
+function openChina(){
+  closeFoodDetail(false);
+  hidePeek(true); cnOpen = true;
+  cancelAnimationFrame(rafId); rafId = 0; clearTimeout(idleTimer);
+  cnView.classList.add('show'); cnView.inert = false;
+  cnView.setAttribute('aria-hidden', 'false'); document.body.classList.add('china-mode');
+  layoutChina(); setSurfaceAvailability(); document.getElementById('cnBack').focus();
+}
+function closeChina(){
+  closeFoodDetail(false);
+  hidePeek(true); cnOpen = false;
+  cnView.classList.remove('show'); cnView.inert = true; cnView.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('china-mode'); setSurfaceAvailability();
+  requestRender(); scheduleIdle(); markers.CN.el.focus();
+}
+document.getElementById('cnBack').addEventListener('click', closeChina);
+
+const directory=document.getElementById('cnDirectory');
+for(const e of DATA.china){
+  const button=document.createElement('button');button.type='button';button.dataset.food=e.id;button.textContent=e.catalogName||e.name;button.setAttribute('aria-label',e.name);
+  bindFoodHover(button,e);directory.appendChild(button);
+}
+function setDirectoryOpen(open,keepPreview=false){
+  if(directoryOpen===open)return;
+  const previewId=keepPreview&&peek.classList.contains('show')?peek.querySelector('[data-entry]')?.dataset.entry:null;
+  if(!previewId)hidePeek();
+  directoryOpen=open;directory.hidden=!open;
+  document.body.classList.toggle('directory-open',open);
+  document.getElementById('cnList').setAttribute('aria-expanded',String(open));
+  if(cnOpen)layoutChina();
+  // Keep an interacted-with preview still while its former directory anchor disappears.
+  if(previewId){
+    peekAnchor?.setAttribute('aria-expanded','false');
+    peekAnchor=cnEls.find(el=>el.dataset.key===previewId)||null;
+    peekAnchor?.setAttribute('aria-expanded','true');
+    peekAnchor?.setAttribute('aria-controls','peek');
+    peekAnchor?.classList.add('active');
+    updatePeekConnector();
+  }
+}
+document.getElementById('cnList').addEventListener('click',()=>setDirectoryOpen(!directoryOpen));
+// Run after the clicked control, so rebuilding map points cannot swallow its action.
+document.addEventListener('click',event=>{
+  if(!directoryOpen||directory.contains(event.target)||document.getElementById('cnList').contains(event.target))return;
+  if(event.target===canvas&&movedDuringDrag)return;
+  setDirectoryOpen(false,peek.contains(event.target));
+});
+
+/* ---------- 悬停卡片：贴着图钉出内容，不走侧边 ---------- */
+const peek = document.getElementById('peek');
+const $ = id => document.getElementById(id);
+let peekTimer = 0, peekAnchor = null;
+let keyboardMode=false, lastHoverPoint=null, lastPointerType='mouse', peekInput='mouse';
+let pendingHover=null, hoverSwitchTimer=0;
+let peekExpanded = false;
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = value => /^https?:\/\//i.test(value || '') ? value : '';
+function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(' · ').at(-1)); }
+function photoBlock(e, cls){
+  if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
+  const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
+  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(e.photo)}" alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="lazy" decoding="async" width="960" height="640"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
+}
+function licenseUrl(e){
+  if (e.licenseUrl) return safeUrl(e.licenseUrl);
+  const credit=e.credit||'', match=credit.match(/CC BY(-SA)? (\d\.\d)/i);
+  if(match)return `https://creativecommons.org/licenses/by${match[1]?'-sa':''}/${match[2]}/`;
+  if(/CC0/i.test(credit))return 'https://creativecommons.org/publicdomain/zero/1.0/';
+  return '';
+}
+function creditBlock(e){
+  if (!e.credit) return '';
+  const parts = e.credit.split(' · '), source = imageSource(e), url = licenseUrl(e);
+  const label = safeUrl(parts.at(-1)) ? parts.slice(0,-1).join(' · ') : e.credit;
+  return `Photo: ${esc(label)}${source ? ` · <a href="${esc(source)}" target="_blank" rel="noopener">Source</a>` : ''}${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">License</a>` : ''}`;
+}
+document.addEventListener('error', event => { const image=event.target; if(image instanceof HTMLImageElement && image.hasAttribute('data-food-photo'))image.closest('.photo-figure')?.classList.add('image-failed'); }, true);
+function nearbyWorldNav(entry){
+  const current=markers[entry.id];if(!current||current.c.china)return '';
+  const p=toSphere(current.c.lon,current.c.lat);
+  const near=DATA.world.filter(e=>{
+    if(e.id===entry.id||!markers[e.id])return false;
+    const c=markers[e.id].c,q=toSphere(c.lon,c.lat);
+    return q.z>.14&&Math.hypot(q.x-p.x,q.y-p.y)*baseR*zoom<40;
+  });
+  if(!near.length)return '';
+  return `<nav class="nearby-flavors" aria-label="Nearby flavors"><p>Nearby flavors</p>${near.map(e=>`<button type="button" data-nearby-food="${esc(e.id)}">${esc(e.catalogName||e.name)}</button>`).join('')}</nav>`;
+}
+function openNearbyFood(event){
+  const button=event.target.closest('[data-nearby-food]');if(!button)return;
+  const entry=DATA.world.find(e=>e.id===button.dataset.nearbyFood);if(entry)openFoodDetail(entry);
+}
+peek.addEventListener('click',openNearbyFood);
+$('foodDetail').addEventListener('click',openNearbyFood);
+function peekEntry(e){
+  return `<article class="food-entry" data-entry="${esc(e.id)}">${photoBlock(e,'food-photo')}<p class="food-place">${esc(e.place)}</p><p class="food-summary">${esc(e.taste)}</p>${nearbyWorldNav(e)}<button class="peek-expand" id="peekExpand" aria-expanded="false" aria-controls="foodDetails">Quick facts</button><div id="foodDetails" hidden>${e.local?`<p class="food-local">${esc(e.local)}</p>`:''}${e.categoryLabel?`<span class="category-label">${esc(e.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',e.materials],['Preparation',e.process],['Flavor',e.taste],['Enjoy it',e.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(e)}</p>${e.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(e.sourceUrl))}" target="_blank" rel="noopener">${esc(e.sourceTitle||'View reference')}</a></p>`:''}</footer></div></article>`;
+}
+function chooseChinaPeekPosition(anchor,width,height,bounds,previewHeight=height,points=[]){
+  const gap=64;
+  const clampX=x=>Math.max(bounds.left,Math.min(bounds.right-width,x));
+  const clampY=y=>Math.max(bounds.top,Math.min(bounds.bottom-height,y));
+  const candidates=[];
+  const add=(x,y)=>candidates.push({x:clampX(x),y:clampY(y)});
+  for(const distance of [gap,112,176])for(const dy of [0,-80,80,-160,160]){
+    add(anchor.x-distance-width,anchor.y-previewHeight/2+dy);
+    add(anchor.x+distance,anchor.y-previewHeight/2+dy);
+  }
+  add(anchor.x-width/2,anchor.y-gap-height);add(anchor.x-width/2,anchor.y+gap);
+  // Empty-space fallbacks are rescored per anchor, never retained as a fixed dock.
+  for(let x=bounds.left;x<=bounds.right-width;x+=32)for(let y=bounds.top;y<=bounds.bottom-height;y+=32)add(x,y);
+  add(bounds.right-width,bounds.bottom-height);
+  const covers=(c,p,pad)=>p.x+pad>c.x&&p.x-pad<c.x+width&&p.y+pad>c.y&&p.y-pad<c.y+height;
+  const preferLeft=anchor.x<(bounds.left+bounds.right)/2;
+  let best=null;
+  for(const c of candidates){
+    const dx=Math.max(c.x-anchor.x,0,anchor.x-c.x-width),dy=Math.max(c.y-anchor.y,0,anchor.y-c.y-previewHeight);
+    const distance=Math.hypot(dx,dy);
+    const blocked=points.filter(p=>covers(c,p,22)).length;
+    const nearBlocked=points.filter(p=>Math.hypot(p.x-anchor.x,p.y-anchor.y)<100&&covers(c,p,22)).length;
+    const score=(covers(c,anchor,24)?1e8:0)+blocked*1e6+nearBlocked*1e5+
+      Math.max(0,gap-distance)*1000+Math.abs(distance-gap)*2+
+      Math.abs(c.y+previewHeight/2-anchor.y)*.5+((c.x+width/2<anchor.x)!==preferLeft?15:0);
+    if(!best||score<best.score)best={...c,score};
+  }
+  return {x:best.x,y:best.y};
+}
+function peekConnectorPath(id,sx,sy,ex,ey,width,height){
+  // Stable per-food variation: direction, bend strength, and where the curve opens.
+  let seed=2166136261;
+  for(const char of id)seed=Math.imul(seed^char.charCodeAt(0),16777619)>>>0;
+  const sample=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+  const direction=sample()<.5?-1:1;
+  const dx=ex-sx,dy=ey-sy,span=Math.max(1,Math.hypot(dx,dy));
+  const bend=Math.min(30+sample()*38,span*(.14+sample()*.27));
+  const first=.22+sample()*.17,second=.63+sample()*.17;
+  const counterCurve=sample()<.28;
+  const bend2=bend*(.45+sample()*.7)*(counterCurve?-1:1);
+  const control=(along,offset)=>({
+    x:Math.max(12,Math.min(width-12,sx+dx*along-dy/span*offset*direction)),
+    y:Math.max(12,Math.min(height-12,sy+dy*along+dx/span*offset*direction))
+  });
+  const a=control(first,bend),b=control(second,bend2);
+  return `M ${sx} ${sy} C ${a.x} ${a.y} ${b.x} ${b.y} ${ex} ${ey}`;
+}
+function updatePeekConnector(){
+  const connector=document.getElementById('peekConnector');
+  const id=peek.querySelector('[data-entry]')?.dataset.entry;
+  const pin=cnEls.find(el=>el.dataset.key===id);
+  if(!cnOpen||detailEntry||!peek.classList.contains('show')||!pin){connector.setAttribute('hidden','');return;}
+  const host=document.querySelector('.stage').getBoundingClientRect(),a=pin.getBoundingClientRect(),card=peek.getBoundingClientRect();
+  const ax=a.left+a.width/2,ay=a.top+a.height/2;
+  if(ax>=card.left&&ax<=card.right&&ay>=card.top&&ay<=card.bottom){connector.setAttribute('hidden','');return;}
+  const ends=[
+    {x:card.left,y:Math.max(card.top+16,Math.min(card.bottom-16,ay))},
+    {x:card.right,y:Math.max(card.top+16,Math.min(card.bottom-16,ay))},
+    {x:Math.max(card.left+16,Math.min(card.right-16,ax)),y:card.top},
+    {x:Math.max(card.left+16,Math.min(card.right-16,ax)),y:card.bottom}
+  ];
+  const end=ends.sort((a,b)=>Math.hypot(a.x-ax,a.y-ay)-Math.hypot(b.x-ax,b.y-ay))[0];
+  const length=Math.hypot(end.x-ax,end.y-ay),inset=Math.min(8,length/2);
+  const sx=ax+(end.x-ax)*inset/length-host.left,sy=ay+(end.y-ay)*inset/length-host.top;
+  connector.querySelector('path').setAttribute('d',peekConnectorPath(id,sx,sy,end.x-host.left,end.y-host.top,host.width,host.height));
+  connector.removeAttribute('hidden');
+}
+function placePeek(anchorEl){
+  const host=document.querySelector('.stage').getBoundingClientRect();
+  const directoryItem=anchorEl.hasAttribute('data-food');
+  const mapPin=directoryItem?cnEls.find(el=>el.dataset.key===anchorEl.dataset.food):null;
+  const a=(mapPin||anchorEl).getBoundingClientRect();
+  peek.style.visibility='hidden';peek.classList.add('show');peek.inert=false;peek.setAttribute('aria-hidden','false');
+  const pw=peek.offsetWidth,ph=peek.offsetHeight,gap=12,edge=12;
+  const right=a.right-host.left+gap,left=a.left-host.left-pw-gap;
+  let x=right+pw<=host.width-edge?right:left>=edge?left:(host.width-pw)/2;
+  if(!cnOpen&&anchorEl.classList.contains('marker')){
+    const radius=baseR*zoom,center=cx+viewX;
+    const outside=[center+radius+8,center-radius-pw-8].filter(v=>v>=edge&&v+pw<=host.width-edge);
+    if(outside.length)x=outside.sort((u,v)=>Math.abs(u+pw/2-(a.left-host.left+a.width/2))-Math.abs(v+pw/2-(a.left-host.left+a.width/2)))[0];
+  }
+  let y=a.top-host.top+a.height/2-ph/2;
+  if(right+pw>host.width-edge&&left<edge){
+    const below=a.bottom-host.top+gap,above=a.top-host.top-ph-gap;
+    if(below+ph<=host.height-edge)y=below;else if(above>=edge)y=above;
+  }
+  const bottomDirectory=cnOpen&&directoryOpen&&window.innerWidth<=600;
+  const maxRight=cnOpen&&directoryOpen&&!bottomDirectory?directory.getBoundingClientRect().left-host.left-10:host.width-edge;
+  const maxBottom=bottomDirectory?directory.getBoundingClientRect().top-host.top-12:host.height-edge;
+  const expandedHeight=Math.min(window.innerHeight*.5,maxBottom-(cnOpen?80:edge));
+  peek.style.setProperty('--peek-limit',Math.max(80,expandedHeight)+'px');
+  const layoutHeight=Math.max(peek.offsetHeight,expandedHeight);
+  if(cnOpen){
+    const anchor={x:a.left-host.left+a.width/2,y:a.top-host.top+a.height/2};
+    const points=cnEls.map(el=>({x:parseFloat(el.style.left),y:parseFloat(el.style.top)}));
+    const position=chooseChinaPeekPosition(anchor,pw,layoutHeight,{left:edge,right:maxRight,top:80,bottom:maxBottom},peek.offsetHeight,points);
+    x=position.x;y=position.y;
+  }
+  peek.style.left=Math.max(edge,Math.min(maxRight-pw,x))+'px';
+  peek.style.top=Math.max(edge,Math.min(maxBottom-layoutHeight,y))+'px';peek.style.visibility='';
+  updatePeekConnector();
+}
+function hidePeek(){
+  document.getElementById('peekConnector').setAttribute('hidden','');
+  cancelHoverSwitch();clearTimeout(peekTimer);peekAnchor?.setAttribute('aria-expanded','false');
+  peek.classList.remove('show');peek.inert=true;peek.setAttribute('aria-hidden','true');peekAnchor=null;peekExpanded=false;
+  cnEls.forEach(el=>el.classList.toggle('active',el.dataset.key===detailEntry?.id));directory.querySelectorAll('button').forEach(el=>el.classList.toggle('active',el.dataset.food===detailEntry?.id));
+  scheduleIdle();
+}
+function scheduleHidePeek(event){
+  if(event?.pointerType==='touch'||peekInput==='touch')return;
+  clearTimeout(peekTimer);peekTimer=setTimeout(()=>{
+    const focused=keyboardMode&&(peek.contains(document.activeElement)||document.activeElement===peekAnchor);
+    if(!peek.matches(':hover')&&!peekAnchor?.matches(':hover')&&!focused)hidePeek();
+  },90);
+}
+function cancelHoverSwitch(){clearTimeout(hoverSwitchTimer);hoverSwitchTimer=0;pendingHover=null;}
+function enterFoodHover(el,entry,event){
+  if(detailEntry)return;
+  lastPointerType=event.pointerType||'mouse';if(lastPointerType==='touch')return;
+  keyboardMode=false;
+  // While travelling from the directory, passing over a map pin must not hijack the card.
+  const travellingToCard=peekAnchor&&lastHoverPoint&&Number.isFinite(event.clientX)&&towardCard({x:event.clientX,y:event.clientY},lastHoverPoint,peekAnchor.getBoundingClientRect(),peek.getBoundingClientRect());
+  if((peekAnchor?.hasAttribute('data-food')||travellingToCard)&&el.classList.contains('cpin')&&peek.classList.contains('show')){
+    cancelHoverSwitch();clearTimeout(peekTimer);pendingHover={el,entry};
+    hoverSwitchTimer=setTimeout(()=>{const next=pendingHover;pendingHover=null;hoverSwitchTimer=0;if(next)peekShow([next.entry],next.el);},220);
+    return;
+  }
+  peekShow([entry],el);
+}
+function closePeek(){
+  const anchor=peekAnchor,restore=peek.contains(document.activeElement);hidePeek();
+  if(restore&&anchor?.isConnected){const wasKeyboard=keyboardMode;keyboardMode=false;anchor.focus();keyboardMode=wasKeyboard;}
+}
+function peekShow(entries,el){
+  if(detailEntry)return;
+  cancelHoverSwitch();clearTimeout(peekTimer);peekInput=keyboardMode?'keyboard':lastPointerType;
+  if(el.classList.contains('china'))return;
+  if(peekAnchor===el&&peek.classList.contains('show'))return;
+  const e=entries[0];if(!e)return;
+  peekAnchor?.setAttribute('aria-expanded','false');peekAnchor=el;peekExpanded=false;
+  el.setAttribute('aria-expanded','true');el.setAttribute('aria-controls','peek');
+  focus=null;vYaw=vPitch=0;clearTimeout(idleTimer);peek.classList.remove('expanded');peek.style.removeProperty('--peek-limit');
+  peek.innerHTML=`<div class="peek-head"><h2 class="peek-title">${esc(e.name)}</h2></div><div class="peek-scroll">${peekEntry(e)}</div><footer class="peek-footer"><button type="button" class="peek-more" id="peekMore" aria-controls="foodDetail"><span>Click the star to see more</span></button></footer>`;
+  $('peekMore').addEventListener('click',()=>openFoodDetail(e));
+  cnEls.forEach(pin=>pin.classList.toggle('active',pin.dataset.key===e.id));
+  directory.querySelectorAll('button').forEach(button=>button.classList.toggle('active',button.dataset.food===e.id));
+  placePeek(el);
+  $('peekExpand').addEventListener('click',()=>{
+    peekExpanded=!peekExpanded;peek.classList.toggle('expanded',peekExpanded);$('foodDetails').hidden=!peekExpanded;
+    $('peekExpand').setAttribute('aria-expanded',String(peekExpanded));$('peekExpand').textContent=peekExpanded?'Hide facts':'Quick facts';
+    updatePeekConnector();
+  });
+}
+peek.addEventListener('pointerenter',event=>{if(event.pointerType&&event.pointerType!=='touch'){lastPointerType=event.pointerType;peekInput=event.pointerType;}cancelHoverSwitch();clearTimeout(peekTimer);});peek.addEventListener('pointerleave',scheduleHidePeek);
+peek.addEventListener('focusin',()=>clearTimeout(peekTimer));peek.addEventListener('focusout',scheduleHidePeek);
+function setSurfaceAvailability(){document.querySelector('.globe-wrap').inert=cnOpen;cnView.inert=!cnOpen;}
+function markActive(c){activePin=c;for(const k in markers)markers[k].el.classList.toggle('active',!!c&&markers[k].c.key===c.key);}
+// Only protect a deliberate, short journey toward the card, never unrelated mouse movement.
+function towardCard(point,previous,anchor,card){
+  if(!previous)return false;
+  const tx=Math.max(card.left,Math.min(card.right,point.x)),ty=Math.max(card.top,Math.min(card.bottom,point.y));
+  const moving=(point.x-previous.x)*(tx-point.x)+(point.y-previous.y)*(ty-point.y)>0;
+  const minX=Math.min(anchor.left,card.left)-6,maxX=Math.max(anchor.right,card.right)+6;
+  const minY=Math.min(anchor.top,card.top)-6,maxY=Math.max(anchor.bottom,card.bottom)+6;
+  return moving&&point.x>=minX&&point.x<=maxX&&point.y>=minY&&point.y<=maxY;
+}
+document.addEventListener('pointermove',event=>{
+  if(event.pointerType==='touch')return;
+  keyboardMode=false;lastPointerType=event.pointerType||'mouse';peekInput=lastPointerType;const point={x:event.clientX,y:event.clientY},previous=lastHoverPoint;lastHoverPoint=point;
+  if(!peekAnchor||!peek.classList.contains('show'))return;
+  if(peek.contains(event.target)||peekAnchor.contains(event.target)){cancelHoverSwitch();clearTimeout(peekTimer);return;}
+  if(pendingHover?.el.contains(event.target)){clearTimeout(peekTimer);return;}
+  if(towardCard(point,previous,peekAnchor.getBoundingClientRect(),peek.getBoundingClientRect())){scheduleHidePeek();return;}
+  hidePeek();
+});
+document.addEventListener('pointerdown',event=>{keyboardMode=false;lastPointerType=event.pointerType||'mouse';if(peek.contains(event.target)||peekAnchor?.contains(event.target)){peekInput=lastPointerType;clearTimeout(peekTimer);}else hidePeek();},true);
+window.addEventListener('keydown',event=>{
+  keyboardMode=true;peekInput='keyboard';
+  if(event.key==='Tab'&&!event.shiftKey&&document.activeElement===peekAnchor&&peek.classList.contains('show')){event.preventDefault();$('peekExpand')?.focus();return;}
+  if(event.key!=='Escape')return;
+  if(detailEntry){event.preventDefault();closeFoodDetail(true);return;}
+  if(peek.classList.contains('show')){event.preventDefault();closePeek();}
+  else if(directoryOpen){event.preventDefault();setDirectoryOpen(false);$('cnList').focus();}
+  else if(cnOpen)closeChina();
+});
+
+/* ---------- 点击详情：独立阅读区，不随悬停离开关闭 ---------- */
+function openFoodDetail(entry){
+  if(!entry)return;detailEntry=entry;hidePeek();focus=null;vYaw=vPitch=0;
+  const pane=$('foodDetail');
+  pane.innerHTML=`<div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${nearbyWorldNav(entry)}${photoBlock(entry,'food-photo')}${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Flavor',entry.taste],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer></div>`;
+  pane.hidden=false;pane.scrollTop=0;document.body.classList.add('detail-open');
+  resize();if(cnOpen)layoutChina();else requestRender();
+  if(keyboardMode)pane.focus();
+}
+function closeFoodDetail(restore=false){
+  if(!detailEntry)return;
+  const previous=detailEntry;detailEntry=null;$('foodDetail').hidden=true;document.body.classList.remove('detail-open');
+  resize();if(cnOpen)layoutChina();else requestRender();
+  if(restore){const target=cnOpen?cnEls.find(el=>el.dataset.key===previous.id):markers[previous.id]?.el;const mode=keyboardMode;keyboardMode=false;target?.focus();keyboardMode=mode;}
+}
+document.addEventListener('click',event=>{
+  if(!detailEntry||$('foodDetail').contains(event.target)||event.target.closest('button,a,input,select,textarea'))return;
+  if(event.target===canvas&&movedDuringDrag)return;
+  event.preventDefault();event.stopPropagation();setDirectoryOpen(false);closeFoodDetail();
+},true);
+
+/* ---------- Pointer, keyboard and zoom ---------- */
+let activePointer = null, downX = 0, downY = 0, movedDuringDrag = false;
+function beginInteraction(){clearTimeout(idleTimer);focus=null;vYaw=vPitch=0;lastMove=performance.now();hidePeek(true);}
+canvas.addEventListener('pointerdown',event=>{
+  if(activePointer!==null||!event.isPrimary||(event.pointerType==='mouse'&&event.button!==0))return;
+  beginInteraction();activePointer=event.pointerId;dragging=true;movedDuringDrag=false;
+  lastX=downX=event.clientX;lastY=downY=event.clientY;canvas.classList.add('dragging');canvas.setPointerCapture(event.pointerId);
+});
+canvas.addEventListener('pointermove',event=>{
+  if(!dragging||event.pointerId!==activePointer)return;
+  const dx=event.clientX-lastX,dy=event.clientY-lastY,k=.32/zoom;
+  lastX=event.clientX;lastY=event.clientY;
+  if(Math.hypot(lastX-downX,lastY-downY)>8)movedDuringDrag=true;
+  yaw-=dx*k;pitch=Math.max(-70,Math.min(70,pitch+dy*k));vYaw=motionPreference.matches?0:-dx*k*.9;vPitch=motionPreference.matches?0:dy*k*.9;
+  lastMove=performance.now();requestRender();
+});
+function endDrag(event){
+  if(!dragging||(event?.pointerId!=null&&event.pointerId!==activePointer))return;
+  const id=activePointer;activePointer=null;dragging=false;canvas.classList.remove('dragging');lastMove=performance.now();
+  try{if(canvas.hasPointerCapture(id))canvas.releasePointerCapture(id);}catch{}
+  requestRender();scheduleIdle();
+}
+canvas.addEventListener('pointerup',endDrag);
+canvas.addEventListener('pointercancel',event=>{vYaw=vPitch=0;endDrag(event);});
+canvas.addEventListener('lostpointercapture',event=>{if(event.pointerId===activePointer){vYaw=vPitch=0;endDrag(event);}});
+window.addEventListener('blur',()=>{vYaw=vPitch=0;endDrag();hidePeek();});
+function setZoom(value){hidePeek();zoom=Math.max(.82,Math.min(1.28,value));resize();focus=null;lastMove=performance.now();requestRender();scheduleIdle();}
+canvas.addEventListener('wheel',event=>{event.preventDefault();setZoom(zoom*(1-event.deltaY*.0012));},{passive:false});
+canvas.addEventListener('click',event=>{
+  if(movedDuringDrag||Math.hypot(event.clientX-downX,event.clientY-downY)>8)return;
+  const rect=canvas.getBoundingClientRect();if(hitChina(event.clientX-rect.left,event.clientY-rect.top))openChina();
+});
+canvas.addEventListener('keydown',event=>{
+  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-','Home','Enter'].includes(event.key))return;
+  event.preventDefault();beginInteraction();
+  if(event.key==='Enter'){openChina();return;}
+  if(event.key==='Home'){returnToChina();return;}
+  if(['+','=','-'].includes(event.key)){setZoom(zoom+(event.key==='-'?-.1:.1));return;}
+  if(event.key==='ArrowLeft')yaw-=8;if(event.key==='ArrowRight')yaw+=8;
+  if(event.key==='ArrowUp')pitch=Math.min(70,pitch+8);if(event.key==='ArrowDown')pitch=Math.max(-70,pitch-8);
+  requestRender();scheduleIdle();
+});
+cnView.addEventListener('click',event=>{if(event.target===cnView||event.target===cnCanvas){hidePeek(true);cnEls.forEach(el=>el.classList.remove('active'));}});
+/* ---------- Demand-driven drawing ---------- */
+let prev=performance.now(),costAvg=0,lastTierChange=0,fastFrames=0,slowFrames=0;
+function requestRender(){if(!rafId&&!document.hidden&&!cnOpen)rafId=requestAnimationFrame(frame);}
+function idleAllowed(){return motionEnabled&&!motionPreference.matches&&!cnOpen&&!document.hidden&&!activePin&&!hoverPin&&!peek.classList.contains('show')&&!detailEntry&&!dragging;}
+function scheduleIdle(){clearTimeout(idleTimer);if(idleAllowed())idleTimer=setTimeout(requestRender,1450);}
+function frame(now){
+  rafId=0;if(document.hidden||cnOpen)return;
+  const dt=Math.min(50,Math.max(1,now-prev));prev=now;let animating=false;
+  if(focus){
+    focus.t=Math.min(1,focus.t+dt/720);const e=1-Math.pow(1-focus.t,3);
+    yaw=focus.y0+(focus.y1-focus.y0)*e;pitch=focus.p0+(focus.p1-focus.p0)*e;
+    if(focus.t>=1)focus=null;else animating=true;
+  }else if(!dragging){
+    if(hoverPin){vYaw=vPitch=0;}
+    else if(Math.abs(vYaw)>.0015||Math.abs(vPitch)>.0015){
+      const factor=dt/16.7;yaw+=vYaw*factor;pitch=Math.max(-70,Math.min(70,pitch+vPitch*factor));
+      vYaw*=Math.pow(.94,factor);vPitch*=Math.pow(.94,factor);animating=true;
+    }else if(idleAllowed()&&now-lastMove>1400){yaw+=dt*.0024;animating=true;}
+  }
+  const oldX=viewX,oldY=viewY;updateCenter();
+  if(Math.abs(viewX-oldX)>.02||Math.abs(viewY-oldY)>.02)animating=true;
+  const started=performance.now();drawGlobe();updateMarkers(baseR*zoom);
+  const cost=performance.now()-started;costAvg=costAvg?costAvg*.9+cost*.1:cost;
+  slowFrames=costAvg>20?slowFrames+1:0;fastFrames=costAvg<8?fastFrames+1:0;
+  if(now-lastTierChange>5000&&((slowFrames>=25&&qualityTier<QUALITY.length-1)||(fastFrames>=150&&qualityTier>0))){
+    qualityTier+=slowFrames>=25?1:-1;lastTierChange=now;slowFrames=fastFrames=0;resize();animating=true;
+  }
+  if(animating)requestRender();
+}
+function angleDelta(from,to){return ((to-from+180)%360+360)%360-180;}
+function offChina(){return Math.abs(angleDelta(yaw,CN_VIEW.yaw));}
+function returnToChina(){
+  hidePeek(true);markActive(null);zoom=CN_VIEW.zoom;resize();vYaw=vPitch=0;
+  const target=yaw+angleDelta(yaw,CN_VIEW.yaw);
+  if(motionPreference.matches){yaw=target;pitch=CN_VIEW.pitch;focus=null;}
+  else focus={y0:yaw,y1:target,p0:pitch,p1:CN_VIEW.pitch,t:0};
+  requestRender();scheduleIdle();
+}
+motionPreference.addEventListener('change',()=>{motionEnabled=!motionPreference.matches;vYaw=vPitch=0;if(motionPreference.matches&&focus){yaw=focus.y1;pitch=focus.p1;focus=null;}requestRender();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(rafId);rafId=0;clearTimeout(idleTimer);vYaw=vPitch=0;}else{prev=performance.now();requestRender();scheduleIdle();}});
+resize();setSurfaceAvailability();requestRender();scheduleIdle();
+// Reflow after font substitution or text wrapping changes, as well as viewport resize.
+if(typeof ResizeObserver!=='undefined'){
+  const headerObserver=new ResizeObserver(refreshLayout);
+  headerObserver.observe(document.querySelector('header'));
+  const peekObserver=new ResizeObserver(updatePeekConnector);peekObserver.observe(peek);
+}
+document.fonts?.ready.then(refreshLayout);
+
+</script>
+</body>
+</html>
