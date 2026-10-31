@@ -132,7 +132,8 @@
   .cpin.flip.cluster .ctag{right:24px}
   .cpin.flip:hover .ctag{transform:translateY(-50%) translateX(0)}
 
-  .globe-wrap{position:absolute;inset:0;display:grid;place-items:center;z-index:1}
+  .globe-wrap{position:absolute;inset:0;z-index:1}
+  #globe{position:absolute;left:0;top:0;max-width:none;max-height:none}
   canvas{display:block;touch-action:none;cursor:grab}
   canvas.dragging{cursor:grabbing}
 
@@ -341,8 +342,7 @@
   .phone-layout .detail-pagination button:disabled{color:var(--muted);opacity:.5;cursor:default}
   .phone-layout .detail-content{display:flex;flex-direction:column}
   .phone-layout .detail-content>*{flex-shrink:0}
-  .phone-layout .detail-content>.nearby-flavors{order:1;margin-top:24px}
-  .phone-layout .detail-content>.food-sources{order:2}
+  .phone-layout .detail-content>.nearby-flavors{margin-top:28px}
   .phone-layout .nearby-flavors button{min-height:44px;font-size:14px}
   .phone-layout .cn-directory{left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:auto;bottom:0;width:auto;height:55%;padding:0 12px max(14px,env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--rule);z-index:7}
   .phone-layout .cn-directory button{font-size:15px;line-height:1.5;min-height:48px;padding:12px 0;border-bottom:1px solid var(--rule)}
@@ -352,6 +352,13 @@
   .phone-layout .catalog-search p{font-size:12px;margin:8px 0 0;color:var(--muted)}
   .phone-layout .catalog-search p:empty{display:none}
   @media(max-height:480px){.phone-layout .detail-content{padding-top:18px}.phone-layout .detail-toolbar{padding-block:0}.phone-layout .detail-pagination{padding-top:0;padding-bottom:env(safe-area-inset-bottom,0px)}}
+
+  .detail-pane .food-photo{height:240px;filter:saturate(1.08) contrast(1.025)}
+  .detail-intro{margin:18px 0 0;color:var(--ink);font-size:15px;line-height:1.7;text-align:left;text-wrap:pretty}
+  .detail-content>.nearby-flavors{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule)}
+  .phone-layout header{text-align:center}
+  .phone-layout .site-intro{margin-inline:auto}
+  .phone-layout .detail-intro{font-size:16px;line-height:1.7;margin-top:20px}
 </style>
 </head>
 <body>
@@ -498,7 +505,7 @@ function resize(){
   cy=globeTop+availableHeight/2;
   // Keep zoomed geometry below the introduction too, not just the initial sphere.
   baseR=Math.min(fitRadius*(usesSplitDetail()?.78:.96),fitRadius/zoom);
-  if(!usesSplitDetail())cy=Math.max(globeTop+baseR*zoom,cy-Math.min(32,H*.04));
+  if(!usesSplitDetail()&&!isPhoneLayout())cy=Math.max(globeTop+baseR*zoom,cy-Math.min(32,H*.04));
   cx-=centerDetailPair(cx-baseR*zoom,cx+baseR*zoom);
   fitDetailHeight(cy-baseR*zoom,cy+baseR*zoom);
   layerUnder = null;
@@ -1216,7 +1223,7 @@ function openNearbyFood(event){
 peek.addEventListener('click',openNearbyFood);
 $('foodDetail').addEventListener('click',openNearbyFood);
 function peekEntry(e){
-  return `<article class="food-entry" data-entry="${esc(e.id)}">${photoBlock(e,'food-photo')}<p class="food-place">${esc(e.place)}</p><p class="food-summary">${esc(e.taste)}</p>${nearbyWorldNav(e)}<button class="peek-expand" id="peekExpand" aria-expanded="false" aria-controls="foodDetails">Quick facts</button><div id="foodDetails" hidden>${e.local?`<p class="food-local">${esc(e.local)}</p>`:''}${e.categoryLabel?`<span class="category-label">${esc(e.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',e.materials],['Preparation',e.process],['Flavor',e.taste],['Enjoy it',e.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(e)}</p>${e.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(e.sourceUrl))}" target="_blank" rel="noopener">${esc(e.sourceTitle||'View reference')}</a></p>`:''}</footer></div></article>`;
+  return `<article class="food-entry" data-entry="${esc(e.id)}">${photoBlock(e,'food-photo')}<p class="food-place">${esc(e.place)}</p><p class="food-summary">${esc(e.taste)}</p><button class="peek-expand" id="peekExpand" aria-expanded="false" aria-controls="foodDetails">Quick facts</button><div id="foodDetails" hidden>${e.local?`<p class="food-local">${esc(e.local)}</p>`:''}${e.categoryLabel?`<span class="category-label">${esc(e.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',e.materials],['Preparation',e.process],['Flavor',e.taste],['Enjoy it',e.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(e)}</p>${e.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(e.sourceUrl))}" target="_blank" rel="noopener">${esc(e.sourceTitle||'View reference')}</a></p>`:''}</footer></div>${nearbyWorldNav(e)}</article>`;
 }
 function chooseChinaPeekPosition(anchor,width,height,bounds,previewHeight=height,points=[]){
   const gap=64;
@@ -1411,7 +1418,7 @@ function openFoodDetail(entry){
   const pane=$('foodDetail');
   const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
   const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
-  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${nearbyWorldNav(entry)}${photoBlock(entry,'food-photo')}${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Flavor',entry.taste],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer></div>`;
+  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo')}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer>${nearbyWorldNav(entry)}</div>`;
   pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
   $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
   $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});
