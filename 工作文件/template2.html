@@ -10,7 +10,7 @@
   @font-face{font-family:"Fredoka";src:url("assets/fonts/fredoka.ttf") format("truetype");font-weight:300 700;font-style:normal;font-display:swap}
   @font-face{font-family:"Nunito";src:url("assets/fonts/nunito.ttf") format("truetype");font-weight:200 1000;font-style:normal;font-display:swap}
   :root{
-    --paper:#fdf1ec;
+    --paper:#fff7f8;
     --safe-top:env(safe-area-inset-top,0px);
     --ink:#4a3f3d;
     --ink-soft:#6f625f;
@@ -37,10 +37,9 @@
   body{
     margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow:hidden;
     background-image:
-      radial-gradient(58% 54% at 50% 46%,rgba(255,252,250,.92),rgba(255,252,250,0) 72%),
-      radial-gradient(42% 40% at 88% 8%,rgba(210,193,230,.26),rgba(210,193,230,0) 70%),
-      radial-gradient(46% 46% at 6% 90%,rgba(169,212,191,.30),rgba(169,212,191,0) 70%),
-      radial-gradient(38% 34% at 18% 12%,rgba(246,222,213,.55),rgba(246,222,213,0) 70%);
+      radial-gradient(circle at 18px 18px,rgba(240,173,191,.26) 0 4px,rgba(240,173,191,.10) 5px,transparent 6px),
+      radial-gradient(circle at 54px 54px,rgba(240,173,191,.26) 0 4px,rgba(240,173,191,.10) 5px,transparent 6px);
+    background-size:72px 72px;
   }
   .stage{position:relative;height:100%;height:100dvh;width:100%;overflow:hidden}
 
@@ -276,6 +275,7 @@
   .marker .tag,.cpin .ctag{display:block;width:max-content;max-width:var(--label-width,min(210px,55vw));white-space:normal;overflow-wrap:break-word;word-break:normal;hyphens:none;text-align:left;line-height:1.4;border-radius:10px}
   .cn-top{left:0;right:0;top:24px;height:44px;display:grid;place-items:center;text-align:center;padding-inline:110px}
   .cn-top h2{font-size:32px;line-height:1.15}
+  .cn-top .explore-hint{position:absolute;top:100%;left:12px;right:12px;justify-content:center;margin-top:8px;white-space:nowrap}
   .cn-return,.cn-actions .cn-btn{height:44px;display:flex;align-items:center;justify-content:center;padding-block:0}
   @media(max-width:820px){.cn-top{top:18px;padding-inline:100px}.cn-top h2{font-size:clamp(18px,3.2vw,26px)}}
   .marker.world .tag,.cpin .ctag{display:none}
@@ -400,8 +400,8 @@
     <button class="cn-btn cn-return" id="cnBack" type="button">← Back</button>
     <nav class="cn-directory" id="cnDirectory" aria-label="Chinese pickle catalog" hidden><div class="catalog-search"><label for="catalogSearch">Find a flavor</label><input id="catalogSearch" type="search" placeholder="Name or region" autocomplete="off"><p id="catalogStatus" role="status" aria-live="polite"></p></div></nav>
     <div class="cn-top">
-      <p class="cn-kicker">CHINA · 47 varieties</p>
       <h2>A taste of China</h2>
+      <p class="explore-hint"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 15 9 23 12 15 15 12 23 9 15 1 12 9 9Z"/></svg>Click the star to see more</p>
     </div>
     <div class="cn-actions">
       <button class="cn-btn" id="cnList" type="button" aria-expanded="false" aria-controls="cnDirectory">Catalog</button>
@@ -1194,10 +1194,13 @@ let peekExpanded = false;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = value => /^https?:\/\//i.test(value || '') ? value : '';
 function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(' · ').at(-1)); }
-function photoBlock(e, cls){
+function photoBlock(e, cls, detail=false){
   if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
   const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
-  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(e.photo)}" alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
+  const variants=e.photoVariants||[],src=variants[0]?.src||e.photo;
+  const sizes=cls==='thumb'?'44px':detail?'(max-width: 759px) calc(100vw - 40px), (max-width: 1024px) 480px, 460px':'268px';
+  const responsive=variants.length?` srcset="${variants.map(v=>`${esc(v.src)} ${v.width}w`).join(', ')}" sizes="${sizes}"`:'';
+  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(src)}"${responsive} alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" fetchpriority="${detail?'high':'auto'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
 }
 function licenseUrl(e){
   if (e.licenseUrl) return safeUrl(e.licenseUrl);
@@ -1443,7 +1446,7 @@ function openFoodDetail(entry){
   const pane=$('foodDetail');
   const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
   const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
-  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo')}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div>`;
+  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo',true)}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div>`;
   pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
   $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
   $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});

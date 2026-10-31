@@ -1,0 +1,1155 @@
+{
+  "assets/photos/caipu-dried-radish.jpg": {
+    "sourceSha256": "5f71fa0b095bbfd7395525c7cfab19700bd43346a2cd86ee5b33eca92dae4e51",
+    "sourceBytes": 427482,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/caipu-dried-radish-5f71fa0b-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 42086
+      },
+      {
+        "src": "assets/photos/optimized/caipu-dried-radish-5f71fa0b-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 154476
+      }
+    ]
+  },
+  "assets/photos/cn-beijing-jiangcai.jpg": {
+    "sourceSha256": "e5009e82f246bc1a92a765fc9e72fe294490570f856f26edf3367e68841c69c5",
+    "sourceBytes": 162973,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-beijing-jiangcai-e5009e82-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 33582
+      },
+      {
+        "src": "assets/photos/optimized/cn-beijing-jiangcai-e5009e82-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 131932
+      }
+    ]
+  },
+  "assets/photos/cn-gz-dushan-reviewed.jpg": {
+    "sourceSha256": "58adfb6b3c513ffd11d9723e6098bd416790e44069e0193fe35f2bc7f768a006",
+    "sourceBytes": 541285,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-gz-dushan-reviewed-58adfb6b-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 25686
+      },
+      {
+        "src": "assets/photos/optimized/cn-gz-dushan-reviewed-58adfb6b-860.webp",
+        "width": 860,
+        "height": 573,
+        "bytes": 55570
+      }
+    ]
+  },
+  "assets/photos/cn-gz-zaolajiao-reviewed.jpg": {
+    "sourceSha256": "1b0fd25a8cded837e2d75d22fddf63eed3c18a19bc8275e1d88595888f55e709",
+    "sourceBytes": 33301,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-gz-zaolajiao-reviewed-1b0fd25a-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 13908
+      },
+      {
+        "src": "assets/photos/optimized/cn-gz-zaolajiao-reviewed-1b0fd25a-533.webp",
+        "width": 533,
+        "height": 400,
+        "bytes": 16566
+      }
+    ]
+  },
+  "assets/photos/cn-hakka-fucai-reviewed.jpg": {
+    "sourceSha256": "ef12c998d15eebd8ba9b8e3e92c7869388ae3f29fcbf37d2f97519db11f9f4ad",
+    "sourceBytes": 64018,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-hakka-fucai-reviewed-ef12c998-480.webp",
+        "width": 480,
+        "height": 813,
+        "bytes": 49250
+      },
+      {
+        "src": "assets/photos/optimized/cn-hakka-fucai-reviewed-ef12c998-498.webp",
+        "width": 498,
+        "height": 843,
+        "bytes": 52572
+      }
+    ]
+  },
+  "assets/photos/cn-hakka-suancai-taiwan-reviewed.jpg": {
+    "sourceSha256": "587043f0c580ae4ce2121af8381cbc62b10f7b34c39dde995cd00172300d9add",
+    "sourceBytes": 49410,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-hakka-suancai-taiwan-reviewed-587043f0-480.webp",
+        "width": 480,
+        "height": 377,
+        "bytes": 11388
+      },
+      {
+        "src": "assets/photos/optimized/cn-hakka-suancai-taiwan-reviewed-587043f0-949.webp",
+        "width": 949,
+        "height": 745,
+        "bytes": 29962
+      }
+    ]
+  },
+  "assets/photos/cn-hangzhou-shuangchagua.jpg": {
+    "sourceSha256": "175d5082980c9059f50b2bc21564bc7773b58f9ec84393b6e53caf857dd68a78",
+    "sourceBytes": 316938,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-hangzhou-shuangchagua-175d5082-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 85340
+      },
+      {
+        "src": "assets/photos/optimized/cn-hangzhou-shuangchagua-175d5082-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 301114
+      }
+    ]
+  },
+  "assets/photos/cn-hanzhong-jiangshuicai.jpg": {
+    "sourceSha256": "9d70f341767f5894137716ba66228f6c6ed367a103c7bf8fdcc2fa4d82e51683",
+    "sourceBytes": 71163,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-hanzhong-jiangshuicai-9d70f341-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 12564
+      },
+      {
+        "src": "assets/photos/optimized/cn-hanzhong-jiangshuicai-9d70f341-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 28556
+      }
+    ]
+  },
+  "assets/photos/cn-hn-duolajiao-reviewed.jpg": {
+    "sourceSha256": "9c67c102040b22107910fbdfb72bca2e6da3c1dce0328236f1e314988e2fcb78",
+    "sourceBytes": 472131,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-hn-duolajiao-reviewed-9c67c102-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 87210
+      },
+      {
+        "src": "assets/photos/optimized/cn-hn-duolajiao-reviewed-9c67c102-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 188042
+      }
+    ]
+  },
+  "assets/photos/cn-korean-chinese-radish-kimchi-reviewed.jpg": {
+    "sourceSha256": "97e9632c96fa41658dc9019aee5cf2436113483c092f8f3789c3b9c90f1ce9ca",
+    "sourceBytes": 143965,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-korean-chinese-radish-kimchi-reviewed-97e9632c-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22326
+      },
+      {
+        "src": "assets/photos/optimized/cn-korean-chinese-radish-kimchi-reviewed-97e9632c-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 68994
+      }
+    ]
+  },
+  "assets/photos/cn-nanning-suanye-adjacent.jpg": {
+    "sourceSha256": "d258bad81a0860a0f47b4ec2a3dc3ab2c6d880605981e58019f1ddc564fc6fcc",
+    "sourceBytes": 255182,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-nanning-suanye-adjacent-d258bad8-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 55992
+      },
+      {
+        "src": "assets/photos/optimized/cn-nanning-suanye-adjacent-d258bad8-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 235818
+      }
+    ]
+  },
+  "assets/photos/cn-ningbo-fermented-taro-stalk-reviewed.jpg": {
+    "sourceSha256": "0dfb1213bb6175672f77e904cd6ad9512b0536fe5e0ce8574801fb5682fed970",
+    "sourceBytes": 114205,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-ningbo-fermented-taro-stalk-reviewed-0dfb1213-480.webp",
+        "width": 480,
+        "height": 264,
+        "bytes": 15770
+      },
+      {
+        "src": "assets/photos/optimized/cn-ningbo-fermented-taro-stalk-reviewed-0dfb1213-608.webp",
+        "width": 608,
+        "height": 334,
+        "bytes": 23688
+      }
+    ]
+  },
+  "assets/photos/cn-ningbo-stinky-winter-melon-reviewed.jpg": {
+    "sourceSha256": "deae601f0b47451708f4b09b223ea57825d4b5d3b94bec14652dccc19d4361c0",
+    "sourceBytes": 29439,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-ningbo-stinky-winter-melon-reviewed-deae601f-480.webp",
+        "width": 480,
+        "height": 543,
+        "bytes": 15712
+      },
+      {
+        "src": "assets/photos/optimized/cn-ningbo-stinky-winter-melon-reviewed-deae601f-530.webp",
+        "width": 530,
+        "height": 600,
+        "bytes": 18546
+      }
+    ]
+  },
+  "assets/photos/cn-sc-nanchong-dongcai-reviewed.jpg": {
+    "sourceSha256": "f8be793fb24a3088888574349dc4a24f01fe8e8c5617a5554d1409f6461a3526",
+    "sourceBytes": 108785,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-sc-nanchong-dongcai-reviewed-f8be793f-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 40200
+      },
+      {
+        "src": "assets/photos/optimized/cn-sc-nanchong-dongcai-reviewed-f8be793f-500.webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 43896
+      }
+    ]
+  },
+  "assets/photos/cn-sc-zizhong-dongjian-reviewed.jpg": {
+    "sourceSha256": "52791104789022b853cf3014cc8ff5e5b4a1e10cff196e05b0c61161dde7de83",
+    "sourceBytes": 67340,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-sc-zizhong-dongjian-reviewed-52791104-480.webp",
+        "width": 480,
+        "height": 316,
+        "bytes": 26194
+      },
+      {
+        "src": "assets/photos/optimized/cn-sc-zizhong-dongjian-reviewed-52791104-600.webp",
+        "width": 600,
+        "height": 395,
+        "bytes": 36194
+      }
+    ]
+  },
+  "assets/photos/cn-shaoxing-ningbo-fermented-amaranth-stalk.jpg": {
+    "sourceSha256": "51c92cff0ba663751814aa32e366637ba3fa0f80324a7363fbc349234de5da84",
+    "sourceBytes": 150410,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-shaoxing-ningbo-fermented-amaranth-stalk-51c92cff-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 26458
+      },
+      {
+        "src": "assets/photos/optimized/cn-shaoxing-ningbo-fermented-amaranth-stalk-51c92cff-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 48640
+      }
+    ]
+  },
+  "assets/photos/cn-tianshui-jiangshuicai.jpg": {
+    "sourceSha256": "92721fe377c97d6d44443ab330a5bbe701dffd1a1b30774ddc60f1257c6a94d6",
+    "sourceBytes": 112611,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-tianshui-jiangshuicai-92721fe3-480.webp",
+        "width": 480,
+        "height": 289,
+        "bytes": 19320
+      },
+      {
+        "src": "assets/photos/optimized/cn-tianshui-jiangshuicai-92721fe3-960.webp",
+        "width": 960,
+        "height": 578,
+        "bytes": 86174
+      }
+    ]
+  },
+  "assets/photos/cn-wuling-zha-guangjiao-reviewed.webp": {
+    "sourceSha256": "17e348324bd48decf49eb1eaf45c526b8164d963f62d4d17ff39203413a00ef8",
+    "sourceBytes": 140159,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-wuling-zha-guangjiao-reviewed-17e34832-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 41574
+      },
+      {
+        "src": "assets/photos/optimized/cn-wuling-zha-guangjiao-reviewed-17e34832-757.webp",
+        "width": 757,
+        "height": 757,
+        "bytes": 79726
+      }
+    ]
+  },
+  "assets/photos/cn-xiangyang-datoucai-correct.jpg": {
+    "sourceSha256": "cbea54a9e35cb5b2f05fdb1815361db5997b8ecdaca129d6c88dc04b14e31cd9",
+    "sourceBytes": 32010,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-xiangyang-datoucai-correct-cbea54a9-240.webp",
+        "width": 240,
+        "height": 180,
+        "bytes": 7286
+      }
+    ]
+  },
+  "assets/photos/cn-xiaoshan-luobogan-reviewed.jpg": {
+    "sourceSha256": "1ee6a296ffe40fdfc9707ef9a2d88e126076083128a038b106086d356288a440",
+    "sourceBytes": 123363,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-xiaoshan-luobogan-reviewed-1ee6a296-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 23160
+      },
+      {
+        "src": "assets/photos/optimized/cn-xiaoshan-luobogan-reviewed-1ee6a296-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 74492
+      }
+    ]
+  },
+  "assets/photos/cn-yangzhou-jiangcai.jpg": {
+    "sourceSha256": "7f1e0e40da74944e14cfecfa0d9d3edb2c6c7b9c734266f5b065aa5749b105b3",
+    "sourceBytes": 155512,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-yangzhou-jiangcai-7f1e0e40-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 35468
+      },
+      {
+        "src": "assets/photos/optimized/cn-yangzhou-jiangcai-7f1e0e40-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 83402
+      }
+    ]
+  },
+  "assets/photos/cn-yn-dai-suansun-reviewed.jpg": {
+    "sourceSha256": "bb1995c6efe64c9fe15003be4bb21238186ed3065e702ef8d15c4133f74f7422",
+    "sourceBytes": 156331,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-yn-dai-suansun-reviewed-bb1995c6-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 31210
+      },
+      {
+        "src": "assets/photos/optimized/cn-yn-dai-suansun-reviewed-bb1995c6-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 57210
+      }
+    ]
+  },
+  "assets/photos/cn-yn-gan-yancai.jpg": {
+    "sourceSha256": "c253f884df16832a5025ebf67a3475b2df02f4e74f0783198d2630cd79f93cc7",
+    "sourceBytes": 140975,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-yn-gan-yancai-c253f884-480.webp",
+        "width": 480,
+        "height": 448,
+        "bytes": 17902
+      },
+      {
+        "src": "assets/photos/optimized/cn-yn-gan-yancai-c253f884-960.webp",
+        "width": 960,
+        "height": 895,
+        "bytes": 91312
+      }
+    ]
+  },
+  "assets/photos/cn-zhejiang-daoducai.jpg": {
+    "sourceSha256": "c8eb3bf9e6eb51d51adb9ed48a6df856bd22ebc2f306890ac13b3911824702fe",
+    "sourceBytes": 192256,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-zhejiang-daoducai-c8eb3bf9-480.webp",
+        "width": 480,
+        "height": 283,
+        "bytes": 20138
+      },
+      {
+        "src": "assets/photos/optimized/cn-zhejiang-daoducai-c8eb3bf9-720.webp",
+        "width": 720,
+        "height": 425,
+        "bytes": 36568
+      }
+    ]
+  },
+  "assets/photos/cn-ziyang-liaosuancai.jpg": {
+    "sourceSha256": "8e56b9a5886cde870ab21a024cc558ffd07909c0a88609e7821f529867722b3e",
+    "sourceBytes": 122458,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/cn-ziyang-liaosuancai-8e56b9a5-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 31222
+      },
+      {
+        "src": "assets/photos/optimized/cn-ziyang-liaosuancai-8e56b9a5-500.webp",
+        "width": 500,
+        "height": 375,
+        "bytes": 34622
+      }
+    ]
+  },
+  "assets/photos/dongbei-suancai-stew.jpg": {
+    "sourceSha256": "d3ddeb5dd361b704701dd84beb514d6a923eed57c20e6a3c47ce981f41a6bc3a",
+    "sourceBytes": 197734,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/dongbei-suancai-stew-d3ddeb5d-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 38304
+      },
+      {
+        "src": "assets/photos/optimized/dongbei-suancai-stew-d3ddeb5d-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 121172
+      }
+    ]
+  },
+  "assets/photos/meal-fish-pickled-mustard-plate.jpg": {
+    "sourceSha256": "c4f9e868ad203f1ac31b22cd3e0028e22f8574883dd0fc8573d771ea58ecaacf",
+    "sourceBytes": 84320,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-fish-pickled-mustard-plate-c4f9e868-480.webp",
+        "width": 480,
+        "height": 321,
+        "bytes": 13260
+      },
+      {
+        "src": "assets/photos/optimized/meal-fish-pickled-mustard-plate-c4f9e868-960.webp",
+        "width": 960,
+        "height": 642,
+        "bytes": 35984
+      }
+    ]
+  },
+  "assets/photos/meal-fuyuan-sour-trotters.jpg": {
+    "sourceSha256": "c71c8a268ebe3f1cacccd1b9bd8bebae5cade718559b56cae801b0c27b402b71",
+    "sourceBytes": 193915,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-fuyuan-sour-trotters-c71c8a26-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 33122
+      },
+      {
+        "src": "assets/photos/optimized/meal-fuyuan-sour-trotters-c71c8a26-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 121220
+      }
+    ]
+  },
+  "assets/photos/meal-ganlancai-green-beans.jpg": {
+    "sourceSha256": "6759a63a1f8ee514d71f85bfdf63e49e1d888b842adab33b1304719041b552f1",
+    "sourceBytes": 196271,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-ganlancai-green-beans-6759a63a-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 39304
+      },
+      {
+        "src": "assets/photos/optimized/meal-ganlancai-green-beans-6759a63a-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 116384
+      }
+    ]
+  },
+  "assets/photos/meal-liuzhou-luosifen-bowl.jpg": {
+    "sourceSha256": "af1d8692775b0c15e3b060132767e34fd11a5d1125f13d820c880ced2f4469cb",
+    "sourceBytes": 225712,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-liuzhou-luosifen-bowl-af1d8692-480.webp",
+        "width": 480,
+        "height": 324,
+        "bytes": 43728
+      },
+      {
+        "src": "assets/photos/optimized/meal-liuzhou-luosifen-bowl-af1d8692-960.webp",
+        "width": 960,
+        "height": 647,
+        "bytes": 153330
+      }
+    ]
+  },
+  "assets/photos/meal-meizhou-preserved-greens-pork.jpg": {
+    "sourceSha256": "862ce7e746a99912ee655bb2cd6f5457c2956362c2b3902e600ec393ad03bc03",
+    "sourceBytes": 213360,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-meizhou-preserved-greens-pork-862ce7e7-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 33242
+      },
+      {
+        "src": "assets/photos/optimized/meal-meizhou-preserved-greens-pork-862ce7e7-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 151984
+      }
+    ]
+  },
+  "assets/photos/meal-pickled-mustard-fish.jpg": {
+    "sourceSha256": "0758698ea1e0e848be367cfc3f8e8a41c72840fedcf35f7d96032c91825e38d6",
+    "sourceBytes": 91702,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-pickled-mustard-fish-0758698e-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 11206
+      },
+      {
+        "src": "assets/photos/optimized/meal-pickled-mustard-fish-0758698e-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 31882
+      }
+    ]
+  },
+  "assets/photos/meal-suancai-bone-broth-mixian.jpg": {
+    "sourceSha256": "3965bd46aeb2cf0fa9c487177b66eaca4b575c336a9879ed71a7fd3f0dd83311",
+    "sourceBytes": 188824,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-suancai-bone-broth-mixian-3965bd46-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 33416
+      },
+      {
+        "src": "assets/photos/optimized/meal-suancai-bone-broth-mixian-3965bd46-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 115518
+      }
+    ]
+  },
+  "assets/photos/meal-suancai-pork-noodles.jpg": {
+    "sourceSha256": "f0324535023edd0969a39771b06d3e9b9c3dd913c435cc7250902390afd5b186",
+    "sourceBytes": 188126,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-suancai-pork-noodles-f0324535-480.webp",
+        "width": 480,
+        "height": 319,
+        "bytes": 14826
+      },
+      {
+        "src": "assets/photos/optimized/meal-suancai-pork-noodles-f0324535-960.webp",
+        "width": 960,
+        "height": 638,
+        "bytes": 38420
+      }
+    ]
+  },
+  "assets/photos/meal-xuecai-pork-stirfry.jpg": {
+    "sourceSha256": "3428201f59a8f08f37e8e714762b9c93bfd2ba488efed2187236c3bf15be6e90",
+    "sourceBytes": 140451,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-xuecai-pork-stirfry-3428201f-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 22876
+      },
+      {
+        "src": "assets/photos/optimized/meal-xuecai-pork-stirfry-3428201f-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 81832
+      }
+    ]
+  },
+  "assets/photos/meal-zaocai-noodles-sibu.jpg": {
+    "sourceSha256": "555c113d6492d1ae36b79d04fb20ec9854f38c4f68746979834716da2b3a4ead",
+    "sourceBytes": 104846,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meal-zaocai-noodles-sibu-555c113d-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 21570
+      },
+      {
+        "src": "assets/photos/optimized/meal-zaocai-noodles-sibu-555c113d-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 53120
+      }
+    ]
+  },
+  "assets/photos/meigancai-bundle.jpg": {
+    "sourceSha256": "6a4ce7d98acb3ac591a20b7ed5efd0eb7437d312fd722b9d8a11fe49782b1af6",
+    "sourceBytes": 213682,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/meigancai-bundle-6a4ce7d9-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24080
+      },
+      {
+        "src": "assets/photos/optimized/meigancai-bundle-6a4ce7d9-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 66254
+      }
+    ]
+  },
+  "assets/photos/preserve-paocai-jar-platter.jpg": {
+    "sourceSha256": "baf913cc154377741f62fd158d8185657fc7f872e6cef02969d43f8c1f6815b2",
+    "sourceBytes": 267625,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/preserve-paocai-jar-platter-baf913cc-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 47872
+      },
+      {
+        "src": "assets/photos/optimized/preserve-paocai-jar-platter-baf913cc-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 93914
+      }
+    ]
+  },
+  "assets/photos/sichuan-paocai.jpg": {
+    "sourceSha256": "1b2d6905097a895fa5ac775ad78d98f078a6a93b01a6160caae38c2eeceb8dac",
+    "sourceBytes": 294729,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/sichuan-paocai-1b2d6905-480.webp",
+        "width": 480,
+        "height": 335,
+        "bytes": 34942
+      },
+      {
+        "src": "assets/photos/optimized/sichuan-paocai-1b2d6905-960.webp",
+        "width": 960,
+        "height": 670,
+        "bytes": 107802
+      }
+    ]
+  },
+  "assets/photos/sour-cowpea.jpg": {
+    "sourceSha256": "caa0e3e07d97df24ba1ec3dbcede83bc807ff579f8d1683d0dbccaddd8e77bb7",
+    "sourceBytes": 443645,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/sour-cowpea-caa0e3e0-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 63868
+      },
+      {
+        "src": "assets/photos/optimized/sour-cowpea-caa0e3e0-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 174038
+      }
+    ]
+  },
+  "assets/photos/tianjin-dongcai.jpg": {
+    "sourceSha256": "c4091415531f6c24b2d866ef12ad006a87c5fd3b7077682c3612a608e9384acd",
+    "sourceBytes": 295325,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/tianjin-dongcai-c4091415-480.webp",
+        "width": 480,
+        "height": 269,
+        "bytes": 10584
+      },
+      {
+        "src": "assets/photos/optimized/tianjin-dongcai-c4091415-946.webp",
+        "width": 946,
+        "height": 530,
+        "bytes": 29120
+      }
+    ]
+  },
+  "assets/photos/tiaoshui-quick-paocai.jpg": {
+    "sourceSha256": "45b43d366a5cc0700e360bd559f1fed84eea914e10b3196ad7398db67bdda689",
+    "sourceBytes": 233833,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/tiaoshui-quick-paocai-45b43d36-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 23508
+      },
+      {
+        "src": "assets/photos/optimized/tiaoshui-quick-paocai-45b43d36-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 72174
+      }
+    ]
+  },
+  "assets/photos/world-01.jpg": {
+    "sourceSha256": "863d1b1b9bf50f42ee3ade75023ab3f947309fdbc659314496a9d5c4b528730b",
+    "sourceBytes": 132714,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-01-863d1b1b-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 20524
+      },
+      {
+        "src": "assets/photos/optimized/world-01-863d1b1b-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 40988
+      }
+    ]
+  },
+  "assets/photos/world-02.jpg": {
+    "sourceSha256": "b8b8a8883c36a23b64ae174f8fb577d2298b7b7a0699c5cbaa9af8dee08522a6",
+    "sourceBytes": 101210,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-02-b8b8a888-480.webp",
+        "width": 480,
+        "height": 494,
+        "bytes": 32368
+      },
+      {
+        "src": "assets/photos/optimized/world-02-b8b8a888-785.webp",
+        "width": 785,
+        "height": 808,
+        "bytes": 59958
+      }
+    ]
+  },
+  "assets/photos/world-03.jpg": {
+    "sourceSha256": "579c42057f84418d6e4d8cbba1e96b8bb9f2527747a22378b1c3952a40ff4d6d",
+    "sourceBytes": 96598,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-03-579c4205-480.webp",
+        "width": 480,
+        "height": 350,
+        "bytes": 18580
+      },
+      {
+        "src": "assets/photos/optimized/world-03-579c4205-960.webp",
+        "width": 960,
+        "height": 699,
+        "bytes": 69036
+      }
+    ]
+  },
+  "assets/photos/world-04.jpg": {
+    "sourceSha256": "80b6e5cde6d3e3bbd561d7a528b72c824c4b8bba3a6a5bb53e38d8699d6c012d",
+    "sourceBytes": 90450,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-04-80b6e5cd-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15890
+      },
+      {
+        "src": "assets/photos/optimized/world-04-80b6e5cd-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 47248
+      }
+    ]
+  },
+  "assets/photos/world-05.jpg": {
+    "sourceSha256": "104a8458bb85976ad362c64aec2c8b77fd0424a602fb7b16bd597bd4ffcb13e1",
+    "sourceBytes": 83930,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-05-104a8458-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 9154
+      },
+      {
+        "src": "assets/photos/optimized/world-05-104a8458-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 58212
+      }
+    ]
+  },
+  "assets/photos/world-06.jpg": {
+    "sourceSha256": "f7eafa7f9e0a6674311b80b6068c1d7aa13193ee46e810a67337db7983c041f6",
+    "sourceBytes": 119580,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-06-f7eafa7f-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 23106
+      },
+      {
+        "src": "assets/photos/optimized/world-06-f7eafa7f-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 76876
+      }
+    ]
+  },
+  "assets/photos/world-07.jpg": {
+    "sourceSha256": "4964cb6957effb40de6071ac9485381952c0b95a6f453dcdd1e5f0979a164802",
+    "sourceBytes": 136135,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-07-4964cb69-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 17244
+      },
+      {
+        "src": "assets/photos/optimized/world-07-4964cb69-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 104856
+      }
+    ]
+  },
+  "assets/photos/world-08.jpg": {
+    "sourceSha256": "a50ace2707f9b117538b98c125337ac798bd9f81713076d78b0824ae93cf1f26",
+    "sourceBytes": 207712,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-08-a50ace27-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 53410
+      },
+      {
+        "src": "assets/photos/optimized/world-08-a50ace27-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 191044
+      }
+    ]
+  },
+  "assets/photos/world-09.jpg": {
+    "sourceSha256": "b59333737790645f62dc8d752464f261e45af31b387e2de4775351ef37ca9269",
+    "sourceBytes": 323805,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-09-b5933373-480.webp",
+        "width": 480,
+        "height": 512,
+        "bytes": 49684
+      },
+      {
+        "src": "assets/photos/optimized/world-09-b5933373-901.webp",
+        "width": 901,
+        "height": 960,
+        "bytes": 117416
+      }
+    ]
+  },
+  "assets/photos/world-10.jpg": {
+    "sourceSha256": "03415b34e654ff92edba0fa40015c646212d73d91f6eb66930c1425394105499",
+    "sourceBytes": 309077,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-10-03415b34-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 63874
+      },
+      {
+        "src": "assets/photos/optimized/world-10-03415b34-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 147930
+      }
+    ]
+  },
+  "assets/photos/world-11.jpg": {
+    "sourceSha256": "77c54395489afc8eaa29e4f0b273e6d4fd33a2fe9884d87074a3588f578e2708",
+    "sourceBytes": 327566,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-11-77c54395-480.webp",
+        "width": 480,
+        "height": 624,
+        "bytes": 83390
+      },
+      {
+        "src": "assets/photos/optimized/world-11-77c54395-739.webp",
+        "width": 739,
+        "height": 960,
+        "bytes": 176704
+      }
+    ]
+  },
+  "assets/photos/world-12.jpg": {
+    "sourceSha256": "c23b51f6b8dde8fa049eea71d08495d7239e13c5be3bb2208060939a5b9cb21c",
+    "sourceBytes": 62593,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-12-c23b51f6-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22842
+      },
+      {
+        "src": "assets/photos/optimized/world-12-c23b51f6-720.webp",
+        "width": 720,
+        "height": 540,
+        "bytes": 41522
+      }
+    ]
+  },
+  "assets/photos/world-13.jpg": {
+    "sourceSha256": "8e068450725f1e05f0098c076ab95c6cd430de8405fc9066ec5791848730860e",
+    "sourceBytes": 75523,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-13-8e068450-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 13522
+      },
+      {
+        "src": "assets/photos/optimized/world-13-8e068450-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 36472
+      }
+    ]
+  },
+  "assets/photos/world-14.jpg": {
+    "sourceSha256": "a89eee86b382b312a312f0f18931b25ca9df4842c314900c883578c9eab35621",
+    "sourceBytes": 42114,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-14-a89eee86-480.webp",
+        "width": 480,
+        "height": 431,
+        "bytes": 17266
+      },
+      {
+        "src": "assets/photos/optimized/world-14-a89eee86-608.webp",
+        "width": 608,
+        "height": 546,
+        "bytes": 23120
+      }
+    ]
+  },
+  "assets/photos/world-b01.jpg": {
+    "sourceSha256": "12a8071b66e7ce03f7f619ed508a02a2a34d09de02846c63345e7a4d9cdaacdc",
+    "sourceBytes": 97700,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-b01-12a8071b-480.webp",
+        "width": 480,
+        "height": 291,
+        "bytes": 14076
+      },
+      {
+        "src": "assets/photos/optimized/world-b01-12a8071b-960.webp",
+        "width": 960,
+        "height": 582,
+        "bytes": 68470
+      }
+    ]
+  },
+  "assets/photos/world-b02.jpg": {
+    "sourceSha256": "8258ea0d24da806f67de2d2e39b4e35c7ed630388d53e929967399170d8fd50b",
+    "sourceBytes": 237527,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-b02-8258ea0d-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 48068
+      },
+      {
+        "src": "assets/photos/optimized/world-b02-8258ea0d-720.webp",
+        "width": 720,
+        "height": 960,
+        "bytes": 96516
+      }
+    ]
+  },
+  "assets/photos/world-b03.jpg": {
+    "sourceSha256": "653d0b3296daa7987f6ea305537880c07a8f4f3b862a6b6061bcc03e03329462",
+    "sourceBytes": 115469,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/world-b03-653d0b32-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 21512
+      },
+      {
+        "src": "assets/photos/optimized/world-b03-653d0b32-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 71514
+      }
+    ]
+  },
+  "assets/photos/yacai-ranmian-serving.jpg": {
+    "sourceSha256": "4f9a1c81c4a9afc1ae6034ee8f06fe6160fcbbbfb5b66543f0be8a8f8326a582",
+    "sourceBytes": 270808,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/yacai-ranmian-serving-4f9a1c81-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 29484
+      },
+      {
+        "src": "assets/photos/optimized/yacai-ranmian-serving-4f9a1c81-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 89702
+      }
+    ]
+  },
+  "assets/photos/zhacai-bowl.jpg": {
+    "sourceSha256": "0d22d4a3c4e8b5e9fea732be7b20bd6972ba70403a6dad48f710c1d996650052",
+    "sourceBytes": 176663,
+    "processing": "EXIF orientation applied; resized without cropping to a maximum 960 px edge; WebP quality 80; source retained.",
+    "variants": [
+      {
+        "src": "assets/photos/optimized/zhacai-bowl-0d22d4a3-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 16976
+      },
+      {
+        "src": "assets/photos/optimized/zhacai-bowl-0d22d4a3-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 48610
+      }
+    ]
+  }
+}

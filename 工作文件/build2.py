@@ -8,6 +8,9 @@ china = (here / 'china.json').read_text()
 prov = (here / 'provinces.json').read_text()
 jd = (here / 'jiuduan.json').read_text()
 data = json.loads((here / 'entries_en.json').read_text())
+variants = json.loads((here.parent / 'assets/photo-variants.json').read_text())
+for entry in data['china'] + data['world']:
+    entry['photoVariants'] = variants[entry['photo']]['variants']
 coords = json.loads((here / 'china_coords.json').read_text())
 for e in data['china']:
     c = coords.get(e['id'])
