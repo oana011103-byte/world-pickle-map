@@ -309,6 +309,49 @@
     .detail-pane{padding-top:12px}
     .detail-pane h2{font-size:20px}
   }
+
+  .detail-toolbar,.detail-pagination{display:none}
+  .catalog-search{position:sticky;top:0;background:var(--paper);padding:8px 0;font-size:12px}
+  .catalog-search label{display:block;margin-bottom:6px}
+  .catalog-search input{width:100%;min-height:36px;font:inherit;border:1px solid var(--rule);border-radius:8px;padding:6px;background:var(--card);color:var(--ink)}
+  .catalog-search p:empty{display:none}
+  .phone-layout .marker{min-width:44px;min-height:44px}
+  .phone-layout .marker.china .tag{display:none}
+  .phone-layout.detail-open .globe-wrap,.phone-layout.detail-open .cnview{visibility:hidden;pointer-events:none}
+  .phone-layout.detail-open header{visibility:hidden}
+  .phone-layout.detail-open header h1{font-size:clamp(28px,3.5vw,44px)}
+  .phone-layout.detail-open .site-intro{display:block}
+  .phone-layout .detail-pane{inset:0!important;width:100%;height:100%!important;padding:0;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
+  .phone-layout .detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none;padding:max(8px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
+  .phone-layout .detail-toolbar span{font-size:12px;color:var(--muted);white-space:nowrap}
+  .phone-layout .detail-toolbar button,.phone-layout .detail-pagination button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:8px 4px;border:0;background:none;color:var(--ink);font:inherit;font-size:15px;cursor:pointer;touch-action:manipulation}
+  .phone-layout .detail-toolbar svg{width:18px;height:18px;flex:none}
+  .phone-layout .detail-content{flex:1 1 auto;min-height:0;max-width:620px;width:100%;margin:0 auto;padding:24px max(22px,env(safe-area-inset-right,0px)) 32px max(22px,env(safe-area-inset-left,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}
+  .phone-layout .detail-pane h2{font-size:clamp(26px,6.8vw,34px);line-height:1.2}
+  .phone-layout .detail-pane .detail-place{font-size:14px;line-height:1.5;margin-bottom:20px}
+  .phone-layout .detail-pane .photo-figure{margin:0}
+  .phone-layout .detail-pane .food-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+  .phone-layout .detail-pane .food-facts{gap:24px;margin-top:26px}
+  .phone-layout .detail-pane .food-fact{grid-template-columns:minmax(0,1fr);gap:5px;font-size:16px;line-height:1.7}
+  .phone-layout .detail-pane .food-fact dt{font-size:13px}
+  .phone-layout .detail-pane .food-sources{font-size:12px;line-height:1.65;margin-top:28px}
+  .phone-layout .detail-pane .photo-caption{font-size:12px;line-height:1.5}
+  .phone-layout .detail-pagination{display:flex;justify-content:space-between;gap:24px;flex:none;padding:4px max(22px,env(safe-area-inset-right,0px)) max(10px,env(safe-area-inset-bottom,0px)) max(22px,env(safe-area-inset-left,0px));border-top:1px solid var(--rule)}
+  .phone-layout .detail-pagination button{flex:1;color:var(--orange-deep)}
+  .phone-layout .detail-pagination button:disabled{color:var(--muted);opacity:.5;cursor:default}
+  .phone-layout .detail-content{display:flex;flex-direction:column}
+  .phone-layout .detail-content>*{flex-shrink:0}
+  .phone-layout .detail-content>.nearby-flavors{order:1;margin-top:24px}
+  .phone-layout .detail-content>.food-sources{order:2}
+  .phone-layout .nearby-flavors button{min-height:44px;font-size:14px}
+  .phone-layout .cn-directory{left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:auto;bottom:0;width:auto;height:55%;padding:0 12px max(14px,env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--rule);z-index:7}
+  .phone-layout .cn-directory button{font-size:15px;line-height:1.5;min-height:48px;padding:12px 0;border-bottom:1px solid var(--rule)}
+  .phone-layout .catalog-search{display:block;position:sticky;top:0;padding:14px 0 10px;background:var(--paper);z-index:1}
+  .phone-layout .catalog-search label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+  .phone-layout .catalog-search input{width:100%;min-height:44px;border:1px solid var(--rule);border-radius:10px;padding:10px 12px;background:var(--card);color:var(--ink);font:inherit;font-size:16px}
+  .phone-layout .catalog-search p{font-size:12px;margin:8px 0 0;color:var(--muted)}
+  .phone-layout .catalog-search p:empty{display:none}
+  @media(max-height:480px){.phone-layout .detail-content{padding-top:18px}.phone-layout .detail-toolbar{padding-block:0}.phone-layout .detail-pagination{padding-top:0;padding-bottom:env(safe-area-inset-bottom,0px)}}
 </style>
 </head>
 <body>
@@ -336,7 +379,7 @@
     <canvas id="cnCanvas"></canvas>
     <div class="cnpins" id="cnPins"></div>
     <button class="cn-btn cn-return" id="cnBack" type="button">← Back</button>
-    <nav class="cn-directory" id="cnDirectory" aria-label="Chinese pickle catalog" hidden></nav>
+    <nav class="cn-directory" id="cnDirectory" aria-label="Chinese pickle catalog" hidden><div class="catalog-search"><label for="catalogSearch">Find a flavor</label><input id="catalogSearch" type="search" placeholder="Name or region" autocomplete="off"><p id="catalogStatus" role="status" aria-live="polite"></p></div></nav>
     <div class="cn-top">
       <p class="cn-kicker">CHINA · 47 varieties</p>
       <h2>A taste of China</h2>
@@ -388,13 +431,15 @@ const D2R = Math.PI / 180;
 
 let W = 0, H = 0, cx = 0, cy = 0, baseR = 0, zoom = 1, renderDpr = 1;
 let detailEntry=null,globeTop=0;
+function isPhoneLayout(){return W<760||(W<=1024&&H<=600&&matchMedia('(pointer: coarse)').matches);}
+function usesSplitDetail(){return !!detailEntry&&!isPhoneLayout();}
 function detailWidth(){return Math.min(440,Math.max(320,window.innerWidth*.38));}
-function detailMapRight(){return detailEntry?(W<760?W*.84:W-detailWidth()-24):W;}
-function detailMapBottom(){return detailEntry&&W<760?H*.42:H;}
+function detailMapRight(){return usesSplitDetail()?W-detailWidth()-24:W;}
+function detailMapBottom(){return H;}
 // Center the visible map and reading column; use a compact, explicit globe gap.
 function centerDetailPair(mapLeft,mapRight=null){
   const pane=document.getElementById('foodDetail');
-  if(!detailEntry||W<760){pane.style.right='0px';return 0;}
+  if(!usesSplitDetail()){pane.style.right='0px';return 0;}
   const paneWidth=detailWidth();
   const measured=pane.querySelector('.detail-content')?.getBoundingClientRect().width;
   const contentWidth=measured>0&&measured<=paneWidth?measured:Math.min(360,paneWidth-56);
@@ -414,7 +459,7 @@ function centerDetailPair(mapLeft,mapRight=null){
 // The desktop reading viewport shares the map's visible top and bottom edges.
 function fitDetailHeight(top,bottom){
   const pane=document.getElementById('foodDetail');
-  if(!detailEntry||W<760){
+  if(!usesSplitDetail()){
     pane.style.removeProperty('--detail-top');pane.style.removeProperty('--detail-height');return;
   }
   const start=Math.max(0,top),end=Math.min(H,bottom);
@@ -437,6 +482,8 @@ function resize(){
   const dpr = renderDpr = Math.min(window.devicePixelRatio || 1, 2) * QUALITY[qualityTier];
   const stage=document.querySelector('.stage');
   W = stage.clientWidth || window.innerWidth; H = stage.clientHeight || window.innerHeight;
+  document.body.classList.toggle('phone-layout',isPhoneLayout());
+  setSurfaceAvailability();
   canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
   canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -444,14 +491,14 @@ function resize(){
   const headerBottom=document.querySelector('header').getBoundingClientRect().bottom;
   const gap=W<=600?16:18;
   globeTop=headerBottom+gap;
-  const bottom=detailMapBottom()-(detailEntry&&W<760?12:28);
+  const bottom=detailMapBottom()-28;
   const availableHeight=Math.max(0,bottom-globeTop);
   const fitRadius=Math.max(0,Math.min(detailMapRight()*.43,availableHeight/2));
   cx=detailMapRight()/2;
   cy=globeTop+availableHeight/2;
   // Keep zoomed geometry below the introduction too, not just the initial sphere.
-  baseR=Math.min(fitRadius*(detailEntry?.78:.96),fitRadius/zoom);
-  if(!detailEntry)cy=Math.max(globeTop+baseR*zoom,cy-Math.min(32,H*.04));
+  baseR=Math.min(fitRadius*(usesSplitDetail()?.78:.96),fitRadius/zoom);
+  if(!usesSplitDetail())cy=Math.max(globeTop+baseR*zoom,cy-Math.min(32,H*.04));
   cx-=centerDetailPair(cx-baseR*zoom,cx+baseR*zoom);
   fitDetailHeight(cy-baseR*zoom,cy+baseR*zoom);
   layerUnder = null;
@@ -795,8 +842,16 @@ clusters.forEach(c => {
   el.addEventListener('blur', () => { hoverPin = false; hoverEl = null; scheduleHidePeek(); scheduleIdle(); });
   el.addEventListener('click', e => {
     e.stopPropagation();if(e.pointerType)lastPointerType=e.pointerType;
-    if (c.china){ openChina(); return; }
-    openFoodDetail(c.entries[0]);
+    let target=c;
+    if(isPhoneLayout()&&lastPointerType==='touch'&&Number.isFinite(e.clientX)&&Number.isFinite(e.clientY)){
+      let distance=Infinity;
+      for(const {el:pin,c:point} of Object.values(markers)){
+        if(pin.hidden)continue;const r=pin.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2));
+        if(d<distance){distance=d;target=point;}
+      }
+    }
+    if (target.china){ openChina(); return; }
+    openFoodDetail(target.entries[0]);
   });
   document.querySelector('.globe-wrap').appendChild(el);
   markers[c.key] = { el, c };
@@ -881,9 +936,9 @@ function layoutChina(){
   cnCe.setTransform(dpr, 0, 0, dpr, 0, 0);
   cnCe.clearRect(0, 0, W2, H2);
 
-  const mobile = W2 <= 820;
-  const pad = mobile ? { l:18, r:directoryOpen&&W2>600?138:18, t:140, b:directoryOpen&&W2<=600?directoryBottomHeight()+28:64 } : { l:76, r:directoryOpen?210:76, t:132, b:80 };
-  if(detailEntry){pad.r=W2<760?W2*.16:detailWidth()+40;pad.l=W2<760?16:40;pad.t=W2<760?88:132;pad.b=W2<760?H2*.58+20:80;}
+  const mobile = W2 <= 820 || isPhoneLayout();
+  const pad = mobile ? { l:18, r:directoryOpen&&W2>600&&!isPhoneLayout()?138:18, t:140, b:directoryOpen&&W2<=600&&!isPhoneLayout()?directoryBottomHeight()+28:64 } : { l:76, r:directoryOpen?210:76, t:132, b:80 };
+  if(usesSplitDetail()){pad.r=detailWidth()+40;pad.l=40;pad.t=132;pad.b=80;}
   const availW = W2 - pad.l - pad.r, availH = Math.max(60,H2 - pad.t - pad.b);
   const MAIN_MINLAT = 17.2;   // 主图只画到这个纬度，南海诸岛单开小图
 
@@ -899,7 +954,7 @@ function layoutChina(){
     if (y < minY) minY = y; if (y > maxY) maxY = y;
   }));
   const w = maxX - minX, h = maxY - minY;
-  const s = Math.min(availW / w, availH / h)*(detailEntry?.78:1);
+  const s = Math.min(availW / w, availH / h)*(usesSplitDetail()?.78:1);
   const detailShift=centerDetailPair(pad.l+(availW-w*s)/2);
   const ox = pad.l + (availW - w * s) / 2 - minX * s - detailShift;
   const oy = pad.t + (availH - h * s) / 2 + maxY * s;
@@ -936,9 +991,9 @@ function layoutChina(){
   cnCe.restore();   // 主图裁剪结束，下面画附图，别再被主图矩形切掉
 
   // ---- 南海诸岛小图（标准做法：右下角附图）----
-  const box = detailEntry&&W2<760?{w:56,h:72}:mobile ? { w: 84, h: 112 } : { w: 132, h: 170 };
+  const box = mobile ? { w: 84, h: 112 } : { w: 132, h: 170 };
   const bx = W2 - pad.r + (mobile ? 12 : 20) - box.w - detailShift;
-  const by = H2 - (detailEntry&&W2<760?H2*.58+20:directoryOpen&&W2<=600?directoryBottomHeight()+28:mobile?70:78) - box.h;
+  const by = H2 - (directoryOpen&&W2<=600&&!isPhoneLayout()?directoryBottomHeight()+28:mobile?70:78) - box.h;
   let jMinX = 1e9, jMaxX = -1e9, jMinY = 1e9, jMaxY = -1e9;
   for (const r of JD) for (const [lon, lat] of r){
     const p = albers(lon, lat);
@@ -1023,7 +1078,7 @@ function buildCnPins(){
     el.innerHTML=`<span class="cdot"></span><span class="ctag">${esc(e.name)}</span>`;
     el.style.left=p.x+'px';el.style.top=p.y+'px';el.style.animationDelay='0ms';el.style.transform='translate(-50%,-50%)';
     const nearest=Math.min(Infinity,...points.filter(q=>q!==p).map(q=>Math.hypot(q.x-p.x,q.y-p.y)));
-    const hitSize=Math.max(8,Math.min(26,nearest*.9))+'px';
+    const hitSize=(isPhoneLayout()?44:Math.max(8,Math.min(26,nearest*.9)))+'px';
     el.style.width=el.style.height=el.style.minWidth=el.style.minHeight=hitSize;
     const labelRight=detailEntry?detailMapRight():cnView.clientWidth-(directoryOpen&&cnView.clientWidth>600?(cnView.clientWidth<=820?142:214):0);
     fitPinLabel(el,p.x,labelRight);
@@ -1038,7 +1093,15 @@ function bindFoodHover(el,entry){
   el.addEventListener('pointerleave',event=>{if(pendingHover?.el===el)cancelHoverSwitch();scheduleHidePeek(event);});
   el.addEventListener('focus',()=>{if(keyboardMode)peekShow([entry],el,entry.name);});
   el.addEventListener('blur',scheduleHidePeek);
-  el.addEventListener('click',event=>{if(event.pointerType)lastPointerType=event.pointerType;cancelHoverSwitch();openFoodDetail(entry);});
+  el.addEventListener('click',event=>{
+    if(event.pointerType)lastPointerType=event.pointerType;cancelHoverSwitch();
+    let chosen=entry;
+    if(isPhoneLayout()&&lastPointerType==='touch'&&el.classList.contains('cpin')&&Number.isFinite(event.clientX)&&Number.isFinite(event.clientY)){
+      let distance=Infinity;
+      for(const pin of cnEls){const r=pin.getBoundingClientRect(),d=Math.hypot(event.clientX-(r.left+r.width/2),event.clientY-(r.top+r.height/2));if(d<distance){distance=d;chosen=DATA.china.find(e=>e.id===pin.dataset.key)||entry;}}
+    }
+    openFoodDetail(chosen);
+  });
 }
 
 function openChina(){
@@ -1063,6 +1126,15 @@ for(const e of DATA.china){
   const button=document.createElement('button');button.type='button';button.dataset.food=e.id;button.textContent=e.catalogName||e.name;button.setAttribute('aria-label',e.name);
   bindFoodHover(button,e);directory.appendChild(button);
 }
+document.getElementById('catalogSearch').addEventListener('input',event=>{
+  const query=event.target.value.trim().toLocaleLowerCase();let count=0;
+  for(const button of directory.querySelectorAll('[data-food]')){
+    const entry=DATA.china.find(e=>e.id===button.dataset.food);
+    button.hidden=![entry.name,entry.catalogName,entry.place,entry.local].join(' ').toLocaleLowerCase().includes(query);
+    if(!button.hidden)count++;
+  }
+  document.getElementById('catalogStatus').textContent=count?`${count} flavors`:'No matches. Try another name or region.';
+});
 function setDirectoryOpen(open,keepPreview=false){
   if(directoryOpen===open)return;
   const previewId=keepPreview&&peek.classList.contains('show')?peek.querySelector('[data-entry]')?.dataset.entry:null;
@@ -1119,19 +1191,27 @@ function creditBlock(e){
 }
 document.addEventListener('error', event => { const image=event.target; if(image instanceof HTMLImageElement && image.hasAttribute('data-food-photo'))image.closest('.photo-figure')?.classList.add('image-failed'); }, true);
 function nearbyWorldNav(entry){
-  const current=markers[entry.id];if(!current||current.c.china)return '';
-  const p=toSphere(current.c.lon,current.c.lat);
-  const near=DATA.world.filter(e=>{
-    if(e.id===entry.id||!markers[e.id])return false;
-    const c=markers[e.id].c,q=toSphere(c.lon,c.lat);
-    return q.z>.14&&Math.hypot(q.x-p.x,q.y-p.y)*baseR*zoom<40;
-  });
+  let near=[];
+  if(cnOpen&&isPhoneLayout()){
+    const current=cnEls.find(pin=>pin.dataset.key===entry.id);if(!current)return '';
+    const x=parseFloat(current.style.left),y=parseFloat(current.style.top);
+    near=cnEls.filter(pin=>pin!==current).map(pin=>({id:pin.dataset.key,d:Math.hypot(parseFloat(pin.style.left)-x,parseFloat(pin.style.top)-y)}))
+      .filter(p=>p.d<56).sort((a,b)=>a.d-b.d).slice(0,6).map(p=>DATA.china.find(e=>e.id===p.id));
+  }else{
+    const current=markers[entry.id];if(!current||current.c.china)return '';
+    const p=toSphere(current.c.lon,current.c.lat);
+    near=DATA.world.filter(e=>{
+      if(e.id===entry.id||!markers[e.id])return false;
+      const c=markers[e.id].c,q=toSphere(c.lon,c.lat);
+      return q.z>.14&&Math.hypot(q.x-p.x,q.y-p.y)*baseR*zoom<40;
+    });
+  }
   if(!near.length)return '';
   return `<nav class="nearby-flavors" aria-label="Nearby flavors"><p>Nearby flavors</p>${near.map(e=>`<button type="button" data-nearby-food="${esc(e.id)}">${esc(e.catalogName||e.name)}</button>`).join('')}</nav>`;
 }
 function openNearbyFood(event){
   const button=event.target.closest('[data-nearby-food]');if(!button)return;
-  const entry=DATA.world.find(e=>e.id===button.dataset.nearbyFood);if(entry)openFoodDetail(entry);
+  const entry=[...DATA.world,...DATA.china].find(e=>e.id===button.dataset.nearbyFood);if(entry)openFoodDetail(entry);
 }
 peek.addEventListener('click',openNearbyFood);
 $('foodDetail').addEventListener('click',openNearbyFood);
@@ -1294,7 +1374,7 @@ function peekShow(entries,el){
 }
 peek.addEventListener('pointerenter',event=>{if(event.pointerType&&event.pointerType!=='touch'){lastPointerType=event.pointerType;peekInput=event.pointerType;}cancelHoverSwitch();clearTimeout(peekTimer);});peek.addEventListener('pointerleave',scheduleHidePeek);
 peek.addEventListener('focusin',()=>clearTimeout(peekTimer));peek.addEventListener('focusout',scheduleHidePeek);
-function setSurfaceAvailability(){document.querySelector('.globe-wrap').inert=cnOpen;cnView.inert=!cnOpen;}
+function setSurfaceAvailability(){const reading=!!detailEntry&&isPhoneLayout();document.querySelector('.globe-wrap').inert=cnOpen||reading;cnView.inert=!cnOpen||reading;}
 function markActive(c){activePin=c;for(const k in markers)markers[k].el.classList.toggle('active',!!c&&markers[k].c.key===c.key);}
 // Only protect a deliberate, short journey toward the card, never unrelated mouse movement.
 function towardCard(point,previous,anchor,card){
@@ -1329,10 +1409,16 @@ window.addEventListener('keydown',event=>{
 function openFoodDetail(entry){
   if(!entry)return;detailEntry=entry;hidePeek();focus=null;vYaw=vPitch=0;
   const pane=$('foodDetail');
-  pane.innerHTML=`<div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${nearbyWorldNav(entry)}${photoBlock(entry,'food-photo')}${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Flavor',entry.taste],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer></div>`;
+  const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
+  const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
+  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${nearbyWorldNav(entry)}${photoBlock(entry,'food-photo')}${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Flavor',entry.taste],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer></div>`;
+  pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
+  $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
+  $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});
+  $('detailNext').addEventListener('click',()=>{if(index<entries.length-1)openFoodDetail(entries[index+1]);});
   pane.hidden=false;pane.scrollTop=0;document.body.classList.add('detail-open');
   resize();if(cnOpen)layoutChina();else requestRender();
-  if(keyboardMode)pane.focus();
+  if(keyboardMode||isPhoneLayout())pane.focus({preventScroll:true});
 }
 function closeFoodDetail(restore=false){
   if(!detailEntry)return;
