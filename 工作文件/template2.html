@@ -1199,11 +1199,46 @@ const safeUrl = value => /^https?:\/\//i.test(value || '') ? value : '';
 function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(' · ').at(-1)); }
 // Retain a previously decoded preview when opening or revisiting the full story.
 const readyPhotos = new Map();
+const detailPhotoCache = new Map();
+const detailPhotoSizes='(max-width: 759px) calc(100vw - 40px), (max-width: 1024px) 480px, 460px';
+function warmDetailPhoto(entry){
+  if(detailPhotoCache.has(entry.id))return;
+  const variants=entry.photoVariants||[];
+  if(!variants.length)return;
+  const image=document.createElement('img'),record={image,ready:false};
+  detailPhotoCache.set(entry.id,record);
+  // Keep only a few decoded photos in memory; the browser keeps the downloaded files cached.
+  while(detailPhotoCache.size>6)detailPhotoCache.delete(detailPhotoCache.keys().next().value);
+  image.decoding='async';image.fetchPriority='low';
+  image.addEventListener('load',async()=>{
+    try{if(image.decode)await image.decode();record.ready=true;}catch{}
+  },{once:true});
+  image.sizes=detailPhotoSizes;
+  image.srcset=variants.map(v=>`${v.src} ${v.width}w`).join(', ');
+  image.src=variants[0].src;
+}
+function reusablePhoto(entry){
+  const warmed=detailPhotoCache.get(entry.id);
+  if(warmed?.ready)return warmed.image;
+  const article=peek.querySelector('.food-entry');
+  if(article?.dataset.entry===entry.id)return article.querySelector('.photo-ready')||article.querySelector('.photo-media img');
+  return null;
+}
+function retainPhotoInDetail(image,pane){
+  if(!image)return;
+  const placeholder=pane.querySelector('.photo-media img');
+  if(!placeholder)return;
+  // Move the existing decoded node, rather than setting its URL on a new image.
+  image.className=placeholder.className;
+  image.alt='';image.setAttribute('aria-hidden','true');
+  image.removeAttribute('data-food-photo');image.removeAttribute('data-photo-id');
+  placeholder.replaceWith(image);
+}
 function photoBlock(e, cls, detail=false){
   if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
   const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
   const available=e.photoVariants||[],variants=detail?available:available.slice(0,1),src=variants[0]?.src||e.photo;
-  const sizes=cls==='thumb'?'44px':detail?'(max-width: 759px) calc(100vw - 40px), (max-width: 1024px) 480px, 460px':'268px';
+  const sizes=cls==='thumb'?'44px':detail?detailPhotoSizes:'268px';
   const responsive=variants.length?` srcset="${variants.map(v=>`${esc(v.src)} ${v.width}w`).join(', ')}" sizes="${sizes}"`:'';
   return `<${tag} class="photo-figure"><span class="photo-media"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" src="${esc(readyPhotos.get(e.id)||e.photoPreview||src)}" alt="" aria-hidden="true" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><img class="${cls} photo-full${e.photoFit==='contain'?' fit-contain':''}" data-food-photo data-photo-id="${esc(e.id)}" src="${esc(src)}"${responsive} alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" fetchpriority="${detail?'high':'auto'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"></span><span class="image-fallback">Higher-resolution photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
 }
@@ -1220,11 +1255,15 @@ function creditBlock(e){
   const label = safeUrl(parts.at(-1)) ? parts.slice(0,-1).join(' · ') : e.credit;
   return `Photo: ${esc(label)}${source ? ` · <a href="${esc(source)}" target="_blank" rel="noopener">Source</a>` : ''}${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">License</a>` : ''}`;
 }
-document.addEventListener('load', event => {
+document.addEventListener('load', async event => {
   const image=event.target;
   if(!(image instanceof HTMLImageElement)||!image.hasAttribute('data-food-photo'))return;
-  image.classList.add('photo-ready');
-  readyPhotos.set(image.dataset.photoId,image.currentSrc||image.src);
+  try{
+    if(image.decode)await image.decode();
+    if(!image.hasAttribute('data-food-photo'))return;
+    image.classList.add('photo-ready');
+    readyPhotos.set(image.dataset.photoId,image.currentSrc||image.src);
+  }catch{} // Keep the already visible photo if decoding fails.
 },true);
 document.addEventListener('error', event => { const image=event.target; if(image instanceof HTMLImageElement && image.hasAttribute('data-food-photo'))image.closest('.photo-figure')?.classList.add('image-failed'); }, true);
 function referenceBlock(e){
@@ -1412,6 +1451,7 @@ function peekShow(entries,el){
   cnEls.forEach(pin=>pin.classList.toggle('active',pin.dataset.key===e.id));
   directory.querySelectorAll('button').forEach(button=>button.classList.toggle('active',button.dataset.food===e.id));
   placePeek(el);
+  warmDetailPhoto(e);
   $('peekExpand').addEventListener('click',()=>{
     peekExpanded=!peekExpanded;peek.classList.toggle('expanded',peekExpanded);$('foodDetails').hidden=!peekExpanded;
     $('peekExpand').setAttribute('aria-expanded',String(peekExpanded));$('peekExpand').textContent=peekExpanded?'Hide facts':'Quick facts';
@@ -1453,11 +1493,14 @@ window.addEventListener('keydown',event=>{
 
 /* ---------- 点击详情：独立阅读区，不随悬停离开关闭 ---------- */
 function openFoodDetail(entry){
-  if(!entry)return;detailEntry=entry;hidePeek();focus=null;vYaw=vPitch=0;
+  if(!entry)return;
+  const shownPhoto=reusablePhoto(entry);
+  detailEntry=entry;hidePeek();focus=null;vYaw=vPitch=0;
   const pane=$('foodDetail');
   const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
   const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
   pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo',true)}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div>`;
+  retainPhotoInDetail(shownPhoto,pane);
   pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
   $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
   $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});
