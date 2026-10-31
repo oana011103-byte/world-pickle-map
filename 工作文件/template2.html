@@ -1197,7 +1197,7 @@ function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(
 function photoBlock(e, cls, detail=false){
   if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
   const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
-  const variants=e.photoVariants||[],src=variants[0]?.src||e.photo;
+  const available=e.photoVariants||[],variants=detail?available:available.slice(0,1),src=variants[0]?.src||e.photo;
   const sizes=cls==='thumb'?'44px':detail?'(max-width: 759px) calc(100vw - 40px), (max-width: 1024px) 480px, 460px':'268px';
   const responsive=variants.length?` srcset="${variants.map(v=>`${esc(v.src)} ${v.width}w`).join(', ')}" sizes="${sizes}"`:'';
   return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(src)}"${responsive} alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" fetchpriority="${detail?'high':'auto'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
