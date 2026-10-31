@@ -11,6 +11,7 @@
   @font-face{font-family:"Nunito";src:url("assets/fonts/nunito.ttf") format("truetype");font-weight:200 1000;font-style:normal;font-display:swap}
   :root{
     --paper:#fdf1ec;
+    --safe-top:env(safe-area-inset-top,0px);
     --ink:#4a3f3d;
     --ink-soft:#6f625f;
     --muted:#786762;
@@ -318,12 +319,12 @@
   .catalog-search p:empty{display:none}
   .phone-layout .marker{min-width:44px;min-height:44px}
   .phone-layout .marker.china .tag{display:none}
-  .phone-layout.detail-open .globe-wrap,.phone-layout.detail-open .cnview{visibility:hidden;pointer-events:none}
+  .phone-layout.detail-open .cn-return{display:none}
   .phone-layout.detail-open header{visibility:hidden}
   .phone-layout.detail-open header h1{font-size:clamp(28px,3.5vw,44px)}
   .phone-layout.detail-open .site-intro{display:block}
-  .phone-layout .detail-pane{inset:0!important;width:100%;height:100%!important;padding:0;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
-  .phone-layout .detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none;padding:max(8px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
+  .phone-layout .detail-pane{inset:var(--phone-map-height,30%) 0 0!important;width:100%;height:calc(100% - var(--phone-map-height,30%))!important;padding:0;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
+  .phone-layout .detail-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none;padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
   .phone-layout .detail-toolbar span{font-size:12px;color:var(--muted);white-space:nowrap}
   .phone-layout .detail-toolbar button,.phone-layout .detail-pagination button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:8px 4px;border:0;background:none;color:var(--ink);font:inherit;font-size:15px;cursor:pointer;touch-action:manipulation}
   .phone-layout .detail-toolbar svg{width:18px;height:18px;flex:none}
@@ -442,7 +443,9 @@ function isPhoneLayout(){return W<760||(W<=1024&&H<=600&&matchMedia('(pointer: c
 function usesSplitDetail(){return !!detailEntry&&!isPhoneLayout();}
 function detailWidth(){return Math.min(440,Math.max(320,window.innerWidth*.38));}
 function detailMapRight(){return usesSplitDetail()?W-detailWidth()-24:W;}
-function detailMapBottom(){return H;}
+function phoneMapHeight(){return Math.round(Math.min(260,Math.max(124,H*.3)));}
+function phoneMapTop(){return Math.max(12,parseFloat(getComputedStyle(document.querySelector('.stage')).getPropertyValue('--safe-top'))||0);}
+function detailMapBottom(){return detailEntry&&isPhoneLayout()?phoneMapHeight():H;}
 // Center the visible map and reading column; use a compact, explicit globe gap.
 function centerDetailPair(mapLeft,mapRight=null){
   const pane=document.getElementById('foodDetail');
@@ -490,6 +493,7 @@ function resize(){
   const stage=document.querySelector('.stage');
   W = stage.clientWidth || window.innerWidth; H = stage.clientHeight || window.innerHeight;
   document.body.classList.toggle('phone-layout',isPhoneLayout());
+  stage.style.setProperty('--phone-map-height',phoneMapHeight()+'px');
   setSurfaceAvailability();
   canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
   canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
@@ -497,8 +501,8 @@ function resize(){
   // Reserve actual text height, including wrapping and the final loaded fonts.
   const headerBottom=document.querySelector('header').getBoundingClientRect().bottom;
   const gap=W<=600?16:18;
-  globeTop=headerBottom+gap;
-  const bottom=detailMapBottom()-28;
+  globeTop=detailEntry&&isPhoneLayout()?phoneMapTop():headerBottom+gap;
+  const bottom=detailMapBottom()-(detailEntry&&isPhoneLayout()?12:28);
   const availableHeight=Math.max(0,bottom-globeTop);
   const fitRadius=Math.max(0,Math.min(detailMapRight()*.43,availableHeight/2));
   cx=detailMapRight()/2;
@@ -945,7 +949,8 @@ function layoutChina(){
 
   const mobile = W2 <= 820 || isPhoneLayout();
   const pad = mobile ? { l:18, r:directoryOpen&&W2>600&&!isPhoneLayout()?138:18, t:140, b:directoryOpen&&W2<=600&&!isPhoneLayout()?directoryBottomHeight()+28:64 } : { l:76, r:directoryOpen?210:76, t:132, b:80 };
-  if(usesSplitDetail()){pad.r=detailWidth()+40;pad.l=40;pad.t=132;pad.b=80;}
+  if(detailEntry&&isPhoneLayout()){pad.l=18;pad.r=18;pad.t=phoneMapTop();pad.b=H2-phoneMapHeight()+20;}
+  else if(usesSplitDetail()){pad.r=detailWidth()+40;pad.l=40;pad.t=132;pad.b=80;}
   const availW = W2 - pad.l - pad.r, availH = Math.max(60,H2 - pad.t - pad.b);
   const MAIN_MINLAT = 17.2;   // 主图只画到这个纬度，南海诸岛单开小图
 
@@ -998,9 +1003,9 @@ function layoutChina(){
   cnCe.restore();   // 主图裁剪结束，下面画附图，别再被主图矩形切掉
 
   // ---- 南海诸岛小图（标准做法：右下角附图）----
-  const box = mobile ? { w: 84, h: 112 } : { w: 132, h: 170 };
+  const box = detailEntry&&isPhoneLayout()?{w:42,h:56}:mobile ? { w: 84, h: 112 } : { w: 132, h: 170 };
   const bx = W2 - pad.r + (mobile ? 12 : 20) - box.w - detailShift;
-  const by = H2 - (directoryOpen&&W2<=600&&!isPhoneLayout()?directoryBottomHeight()+28:mobile?70:78) - box.h;
+  const by = H2 - (detailEntry&&isPhoneLayout()?H2-phoneMapHeight()+20:directoryOpen&&W2<=600&&!isPhoneLayout()?directoryBottomHeight()+28:mobile?70:78) - box.h;
   let jMinX = 1e9, jMaxX = -1e9, jMinY = 1e9, jMaxY = -1e9;
   for (const r of JD) for (const [lon, lat] of r){
     const p = albers(lon, lat);
@@ -1381,7 +1386,7 @@ function peekShow(entries,el){
 }
 peek.addEventListener('pointerenter',event=>{if(event.pointerType&&event.pointerType!=='touch'){lastPointerType=event.pointerType;peekInput=event.pointerType;}cancelHoverSwitch();clearTimeout(peekTimer);});peek.addEventListener('pointerleave',scheduleHidePeek);
 peek.addEventListener('focusin',()=>clearTimeout(peekTimer));peek.addEventListener('focusout',scheduleHidePeek);
-function setSurfaceAvailability(){const reading=!!detailEntry&&isPhoneLayout();document.querySelector('.globe-wrap').inert=cnOpen||reading;cnView.inert=!cnOpen||reading;}
+function setSurfaceAvailability(){document.querySelector('.globe-wrap').inert=cnOpen;cnView.inert=!cnOpen;}
 function markActive(c){activePin=c;for(const k in markers)markers[k].el.classList.toggle('active',!!c&&markers[k].c.key===c.key);}
 // Only protect a deliberate, short journey toward the card, never unrelated mouse movement.
 function towardCard(point,previous,anchor,card){
