@@ -207,7 +207,10 @@
   .marker .dot,.cpin .cdot{flex-shrink:0}
 
   .photo-figure{margin:0}.fit-contain{object-fit:contain!important;background:#fffdf9}.photo-caption{font-size:12px;line-height:1.6;color:var(--muted);margin:8px 0 0}
-  .image-failed img{display:none!important}.image-fallback{display:none;min-height:110px;place-items:center;padding:16px;background:#f7ece7;color:var(--muted);font-size:12px;border-radius:9px;text-align:center;line-height:1.8}
+  .photo-media{display:block;position:relative}
+  .photo-media .photo-full{position:absolute;inset:0;height:100%!important;opacity:0}
+  .photo-media .photo-full.photo-ready{opacity:1}
+  .image-failed .photo-full{display:none!important}.image-fallback{display:none;min-height:110px;place-items:center;padding:16px;background:#f7ece7;color:var(--muted);font-size:12px;border-radius:9px;text-align:center;line-height:1.8}
   .image-failed .image-fallback{display:grid}.image-fallback a{text-decoration:underline}
 
   .category-label{display:inline-block;background:#f2e2cf;color:#745331;font-size:11px;border-radius:5px;padding:3px 7px;margin-top:9px}
@@ -1194,13 +1197,15 @@ let peekExpanded = false;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = value => /^https?:\/\//i.test(value || '') ? value : '';
 function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(' · ').at(-1)); }
+// Retain a previously decoded preview when opening or revisiting the full story.
+const readyPhotos = new Map();
 function photoBlock(e, cls, detail=false){
   if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
   const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
   const available=e.photoVariants||[],variants=detail?available:available.slice(0,1),src=variants[0]?.src||e.photo;
   const sizes=cls==='thumb'?'44px':detail?'(max-width: 759px) calc(100vw - 40px), (max-width: 1024px) 480px, 460px':'268px';
   const responsive=variants.length?` srcset="${variants.map(v=>`${esc(v.src)} ${v.width}w`).join(', ')}" sizes="${sizes}"`:'';
-  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(src)}"${responsive} alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" fetchpriority="${detail?'high':'auto'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
+  return `<${tag} class="photo-figure"><span class="photo-media"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" src="${esc(readyPhotos.get(e.id)||e.photoPreview||src)}" alt="" aria-hidden="true" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><img class="${cls} photo-full${e.photoFit==='contain'?' fit-contain':''}" data-food-photo data-photo-id="${esc(e.id)}" src="${esc(src)}"${responsive} alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" fetchpriority="${detail?'high':'auto'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"></span><span class="image-fallback">Higher-resolution photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
 }
 function licenseUrl(e){
   if (e.licenseUrl) return safeUrl(e.licenseUrl);
@@ -1215,6 +1220,12 @@ function creditBlock(e){
   const label = safeUrl(parts.at(-1)) ? parts.slice(0,-1).join(' · ') : e.credit;
   return `Photo: ${esc(label)}${source ? ` · <a href="${esc(source)}" target="_blank" rel="noopener">Source</a>` : ''}${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">License</a>` : ''}`;
 }
+document.addEventListener('load', event => {
+  const image=event.target;
+  if(!(image instanceof HTMLImageElement)||!image.hasAttribute('data-food-photo'))return;
+  image.classList.add('photo-ready');
+  readyPhotos.set(image.dataset.photoId,image.currentSrc||image.src);
+},true);
 document.addEventListener('error', event => { const image=event.target; if(image instanceof HTMLImageElement && image.hasAttribute('data-food-photo'))image.closest('.photo-figure')?.classList.add('image-failed'); }, true);
 function referenceBlock(e){
   const refs=e.references?.length?e.references:[{url:e.sourceUrl,title:e.sourceTitle}];

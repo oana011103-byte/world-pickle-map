@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """把海岸线 + 整理好的英文条目灌进模板，生成 index.html"""
-import json, pathlib
+import base64, io, json, pathlib
+from PIL import Image, ImageOps
 here = pathlib.Path(__file__).parent
 tpl = (here / 'template2.html').read_text()
 land = (here / 'land-hi.json').read_text()
@@ -9,8 +10,17 @@ prov = (here / 'provinces.json').read_text()
 jd = (here / 'jiuduan.json').read_text()
 data = json.loads((here / 'entries_en.json').read_text())
 variants = json.loads((here.parent / 'assets/photo-variants.json').read_text())
+previews = {}
 for entry in data['china'] + data['world']:
     entry['photoVariants'] = variants[entry['photo']]['variants']
+    if entry['photo'] not in previews:
+        with Image.open(here.parent / entry['photo']) as source:
+            preview = ImageOps.exif_transpose(source).convert('RGB')
+            preview.thumbnail((192, 192), Image.Resampling.LANCZOS)
+            buffer = io.BytesIO()
+            preview.save(buffer, 'WEBP', quality=55, method=6)
+            previews[entry['photo']] = 'data:image/webp;base64,' + base64.b64encode(buffer.getvalue()).decode('ascii')
+    entry['photoPreview'] = previews[entry['photo']]
 coords = json.loads((here / 'china_coords.json').read_text())
 for e in data['china']:
     c = coords.get(e['id'])
