@@ -232,14 +232,16 @@
     body.china-mode.directory-open .peek{width:min(300px,calc(100vw - 24px))}
   }
   :root{--detail-width:clamp(320px,38vw,440px)}
-  .detail-pane{position:absolute;z-index:9;right:0;top:0;bottom:0;width:var(--detail-width);background:transparent;border:0;display:flex;flex-direction:column;padding:28px 28px 40px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
+  .detail-pane{position:absolute;z-index:9;right:0;top:0;bottom:0;width:var(--detail-width);background:transparent;border:0;display:flex;flex-direction:column;padding:28px 28px 40px;overflow:hidden;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
   .detail-pane::-webkit-scrollbar{display:none;width:0;height:0}
   @media(min-width:760px){.detail-pane{top:var(--detail-top,0px);bottom:auto;height:var(--detail-height,100%);padding-block:0}}
-  .detail-content{width:100%;max-width:360px;flex-shrink:0;margin:auto;text-align:center}
+  .detail-content{width:100%;max-width:360px;flex:1 1 auto;min-height:0;margin:auto;text-align:center;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+  .detail-content::-webkit-scrollbar{display:none}
   .detail-content .food-facts{text-align:left}
   .detail-pane h2{font-size:26px;line-height:1.35;margin:0 0 8px;overflow-wrap:anywhere}
-  .detail-pane .detail-place{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 8px}
-  .detail-scroll-hint{display:flex;align-items:center;justify-content:center;gap:6px;margin:0 0 16px;color:var(--ink-soft);font-size:11px;line-height:1.5;font-weight:600}
+  .detail-pane .detail-place{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 18px}
+  .detail-scroll-hint{flex:none;display:flex;align-items:center;justify-content:center;gap:6px;margin:0;padding:10px 0 4px;color:var(--ink-soft);font-size:11px;line-height:1.5;font-weight:600}
+  .detail-scroll-hint.is-end{visibility:hidden}
   .detail-scroll-hint svg{width:13px;height:13px;flex:none}
   .detail-pane .food-photo{display:block;width:100%;height:210px;object-fit:cover;border-radius:10px;background:#f7ece7}
   .detail-pane .food-facts{margin-top:22px;gap:16px}.detail-pane .food-fact{font-size:14px}
@@ -345,7 +347,7 @@
   .phone-layout .detail-toolbar svg{width:18px;height:18px;flex:none}
   .phone-layout .detail-content{flex:1 1 auto;min-height:0;max-width:620px;width:100%;margin:0 auto;padding:24px max(22px,env(safe-area-inset-right,0px)) 32px max(22px,env(safe-area-inset-left,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}
   .phone-layout .detail-pane h2{font-size:clamp(26px,6.8vw,34px);line-height:1.2}
-  .phone-layout .detail-pane .detail-place{font-size:14px;line-height:1.5;margin-bottom:8px}
+  .phone-layout .detail-pane .detail-place{font-size:14px;line-height:1.5;margin-bottom:20px}
   .phone-layout .detail-pane .photo-figure{margin:0}
   .phone-layout .detail-pane .food-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
   .phone-layout .detail-pane .food-facts{gap:24px;margin-top:26px}
@@ -530,7 +532,7 @@ function resize(){
   fitDetailHeight(cy-baseR*zoom,cy+baseR*zoom);
   layerUnder = null;
 }
-function refreshLayout(){hidePeek(true);resize();if(cnOpen)layoutChina();else requestRender();}
+function refreshLayout(){hidePeek(true);resize();if(cnOpen)layoutChina();else requestRender();requestAnimationFrame(updateDetailScrollHint);}
 window.addEventListener('resize',refreshLayout);
 window.visualViewport?.addEventListener('resize',refreshLayout);
 
@@ -1494,6 +1496,12 @@ window.addEventListener('keydown',event=>{
 });
 
 /* ---------- 点击详情：独立阅读区，不随悬停离开关闭 ---------- */
+function updateDetailScrollHint(){
+  const pane=$('foodDetail'),content=pane.querySelector('.detail-content'),hint=pane.querySelector('.detail-scroll-hint');
+  if(!content||!hint)return;
+  const atEnd=content.scrollHeight-content.scrollTop-content.clientHeight<=4;
+  hint.classList.toggle('is-end',atEnd);hint.setAttribute('aria-hidden',String(atEnd));
+}
 function openFoodDetail(entry){
   if(!entry)return;
   const shownPhoto=reusablePhoto(entry);
@@ -1501,14 +1509,17 @@ function openFoodDetail(entry){
   const pane=$('foodDetail');
   const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
   const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
-  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p><p class="detail-scroll-hint">Scroll down for more<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v10m-3.5-3.5L8 12.5l3.5-3.5"/></svg></p>${photoBlock(entry,'food-photo',true)}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div>`;
+  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo',true)}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div><p class="detail-scroll-hint">Scroll down for more<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v10m-3.5-3.5L8 12.5l3.5-3.5"/></svg></p>`;
   retainPhotoInDetail(shownPhoto,pane);
+  pane.querySelector('.detail-content').addEventListener('scroll',updateDetailScrollHint,{passive:true});
+  pane.querySelector('.detail-content').addEventListener('toggle',updateDetailScrollHint,true);
   pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
   $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
   $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});
   $('detailNext').addEventListener('click',()=>{if(index<entries.length-1)openFoodDetail(entries[index+1]);});
   pane.hidden=false;pane.scrollTop=0;document.body.classList.add('detail-open');
   resize();if(cnOpen)layoutChina();else requestRender();
+  requestAnimationFrame(updateDetailScrollHint);
   if(keyboardMode||isPhoneLayout())pane.focus({preventScroll:true});
 }
 function closeFoodDetail(restore=false){
