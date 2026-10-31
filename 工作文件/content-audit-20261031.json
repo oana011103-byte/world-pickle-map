@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-10-31",
+  "scope": "All 47 Chinese and 17 international entries from the supplied content pack; not a claim to cover all pickles worldwide.",
+  "content_pack_sha256": "fcc79e35fa9ed2808ff41c2c7973aadb3b23c86ad779aeb78636895e8f624fc7",
+  "coverage": {
+    "china": 47,
+    "world": 17,
+    "missing_pack_ids": [],
+    "undecodable_photos": [],
+    "ingredient_only_main_photos": 0,
+    "new_downloaded_photos": 13,
+    "reused_related_food_photo": 1,
+    "photo_types": {
+      "Prepared food": 39,
+      "Serving example": 16,
+      "Representative food": 4,
+      "Product example": 3,
+      "Preparation scene": 2
+    }
+  },
+  "content_changes": [
+    "Preserved regional names and distinctions; added fermentation status, texture, aroma, variants and labeled pairing ideas from supplied pack.",
+    "Retained all supplied references; added accessible primary references for fucai, zao lajiao and Sinki.",
+    "Distinguished fermentation, vinegar pickling and sauce pickling.",
+    "Classified every main image, with explicit captions for related-food, serving, preparation and product examples."
+  ],
+  "verification_limits": [
+    "Reference reachability is not independent validation of every claim. Supplied documentation remains the baseline.",
+    "Some source sites block automated access or time out; original reference URLs remain visible.",
+    "A standard PDF endpoint returns an error page and is labeled unavailable; an accessible university source was added.",
+    "Regional product examples and related-food photographs do not establish every regional recipe or manufacturing method.",
+    "UI regression checks use modeled DOM/canvas geometry; no physical-phone rendering verification."
+  ],
+  "photo_audit": "assets/photo-audit-20261031.json",
+  "reference_audit": "工作文件/reference-link-audit-20261031.json"
+}

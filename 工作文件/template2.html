@@ -55,6 +55,16 @@
   .site-intro{max-width:min(440px,100%);margin:10px 0 0;color:var(--ink-soft);font-size:13px;line-height:1.65;text-wrap:pretty}
   @media(max-width:759px){.site-intro{font-size:12px;max-width:min(360px,100%)}body.detail-open .site-intro{display:none}}
 
+  .explore-hint{display:flex;align-items:center;gap:7px;margin:12px 0 0;color:var(--ink-soft);font-size:13px;line-height:1.5;font-weight:700}
+  .explore-hint svg{width:15px;height:15px;flex:none;color:#a96b40}
+  .phone-layout .explore-hint{justify-content:center;font-size:12px;margin-top:9px}
+  .photo-label{display:block;font-size:11px;font-weight:700;line-height:1.4;color:var(--ink-soft);margin:7px 0 0}
+  .food-context{margin-top:24px;text-align:left;font-size:14px;line-height:1.7}
+  .food-context summary{cursor:pointer;font-weight:700;padding:10px 0;color:var(--ink)}
+  .food-context p{margin:12px 0}.food-context ul{padding-left:20px}
+  .food-context summary:focus-visible{outline:2px solid var(--ink-soft);outline-offset:3px;border-radius:3px}
+  .reference-list{margin:8px 0 0;padding-left:20px;overflow-wrap:anywhere}.reference-list li+li{margin-top:8px}
+  .food-sources .review-date{margin-top:12px}
   /* 小卡预览，原地展开；一次只阅读一种风味 */
   .peek{position:absolute;z-index:7;width:min(300px,calc(100vw - 24px));max-height:min(380px,50dvh,var(--peek-limit,50dvh));
     display:flex;flex-direction:column;padding:0;overflow:hidden;border-radius:16px;background:var(--card);
@@ -367,6 +377,7 @@
   <header>
     <h1>World Pickle Map</h1>
     <p class="site-intro">A little journey through China’s pickled vegetables and their cousins around the world. Discover the ingredients, traditions, and flavors behind each jar.</p>
+    <p class="explore-hint"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 15 9 23 12 15 15 12 23 9 15 1 12 9 9Z"/></svg>Click the star to see more</p>
   </header>
 
   <div class="globe-wrap">
@@ -1186,7 +1197,7 @@ function imageSource(e){ return safeUrl(e.photoSource || (e.credit || '').split(
 function photoBlock(e, cls){
   if (!e.photo) return `<div class="${cls} noimg">${jarSVG(cls === 'thumb' ? 44 : 96, '#cfe0d4', '#a9c4b1')}</div>`;
   const source = imageSource(e), tag = cls==='thumb'?'span':'figure';
-  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(e.photo)}" alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="lazy" decoding="async" width="960" height="640"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
+  return `<${tag} class="photo-figure"><img class="${cls}${e.photoFit==='contain'?' fit-contain':''}" data-food-photo src="${esc(e.photo)}" alt="${esc(cls==='thumb'?'':e.photoCaption || e.name)}" loading="${cls==='thumb'?'lazy':'eager'}" decoding="async" width="${e.photoWidth||960}" height="${e.photoHeight||640}"><span class="image-fallback">Photo unavailable for ${esc(e.name)}.${source && cls!=='thumb' ? `<a href="${esc(source)}" target="_blank" rel="noopener">View photo source</a>` : ''}</span>${e.photoKind && cls!=='thumb' ? `<span class="photo-label">${esc(e.photoKind)}</span>` : ''}${e.photoCaption && cls!=='thumb' ? `<figcaption class="photo-caption">${esc(e.photoCaption)}</figcaption>` : ''}</${tag}>`;
 }
 function licenseUrl(e){
   if (e.licenseUrl) return safeUrl(e.licenseUrl);
@@ -1202,6 +1213,15 @@ function creditBlock(e){
   return `Photo: ${esc(label)}${source ? ` · <a href="${esc(source)}" target="_blank" rel="noopener">Source</a>` : ''}${url ? ` · <a href="${esc(url)}" target="_blank" rel="noopener">License</a>` : ''}`;
 }
 document.addEventListener('error', event => { const image=event.target; if(image instanceof HTMLImageElement && image.hasAttribute('data-food-photo'))image.closest('.photo-figure')?.classList.add('image-failed'); }, true);
+function referenceBlock(e){
+  const refs=e.references?.length?e.references:[{url:e.sourceUrl,title:e.sourceTitle}];
+  return `<p>References</p><ol class="reference-list">${refs.filter(r=>safeUrl(r.url)).map(r=>`<li><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title||'View reference')}</a>${r.accessNote?` <span>(${esc(r.accessNote)})</span>`:''}</li>`).join('')}</ol>`;
+}
+function foodContext(e){
+  const facts=[['Fermentation',e.fermentation],['Texture',e.texture],['Aroma',e.aroma],['Regional distinctions',e.scopeNote]].filter(([,v])=>v);
+  if(!facts.length&&!e.variants?.length&&!e.occasions?.length)return '';
+  return `<details class="food-context"><summary>About this pickle</summary>${facts.map(([k,v])=>`<p><strong>${k}</strong><br>${esc(v)}</p>`).join('')}${e.variants?.length?`<p><strong>Variations</strong></p><ul>${e.variants.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:''}${e.occasions?.length?`<p><strong>At the table</strong></p><ul>${e.occasions.map(o=>`<li>${esc(o.text)}${o.evidence_type==='editorial_suggestion'?' <em>(Pairing idea)</em>':''}</li>`).join('')}</ul>`:''}</details>`;
+}
 function nearbyWorldNav(entry){
   let near=[];
   if(cnOpen&&isPhoneLayout()){
@@ -1228,7 +1248,7 @@ function openNearbyFood(event){
 peek.addEventListener('click',openNearbyFood);
 $('foodDetail').addEventListener('click',openNearbyFood);
 function peekEntry(e){
-  return `<article class="food-entry" data-entry="${esc(e.id)}">${photoBlock(e,'food-photo')}<p class="food-place">${esc(e.place)}</p><p class="food-summary">${esc(e.taste)}</p><button class="peek-expand" id="peekExpand" aria-expanded="false" aria-controls="foodDetails">Quick facts</button><div id="foodDetails" hidden>${e.local?`<p class="food-local">${esc(e.local)}</p>`:''}${e.categoryLabel?`<span class="category-label">${esc(e.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',e.materials],['Preparation',e.process],['Flavor',e.taste],['Enjoy it',e.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(e)}</p>${e.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(e.sourceUrl))}" target="_blank" rel="noopener">${esc(e.sourceTitle||'View reference')}</a></p>`:''}</footer></div>${nearbyWorldNav(e)}</article>`;
+  return `<article class="food-entry" data-entry="${esc(e.id)}">${photoBlock(e,'food-photo')}<p class="food-place">${esc(e.place)}</p><p class="food-summary">${esc(e.taste)}</p><button class="peek-expand" id="peekExpand" aria-expanded="false" aria-controls="foodDetails">Quick facts</button><div id="foodDetails" hidden>${e.local?`<p class="food-local">${esc(e.local)}</p>`:''}${e.categoryLabel?`<span class="category-label">${esc(e.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',e.materials],['Preparation',e.process],['Flavor',e.taste],['Enjoy it',e.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(e)}</p>${referenceBlock(e)}</footer></div>${nearbyWorldNav(e)}</article>`;
 }
 function chooseChinaPeekPosition(anchor,width,height,bounds,previewHeight=height,points=[]){
   const gap=64;
@@ -1423,7 +1443,7 @@ function openFoodDetail(entry){
   const pane=$('foodDetail');
   const entries=cnOpen?DATA.china:DATA.world,index=entries.findIndex(e=>e.id===entry.id);
   const backIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>';
-  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo')}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><footer class="food-sources"><p>${creditBlock(entry)}</p>${entry.sourceUrl?`<p>Reference: <a href="${esc(safeUrl(entry.sourceUrl))}" target="_blank" rel="noopener">${esc(entry.sourceTitle||'View reference')}</a></p>`:''}</footer>${nearbyWorldNav(entry)}</div>`;
+  pane.innerHTML=`<div class="detail-toolbar"><button type="button" id="detailBack">${backIcon}Back to map</button><span>${cnOpen?'China':'World'} · ${index+1} / ${entries.length}</span></div><div class="detail-content"><h2 id="detailTitle">${esc(entry.name)}</h2><p class="detail-place">${esc(entry.place)}</p>${photoBlock(entry,'food-photo')}<p class="detail-intro">${esc(entry.taste)}</p>${entry.local?`<p class="food-local">${esc(entry.local)}</p>`:''}${entry.categoryLabel?`<span class="category-label">${esc(entry.categoryLabel)}</span>`:''}<dl class="food-facts">${[['Ingredients',entry.materials],['Preparation',entry.process],['Enjoy it',entry.eat]].map(([label,value])=>`<div class="food-fact"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${foodContext(entry)}<footer class="food-sources"><p>${creditBlock(entry)}</p>${referenceBlock(entry)}</footer>${nearbyWorldNav(entry)}</div>`;
   pane.insertAdjacentHTML('beforeend',`<nav class="detail-pagination" aria-label="Browse flavors"><button type="button" id="detailPrevious" ${index===0?'disabled':''}>Previous flavor</button><button type="button" id="detailNext" ${index===entries.length-1?'disabled':''}>Next flavor</button></nav>`);
   $('detailBack').addEventListener('click',()=>closeFoodDetail(true));
   $('detailPrevious').addEventListener('click',()=>{if(index>0)openFoodDetail(entries[index-1]);});

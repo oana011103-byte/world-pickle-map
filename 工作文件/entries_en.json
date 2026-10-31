@@ -17,7 +17,41 @@
       "categoryLabel": "Regional pickle",
       "photoFit": "contain",
       "photoSource": "https://ccyjy.hbue.edu.cn/b1/36/c8562a241974/page.htm",
-      "catalogName": "Xiangyang preserved mustard root"
+      "catalogName": "Xiangyang preserved mustard root",
+      "references": [
+        {
+          "url": "https://manu61.magtech.com.cn/zgnz/fileup/0254-5071/HTML/中国酿造201907020.html",
+          "title": "Changes in physicochemical characteristics during production of traditionally fermented Xiangyang datoucai",
+          "supports": "Original research from Hubei University of Arts and Science supports the ingredient, process and texture changes."
+        },
+        {
+          "url": "https://www.hj.cn/content/2026-06/22/content_20158429.html",
+          "title": "Xiangyang intangible cultural heritage on the table",
+          "supports": "Local reporting documents dressed, stir-fried and steamed uses; legends are not treated as verified history."
+        }
+      ],
+      "fermentation": "Salted and partly dehydrated mustard root matured through fermentation.",
+      "scopeNote": "The story linking “Kongming cai” to a historical figure is a local legend, not a verified account of its invention.",
+      "texture": "Dense flesh that becomes crisp and chewy when sliced or shredded.",
+      "aroma": "Aged pickle aromas that mingle with meat when steamed or stir-fried.",
+      "local": "襄阳大头菜",
+      "variants": [
+        "Different aging periods and seasoning styles",
+        "The name datoucai can refer to different vegetables elsewhere; this entry describes the Xiangyang tradition."
+      ],
+      "occasions": [
+        {
+          "text": "A small accompaniment to everyday rice meals.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Try it with breakfast congee, or use a little to season steamed pork.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 240,
+      "photoHeight": 180
     },
     {
       "id": "cn-northeast-sour-napa",
@@ -32,10 +66,60 @@
       "sourceUrl": "https://www.dc.gov.cn/cydc/pin/201805/t20180529_218976.html",
       "sourceTitle": "Exploring Dongchang: Sour Cabbage with Pork and Blood Sausage",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoKind": "Serving example",
+      "photoCaption": "Sour cabbage stewed with pork and Chinese blood sausage.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Northeastern Sour Napa Cabbage"
+      "catalogName": "Northeastern Sour Napa Cabbage",
+      "references": [
+        {
+          "title": "Exploring Dongchang: Sour Cabbage with Pork and Blood Sausage",
+          "url": "https://www.dc.gov.cn/cydc/pin/201805/t20180529_218976.html",
+          "supports": "Dongchang District government describes naturally fermented long napa cabbage, its pale yellow colour, and its use with pork and blood sausage."
+        },
+        {
+          "title": "Manchu Food Customs in Kuancheng, Part One",
+          "url": "https://www.hbkc.gov.cn/art/2018/6/13/art_3679_519913.html",
+          "supports": "Kuancheng County government records autumn and winter cabbage pickling and its use in simmered dishes, stews, stir-fries, cold dishes, fillings and hotpot."
+        },
+        {
+          "title": "Benxi Shazhucai: The Winter Pig-Slaughter Feast",
+          "url": "https://benxi.gov.cn/ly/bxms/content_255787",
+          "supports": "Benxi tourism authorities document shared meals near Lunar New Year, with pork, sour cabbage and blood sausage, and winter gatherings around the pot."
+        },
+        {
+          "title": "PCR-DGGE Analysis of Lactic Acid Bacterial Diversity in Traditional Northeast Chinese Suancai",
+          "url": "https://www.spkx.net.cn/fileup/HTML/201607015.shtml",
+          "supports": "Original research from Shenyang Agricultural University supports the role of lactic acid bacteria in traditional northeastern sour-cabbage fermentation."
+        }
+      ],
+      "fermentation": "Core fermented vegetable: lactic-acid-fermented napa cabbage.",
+      "scopeNote": "This is a napa-cabbage family, distinct from the leafy-mustard sour greens of Sichuan and Chongqing. Fermentation time is not presented as a universal number.",
+      "texture": "The thick ribs retain a crisp, springy bite while the leaves soften. Finely cut cabbage blends readily into pork broth and glass noodles.",
+      "aroma": "Sour fermented-cabbage aroma, joined by rich meat-broth aromas when stewed.",
+      "local": "东北白菜酸菜",
+      "variants": [
+        "Raw-cabbage and blanched-cabbage fermentation routes",
+        "Whole heads and shredded commercial forms",
+        "Cooking differences between northeastern households and Manchu communities in northern Hebei"
+      ],
+      "occasions": [
+        {
+          "text": "Vegetables are preserved in late autumn and early winter for winter family stews and hotpots.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Near the New Year, the slaughter of a household pig can be followed by a shared meal of pork, sour cabbage and blood sausage.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A family gathering around a bubbling pot in winter, or a weekend making dumplings together.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Suan_cai,_pork,_and_Chinese_blood_sausage_stew.jpg",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-hetao-sour-cabbage",
@@ -51,9 +135,48 @@
       "sourceTitle": "Food in Urad Front Banner: Pork and Sour-Cabbage Stew",
       "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: sour cabbage stewed with pork and glass noodles, not photographed in Hetao.",
+      "photoCaption": "Suancai stewed with pork and glass noodles, photographed as a northeastern Chinese specialty.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Hetao Sour Cabbage"
+      "catalogName": "Hetao Sour Cabbage",
+      "references": [
+        {
+          "title": "Food in Urad Front Banner: Pork and Sour-Cabbage Stew",
+          "url": "https://www.wltqq.gov.cn/zjqq/aswltqq/mswltqq/202609/t20260929_605383.html",
+          "supports": "The banner government records cabbage varieties, layered salting and weighting, yellow-green colour, pork-potato-noodle combinations, and winter feasting and hospitality."
+        },
+        {
+          "title": "Tastes of Inner Mongolia: Twenty Hetao Specialities from Bayannur",
+          "url": "https://inews.nmgnews.com.cn/system/2020/12/30/013045063.shtml",
+          "supports": "Local Inner Mongolian reporting describes pork and sour-cabbage stew and meals shared with neighbours."
+        }
+      ],
+      "fermentation": "A regional branch of northern Chinese fermented sour cabbage.",
+      "scopeNote": "Hetao and northeastern sour cabbage are related regional traditions, not evidence of completely separate fermentation mechanisms.",
+      "texture": "Juicy cabbage becomes tender in a stew, alongside soft potatoes, glass noodles and meat.",
+      "aroma": "Sour-cabbage fragrance layered with pork, scallion and garlic when cooked.",
+      "local": "河套酸白菜",
+      "variants": [
+        "Different cabbage varieties",
+        "Cabbage-and-potato versions and versions with pork, tofu or glass noodles"
+      ],
+      "occasions": [
+        {
+          "text": "Autumn preservation supplies everyday family meals through winter.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Neighbors help at the New Year pig slaughter and share a large pot of pork-and-sour-cabbage stew; it is also served to guests.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A winter neighborhood gathering or a generous one-pot family meal.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Suan_cai_pork_stew.jpg",
+      "photoWidth": 1600,
+      "photoHeight": 1064
     },
     {
       "id": "cn-korean-chinese-napa-kimchi",
@@ -63,15 +186,52 @@
       "process": "Cabbage is first salted, then coated between the leaves with a prepared seasoning mixture and stored to ferment. The defining sequence joins salting, seasoning paste and further fermentation, rather than simply submerging cabbage in plain brine.",
       "taste": "A combination of chili heat, salt, sourness and often sweetness and savory depth. Acidity changes with ripeness and recipe.",
       "eat": "A small side dish with a meal; Soups and fried rice made with the fermented cabbage; specific recipes vary locally.",
-      "photo": "assets/photos/ingredient-napa-cabbage.jpg",
-      "credit": "Sous Chef / Sous Chef Photos · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Napa_cabbage.jpg",
+      "photo": "assets/photos/world-01.jpg",
+      "credit": "AhmadElq · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Korean_Kimchi.jpg",
       "sourceUrl": "https://www.ihchina.cn/project_details/14752/",
       "sourceTitle": "Kimchi-Making Skills of the Korean Ethnic Community in China",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: napa cabbage, not a finished pickle or a sample from this region.",
+      "photoKind": "Representative food",
+      "photoCaption": "Cabbage kimchi, shown as a related food example. This photograph is not documented as a Korean-Chinese regional preparation.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Korean-Chinese Spicy Napa Cabbage"
+      "catalogName": "Korean-Chinese Spicy Napa Cabbage",
+      "references": [
+        {
+          "title": "Kimchi-Making Skills of the Korean Ethnic Community in China",
+          "url": "https://www.ihchina.cn/project_details/14752/",
+          "supports": "National intangible-cultural-heritage records describe the ingredients, initial salting, seasoning, coating, cellar fermentation, flavour and cooperative early-winter preparation."
+        },
+        {
+          "title": "National Ethnic Affairs Commission: Customs of the Korean Ethnic Community",
+          "url": "https://www.neac.gov.cn/seac/ztzl/cxz/fsxg.shtml",
+          "supports": "Records the place of varied pickled vegetables, spicy cabbage and kimchi soup in the community's diet."
+        }
+      ],
+      "fermentation": "Core fermented vegetable: seasoning-paste-style fermentation.",
+      "scopeNote": "This entry represents traditions of China's Korean communities and can be compared with the brief international kimchi entry. Other Korean-Chinese salted or sauce-pickled vegetables are not automatically fermented.",
+      "texture": "Crisp and juicy, with softer leaves and firmer cabbage ribs.",
+      "aroma": "Garlic, ginger, chili and fermentation aromas; fish sauce, when used, changes the aromatic profile.",
+      "local": "朝鲜族辣白菜",
+      "variants": [
+        "Household differences in chili, garlic, ginger and fish-based seasonings",
+        "Freshly prepared and more mature flavor profiles"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday side dish alongside the three daily meals.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "In early winter, neighbors help one another prepare, divide and share the cabbage preserved for the cold season.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A small dish beside a home-cooked meal, or an early-winter gathering to prepare vegetables together.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "cn-korean-chinese-radish-kimchi",
@@ -81,15 +241,55 @@
       "process": "Radish replaces cabbage as the main vegetable and is salted, seasoned and fermented. Cutting style and seasoning should be described for the particular local version.",
       "taste": "Typical red-chili versions are salty, sour and hot while retaining radish flavor. Not every version has the same level of heat.",
       "eat": "A small side dish with rice and everyday meals.",
-      "photo": "assets/photos/ingredient-daikon-radish.jpg",
-      "credit": "Eric Polk (Epolk) · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Daikon_radish_-_Minowase.jpg",
+      "photo": "assets/photos/cn-korean-chinese-radish-kimchi-reviewed.jpg",
+      "credit": "lazy fri13th · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Kkakdugi.jpg",
       "sourceUrl": "https://www.panjin.gov.cn/html/2009/2020-06-11/content-121833.html",
       "sourceTitle": "Panjin Government: Rongxing Korean-Community Kimchi-Making Skills",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: white radish, not a finished pickle or a sample from this region.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "photoKind": "Representative food",
+      "photoCaption": "Kkakdugi, a cubed-radish kimchi. Shown as a related food example, not a verified photograph from a Korean-Chinese community.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Korean-Chinese Cubed Radish Pickles"
+      "catalogName": "Korean-Chinese Cubed Radish Pickles",
+      "references": [
+        {
+          "title": "Panjin Government: Rongxing Korean-Community Kimchi-Making Skills",
+          "url": "https://www.panjin.gov.cn/html/2009/2020-06-11/content-121833.html",
+          "supports": "Identifies cubed radish and spicy cabbage as representative Rongxing foods, and records everyday side dishes and communal winter preparation."
+        },
+        {
+          "title": "Kimchi-Making Skills of the Korean Ethnic Community in China",
+          "url": "https://www.ihchina.cn/project_details/14752/",
+          "supports": "Provides evidence for the broader tradition of fermenting cabbage and radish in Korean communities in China."
+        }
+      ],
+      "fermentation": "An ingredient variant within the fermented-pickle family; this entry covers versions that undergo fermentation.",
+      "scopeNote": "Treat this as a radish branch of the Korean-Chinese pickle family. Quick vinegar radishes, vegetables salted without fermentation and freshly mixed radish salads are separate cases. The root-versus-leaf texture comparison is descriptive.",
+      "texture": "Firm, crunchy root-vegetable pieces contrast with leafy cabbage pickles. Texture changes with fermentation and storage.",
+      "aroma": "Radish aroma combined with seasonings and fermentation notes.",
+      "local": "朝鲜族萝卜块泡菜",
+      "variants": [
+        "Cubed, sliced or other cuts should be identified for each local version",
+        "Hot red-chili and milder household seasonings"
+      ],
+      "occasions": [
+        {
+          "text": "A familiar household side dish served alongside spicy cabbage.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Radish cubes are among the representative foods made during Rongxing's communal winter pickle preparation.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A rice meal that calls for a small, crunchy vegetable side.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Kkakdugi.jpg",
+      "photoFit": "contain",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-tianshui-jiangshuicai",
@@ -106,7 +306,50 @@
       "photoKind": "Prepared food",
       "photoCaption": "Serving example: jiangshui noodles, not photographed in Tianshui.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Tianshui Jiangshui Greens"
+      "catalogName": "Tianshui Jiangshui Greens",
+      "references": [
+        {
+          "title": "Tianshui Culture and Tourism Bureau: A Taste of Tianshui",
+          "url": "https://www.tianshui.gov.cn/wlj/info/2462/155422.htm",
+          "supports": "Describes the vegetables, blanching, flour-based liquid or starter, and serving jiangshui with noodles."
+        },
+        {
+          "title": "A Two-Day Food and Travel Guide to Qin'an",
+          "url": "https://www.tianshui.gov.cn/wlj/info/2732/246062.htm",
+          "supports": "Records Qin'an breakfast foods and the specific pairing of chilli noodles with a bowl of jiangshui broth."
+        },
+        {
+          "title": "CPPCC: The Industrial Transformation of a Bowl of Jiangshui",
+          "url": "https://www.cppcc.gov.cn/zxww/2025/10/23/ARTI1761178194717119.shtml",
+          "supports": "Describes blanching northwestern vegetables and fermenting them with noodle-cooking liquid, as well as jiangshui noodles and small dough dumplings."
+        }
+      ],
+      "fermentation": "Core fermented vegetable: fermentation involving a starchy soup or jiangshui medium. Not every local version should be described as completely salt-free.",
+      "scopeNote": "Tianshui and Hanzhong belong to related jiangshui traditions, with distinct local dishes. Broad health claims in tourism materials are not included.",
+      "texture": "Blanched leaves are soft while stems retain some fiber. The liquid jiangshui is valued as well as the vegetables.",
+      "aroma": "Light vegetable aroma and a fermented sour fragrance.",
+      "local": "天水浆水菜",
+      "variants": [
+        "Seasonal wild greens, celery and cabbages in Qin'an",
+        "Turnip-based variants appear in Wenxian and Wudu in Longnan and merit more detailed regional entries"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday Tianshui noodle tradition, especially associated with refreshing sour meals in summer.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Local Qin'an food descriptions pair spicy lazi noodles with a bowl of jiangshui soup.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A summer noodle meal using both the fermented greens and their sour liquid.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 578
     },
     {
       "id": "cn-hanzhong-jiangshuicai",
@@ -124,7 +367,56 @@
       "photoCaption": "Hanzhong jiangshui greens, as identified in the source article.",
       "categoryLabel": "Regional pickle",
       "photoSource": "https://suoluoguo.com/%E6%B5%86%E6%B0%B4%E8%8F%9C",
-      "catalogName": "Hanzhong Jiangshui Greens"
+      "catalogName": "Hanzhong Jiangshui Greens",
+      "references": [
+        {
+          "title": "DB6107/T 47-2023: Preparation of Lueyang Cai Doufu Jiejie, a Hanzhong Local Snack",
+          "url": "https://amr.hanzhong.gov.cn/hzsjgj/gsgg/202401/f82107e44b0747db9bb2bf0cff0aa461/files/%E6%B1%89%E4%B8%AD%E7%89%B9%E8%89%B2%E5%B0%8F%E5%90%83%E5%88%B6%E4%BD%9C%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B%20%E7%95%A5%E9%98%B3%E8%8F%9C%E8%B1%86%E8%85%90%E8%8A%82%E8%8A%82.pdf.pdf",
+          "supports": "The local standard defines Hanzhong jiangshui greens as a semi-finished sour vegetable made by washing and blanching leafy greens before lactic acid fermentation; its appendix lists ingredients and methods."
+        },
+        {
+          "title": "Hanzhong Economic Cooperation Bureau: Jiangshui Noodles",
+          "url": "https://jhj.hanzhong.gov.cn/hzjhjwz/hzms/202105/ca1a68f49a5b4b509093f4aba006f399.shtml",
+          "supports": "Describes the ingredients, vegetable colour, stir-frying with garlic shoots, and pairing with tofu toppings and hand-rolled noodles."
+        },
+        {
+          "title": "Liuba: Building an Intangible-Heritage Food Centre in the Old Street",
+          "url": "https://www.hanzhong.gov.cn/hzszf/xwzx/qxdt/202402/f281ffc9da534b2fab7fdaf65aef759f.shtml",
+          "supports": "Records local wild greens and their use in jiangshui noodles, stirred grain dough, small dough dumplings and pounded potato cakes."
+        },
+        {
+          "title": "Hanzhong Economic Cooperation Bureau: Cai Doufu",
+          "url": "https://jhj.hanzhong.gov.cn/hzjhjwz/hzms/202010/f559ac15ab0441eeb3bf7e300dbcf404.shtml",
+          "supports": "Records coagulating tofu with sour jiangshui and making tofu-and-greens porridge, a former hospitality dish that became everyday food."
+        }
+      ],
+      "fermentation": "Core fermented vegetable: jiangshui-style leafy-green lactic fermentation, related to the Tianshui tradition.",
+      "scopeNote": "Jiangshui may mean the fermentation liquid or the wider food tradition. Distinguish the greens, the liquid and the finished noodle dish; jiangshui noodles are not a separate preserved vegetable.",
+      "texture": "Soft leaves with fibrous stems. The fermentation liquid flavors soups and is also used to set tofu.",
+      "aroma": "Fermented sourness, joined by garlic shoots, scallion, ginger and chili oil in cooked dishes.",
+      "local": "汉中浆水菜",
+      "variants": [
+        "Liuba versions made with locally named wild youcai greens",
+        "Mustard-preferred versions in Zhenba",
+        "The liquid jiangshui and the drained greens can be discussed separately"
+      ],
+      "occasions": [
+        {
+          "text": "Everyday Hanzhong noodles and local snacks; caitofu has become a widely eaten home-style food.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "An official Liuba account presents jiangshui noodles as a refreshing sour meal after the New Year celebrations.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A noodle accompaniment at breakfast or lunch.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 1024,
+      "photoHeight": 576
     },
     {
       "id": "cn-ziyang-liaosuancai",
@@ -142,7 +434,50 @@
       "photoCaption": "Ziyang fermented greens, from the Ziyang County Government’s article on liao suancai.",
       "categoryLabel": "Regional pickle",
       "photoSource": "https://www.zyx.gov.cn/Content-2562596.html",
-      "catalogName": "Ziyang Liao Sour Greens"
+      "catalogName": "Ziyang Liao Sour Greens",
+      "references": [
+        {
+          "title": "The Flavour of a Jar of Liaosuancai: Ziyang's Local Speciality Reaches a Wider Audience",
+          "url": "https://www.zyx.gov.cn/Content-2823125.html",
+          "supports": "The county government describes natural fermentation of local greens, the golden colour and refreshing sour flavour, and uses in noodles and buns and as food taken to relatives elsewhere."
+        },
+        {
+          "title": "Shaanxi Draft Local Food-Safety Standard for Ziyang Liaosuancai: Consultation and Drafting Materials",
+          "url": "https://sxwjw.shaanxi.gov.cn/hdjl/dczj/202509/P020250928597415914287.pdf",
+          "supports": "Provides an ingredient definition and a survey of uses in noodle soup, pork stir-fries, buns, dumplings, cold dishes and soups throughout the year. Cited only as drafting material."
+        },
+        {
+          "title": "Huangu Township: Passing on Intangible Heritage and Supporting Rural Development",
+          "url": "https://www.zyx.gov.cn/Content-2710403.html",
+          "supports": "Confirms the local name of Ziyang youcai suancai, or liaosuancai, and its county-level intangible-heritage record."
+        }
+      ],
+      "fermentation": "Core fermented vegetable: a local sour-green tradition of the Qinba region.",
+      "scopeNote": "Although geographically close to Hanzhong jiangshui, this tradition retains its own name and raw-material identity. Unsupported nitrite-free, nutrition or selenium-related health promises are not adopted. The cited draft-standard materials provide research background, not a claim about current final law.",
+      "texture": "Leaf and stem textures remain distinct. The greens can be finely cut for noodle soup or fillings.",
+      "aroma": "Naturally fermented sour-greens aroma.",
+      "local": "紫阳撩酸菜",
+      "variants": [
+        "Household, workshop and standardized packaged products",
+        "Noodle soups, stir-fries and fillings"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday side dish and noodle ingredient, eaten throughout the year in the local background survey.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A taste of home carried to friends and relatives working elsewhere; modern products also serve as convenient noodle ingredients and rice accompaniments.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Home-style noodles or a hometown food to bring back after a visit.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 500,
+      "photoHeight": 375
     },
     {
       "id": "cn-sc-paocai",
@@ -158,9 +493,47 @@
       "sourceTitle": "Sichuan paocai fermented by mixed-starter culture of lactic acid bacteria",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "A small plate of Sichuan paocai photographed in Beijing.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Sichuan and Chongqing brine pickles"
+      "catalogName": "Sichuan and Chongqing brine pickles",
+      "references": [
+        {
+          "title": "Sichuan paocai fermented by mixed-starter culture of lactic acid bacteria",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7590268/",
+          "supports": "Original research describes brine-submerged, lactic-fermented vegetables including radish, cabbage, yardlong beans and cucumber, eaten as side dishes or appetizers."
+        },
+        {
+          "title": "Chengdu Institute of Biology, Chinese Academy of Sciences: Notes on paocai",
+          "url": "https://www.cib.cas.cn/kxcb/kpwz/bsyc/202408/t20240807_7258696.html",
+          "supports": "Describes brine, earthenware jars, seasonal vegetables and lactic fermentation; lists young ginger, yardlong beans and mustard greens. An indexed summary was available; full-text retrieval failed."
+        }
+      ],
+      "fermentation": "An umbrella family of fermented vegetables, with variants distinguished by ingredient, maturation and use.",
+      "scopeNote": "This is the parent family. Its ingredient variants should not be counted as entirely unrelated culinary traditions.",
+      "texture": "From crisp to soft, depending on the vegetable and maturity.",
+      "aroma": "Fresh vegetable notes and fermented acidity, sometimes with aromatic spices.",
+      "local": "四川／川渝盐水泡菜",
+      "variants": [
+        "Quick-dipped xizao paocai",
+        "Sour mustard greens",
+        "Fermented yardlong beans",
+        "Fermented ginger and chilies",
+        "Fermented radish"
+      ],
+      "occasions": [
+        {
+          "text": "A side dish or small appetizer alongside a main meal.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Combine contrasting colors and textures as a side dish for a family gathering.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Sichuan_pickles_in_Beijing_(20161122163831).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 893
     },
     {
       "id": "cn-cy-qingcai",
@@ -176,9 +549,44 @@
       "sourceTitle": "Quality and flavor differences in suancai fermented from different mustard varieties",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: fish with sour mustard greens.",
+      "photoCaption": "Fish fillets served in a soup with pickled mustard greens.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Sichuan and Chongqing sour mustard greens"
+      "catalogName": "Sichuan and Chongqing sour mustard greens",
+      "references": [
+        {
+          "title": "Quality and flavor differences in suancai fermented from different mustard varieties",
+          "url": "https://manu61.magtech.com.cn/zgnz/article/2024/0254-5071/2024-10-178.html",
+          "supports": "Original research from the Sichuan Academy of Agricultural Sciences and collaborators describes mustard-based Sichuan suancai, pre-salting with further fermentation or direct jar fermentation, and use in suancai fish and hotpot."
+        },
+        {
+          "title": "Jiangjin District Government: Suancai fish as a local heritage food",
+          "url": "https://www.jiangjin.gov.cn/jrjj/fycp/202208/t20220809_10988856.html",
+          "supports": "Identifies local da qingcai mustard greens and fermented chili and ginger in suancai fish. The indexed summary was read; full-text retrieval timed out."
+        }
+      ],
+      "fermentation": "Lactic acid-fermented mustard greens: the leafy branch of the Sichuan–Chongqing paocai family.",
+      "scopeNote": "The mustard ingredient distinguishes it from northeastern Chinese cabbage suancai. Suancai fish is a dish, not a separate variety of pickle.",
+      "texture": "Soft leaves with petioles that can retain a crisp, resilient bite.",
+      "aroma": "A pronounced sour-greens aroma that varies with the mustard variety and fermentation.",
+      "local": "川渝泡酸青菜",
+      "variants": [
+        "Different mustard varieties, including broad-stemmed types",
+        "Commercial pre-salting followed by a second fermentation, or direct household jar fermentation"
+      ],
+      "occasions": [
+        {
+          "text": "A main vegetable ingredient or broth base for suancai fish and hotpot.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Share a pot of suancai fish with family on a cool day.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Pickled_mustard_fish_filet_soup.jpg",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-sc-xizao",
@@ -194,9 +602,40 @@
       "sourceTitle": "Geographical Indications website: Sichuan paocai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Tiaoshui paocai served at a restaurant in Jiang'an, Yibin.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Quick-dipped Sichuan pickles"
+      "catalogName": "Quick-dipped Sichuan pickles",
+      "references": [
+        {
+          "title": "Geographical Indications website: Sichuan paocai",
+          "url": "https://cpgi.org.cn/?a=detail&c=i&cataid=15&id=3115",
+          "supports": "Distinguishes quick-dipped and longer-stored pickles, seasoning pickles and rice accompaniments; documents fish soup, glass-noodle soup, breakfast uses and beans with minced pork. Health claims were not used."
+        }
+      ],
+      "fermentation": "A short brine-soaking style. Fermentation and acid production vary; the name alone does not establish a long or complete fermentation.",
+      "scopeNote": "The name describes soaking time and use, not one vegetable species. It does not provide a universal safe fermentation time.",
+      "texture": "Tender crispness is its defining feature.",
+      "aroma": "More fresh-vegetable aroma, alongside the sour scent of the brine.",
+      "local": "四川洗澡泡菜",
+      "variants": [
+        "Radish peel",
+        "Stem-lettuce strips",
+        "Cabbage and other leafy vegetables"
+      ],
+      "occasions": [
+        {
+          "text": "A small accompaniment to rice or congee.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Serve a little between bites of richly flavored main dishes.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Tiaoshui_Paocai_at_a_restaurant_in_Jiang%27an,_Yibin_(20250117112257).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 853
     },
     {
       "id": "cn-cy-cowpea",
@@ -212,9 +651,44 @@
       "sourceTitle": "Yankitchen: Stir-fried Sichuan pickled beans and ground pork",
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Chopped spicy and sour cowpeas.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fermented yardlong beans"
+      "catalogName": "Fermented yardlong beans",
+      "references": [
+        {
+          "title": "Yankitchen: Stir-fried Sichuan pickled beans and ground pork",
+          "url": "https://www.yankitchen.com/blog/stir-fried-sichuan-style-pickled-string-beans-and-ground-pork",
+          "supports": "A first-hand recipe documents fermented beans, chilies and minced pork, with sour, savory and hot flavors; used here as direct evidence of a serving method."
+        },
+        {
+          "title": "Sichuan paocai fermented by mixed-starter culture of lactic acid bacteria",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7590268/",
+          "supports": "Original research describes brine-submerged, lactic-fermented vegetables including radish, cabbage, yardlong beans and cucumber, eaten as side dishes or appetizers."
+        }
+      ],
+      "fermentation": "Brine-fermented bean pods, an ingredient variant of the paocai family.",
+      "scopeNote": "Suan doujiao is not exclusive to the Sichuan–Chongqing method. Regional versions should retain their own ingredient and process descriptions.",
+      "texture": "Crisp, with the fibrous bite of bean pods.",
+      "aroma": "Sour and beany notes, with meat aromas added during cooking.",
+      "local": "泡豇豆／酸豇豆",
+      "variants": [
+        "Whole beans fermented before chopping",
+        "Combinations with chilies and minced meat"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday home-cooked dish served with rice.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Chop finely as a topping for a rice bowl or noodles.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Spicy_and_sour_cowpea.jpg",
+      "photoWidth": 1280,
+      "photoHeight": 1280
     },
     {
       "id": "cn-cy-spice-pickles",
@@ -230,9 +704,45 @@
       "sourceTitle": "Jiangjin District Government: Suancai fish as a local heritage food",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "A decorated fermentation jar with a small plate of Sichuan paocai.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fermented ginger and chilies"
+      "catalogName": "Fermented ginger and chilies",
+      "references": [
+        {
+          "title": "Jiangjin District Government: Suancai fish as a local heritage food",
+          "url": "https://www.jiangjin.gov.cn/jrjj/fycp/202208/t20220809_10988856.html",
+          "supports": "Identifies local da qingcai mustard greens and fermented chili and ginger in suancai fish. The indexed summary was read; full-text retrieval timed out."
+        },
+        {
+          "title": "Chengdu Institute of Biology, Chinese Academy of Sciences: Notes on paocai",
+          "url": "https://www.cib.cas.cn/kxcb/kpwz/bsyc/202408/t20240807_7258696.html",
+          "supports": "Describes brine, earthenware jars, seasonal vegetables and lactic fermentation; lists young ginger, yardlong beans and mustard greens. An indexed summary was available; full-text retrieval failed."
+        }
+      ],
+      "fermentation": "Brine-fermented seasoning vegetables, grouped here by use. Ginger and chilies remain separate ingredient variants.",
+      "scopeNote": "Not every packaged wild-chili pickle is naturally fermented. Its ingredients and manufacturing method still matter.",
+      "texture": "Ginger slices are tender-crisp; chili flesh softens but retains body.",
+      "aroma": "Fermented acidity layered with ginger or chili aromas.",
+      "local": "泡姜与泡椒（调料泡菜组）",
+      "variants": [
+        "Fermented young ginger",
+        "Red fermented chilies",
+        "Other brine-fermented chili varieties"
+      ],
+      "occasions": [
+        {
+          "text": "Seasoning ingredients in stir-fried, braised or simmered main dishes, especially fish.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Slice a mild fermented young ginger as a small side dish.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Sichuan_Pao_Cai_and_Pao_Cai_Jar.jpg",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "cn-cq-zhacai",
@@ -248,9 +758,45 @@
       "sourceTitle": "China Intangible Cultural Heritage: Traditional Fuling zhacai production",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Zhacai in a bowl with pieces of meat.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fuling pressed mustard stem"
+      "catalogName": "Fuling pressed mustard stem",
+      "references": [
+        {
+          "title": "China Intangible Cultural Heritage: Traditional Fuling zhacai production",
+          "url": "https://www.ihchina.cn/project_details/14641/",
+          "supports": "Identifies swollen mustard stems, air-drying, repeated salting and pressing, seasonings and later fermentation; describes Fuling origin and a crisp-tender finish."
+        },
+        {
+          "title": "Chongqing Intellectual Property Administration: Fuling zhacai",
+          "url": "https://zscqj.cq.gov.cn/zwfw/bmfw/dlbzfw/cqdbml/202403/t20240313_13034064.html",
+          "supports": "Documents repeated washing, salting and pressing, and the regional product’s crisp texture."
+        }
+      ],
+      "fermentation": "A salted and pressed mustard product with a later fermentation stage.",
+      "scopeNote": "Zhacai is made from swollen stems, not leafy sour greens. Added seasonings and heat treatment are separate product attributes.",
+      "texture": "Firm, crisp and pleasantly chewy.",
+      "aroma": "Mustard and matured spice aromas.",
+      "local": "涪陵榨菜",
+      "variants": [
+        "Whole preserved stems",
+        "Seasoned shreds or slices",
+        "Reduced-salt products and different heat levels"
+      ],
+      "occasions": [
+        {
+          "text": "Pair a little with plain congee, steamed buns or other mild staples.",
+          "evidence_type": "editorial_suggestion"
+        },
+        {
+          "text": "Use as a seasoning ingredient with pork, eggs or fried rice.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Zhacai_in_a_bowl_(20210622125217).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 853
     },
     {
       "id": "cn-sc-yacai",
@@ -265,10 +811,60 @@
       "sourceUrl": "https://patents.google.com/patent/CN106616676A/zh",
       "sourceTitle": "A method for producing finely chopped yacai — patent text",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "photoKind": "Prepared food",
-      "photoCaption": "Serving example: burning noodles, rather than preserved yacai on its own.",
+      "photoKind": "Serving example",
+      "photoCaption": "A serving of ranmian at Beijing Yibin Hostel.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Yibin preserved mustard strips"
+      "catalogName": "Yibin preserved mustard strips",
+      "references": [
+        {
+          "title": "A method for producing finely chopped yacai — patent text",
+          "url": "https://patents.google.com/patent/CN106616676A/zh",
+          "supports": "The inventors describe traditional leaf-mustard petioles cut into strips, dried and salted, then fermented again with brown sugar and spices. The patented new method is not generalized to all yacai."
+        },
+        {
+          "title": "National Standards Information Platform: Geographical indication product Yibin yacai",
+          "url": "https://dbba.sacinfo.org.cn/stdDetail/da53aca352ed2f939bf1e2b685acc0ed6fa35d621ba3edd6e3f6b923fcd6db66",
+          "supports": "Official standard listing identifies the Yibin geographical-indication product and its agricultural, industry, business and academic drafting organizations."
+        },
+        {
+          "title": "Yibin local media: Traditional foods featured in the Spring Festival Gala campaign",
+          "url": "https://yibinrm.cn/cms/a/122817800/content",
+          "supports": "Local reporting identifies finely chopped Yibin yacai as a seasoning in ranmian."
+        },
+        {
+          "title": "Xinhua on-site report: The open-air communal banquet",
+          "url": "https://www.xinhuanet.com/tech/2020-10/21/c_1126635258.htm",
+          "supports": "Reports on Yibin communal banquets and yacai fermented with brown sugar, Sichuan pepper and spices."
+        }
+      ],
+      "fermentation": "A partly dried, salt-preserved vegetable fermented and matured with sugar and spices.",
+      "scopeNote": "Yacai does not mean bean sprouts here. Yibin products should not be treated as identical to every salty yacai made elsewhere in Sichuan.",
+      "texture": "Fine pieces in chopped versions; tender-crisp in strips. It takes up oil and cooking juices when used in dishes.",
+      "aroma": "Sweet, spiced and matured vegetable aromas.",
+      "local": "宜宾芽菜",
+      "variants": [
+        "Sweet yacai styles",
+        "Salty yacai styles, including traditions elsewhere in Sichuan",
+        "Finely chopped suimi yacai"
+      ],
+      "occasions": [
+        {
+          "text": "A finely chopped seasoning in Yibin ranmian.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A supporting ingredient in traditional open-air communal banquets in Yibin.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Stir a little into eggs or green beans for an everyday rice accompaniment.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Ranmian_at_Beijing_Yibin_Hostel_(20210401111937).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 853
     },
     {
       "id": "cn-sc-nanchong-dongcai",
@@ -278,15 +874,46 @@
       "process": "The mustard is wilted, rubbed with salt, dehydrated and pickled. The prepared greens are mixed with spices and packed in jars for repeated tending and sealed maturation.",
       "taste": "Deeply salty and savory, with pronounced spices rather than bright sourness.",
       "eat": "A vegetable seasoning in Sichuan cooking; Chopped into steamed pork or noodle dishes (serving idea).",
-      "photo": "assets/photos/ingredient-leaf-mustard.jpg",
-      "credit": "thebittenword.com · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg",
+      "photo": "assets/photos/cn-sc-nanchong-dongcai-reviewed.jpg",
+      "credit": "Intangible Cultural Heritage Food platform / Yanshan product listing · Copyright retained by the source; no open license stated · https://ichf.hk/fyms?id=112",
       "sourceUrl": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c633dffca9d9493faccf8994a6b31706",
       "sourceTitle": "Ministry of Commerce Time-honored Brands Digital Museum: Yanshan",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: mustard greens, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Product example",
+      "photoCaption": "Packaged Yanshan dongcai from Nanchong. The serving picture on the package is a suggestion, not the unpackaged preserve.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Nanchong aged mustard greens"
+      "catalogName": "Nanchong aged mustard greens",
+      "references": [
+        {
+          "title": "Ministry of Commerce Time-honored Brands Digital Museum: Yanshan",
+          "url": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c633dffca9d9493faccf8994a6b31706",
+          "supports": "Documents Nanchong dongcai made from Jiangan mustard, salt and spices through dehydration, pickling and sealed maturation; dark glossy appearance, crisp texture and use at ceremonial and festive banquets."
+        }
+      ],
+      "fermentation": "Partly dehydrated, salted mustard greens fermented during extended jar storage.",
+      "scopeNote": "This is distinct from the cabbage-and-garlic dongcai of Tianjin. The same name does not guarantee the same vegetable or process.",
+      "texture": "Fairly firm but tender-crisp; dark brown with a glossy surface.",
+      "aroma": "Matured sauce-like or fresh aromatic notes, together with spices.",
+      "local": "南充冬菜",
+      "variants": [
+        "Different aging grades",
+        "Whole strips and subsequently chopped or seasoned forms"
+      ],
+      "occasions": [
+        {
+          "text": "A local food associated with wedding, funeral and festive banquets.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Use a small amount to add aroma to steamed pork or quick stir-fries.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://ichf.hk/fyms?id=112",
+      "photoWidth": 500,
+      "photoHeight": 500,
+      "photoFit": "contain"
     },
     {
       "id": "cn-yn-midu",
@@ -302,9 +929,49 @@
       "sourceTitle": "Yunnan Department of Agriculture and Rural Affairs: Midu mustard greens and regional branding",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: rice noodles in bone broth with sour greens, not photographed in Midu.",
+      "photoCaption": "Suancai bone-broth rice noodles with the accompanying ingredients presented separately before mixing.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Midu sour chopped mustard greens"
+      "catalogName": "Midu sour chopped mustard greens",
+      "references": [
+        {
+          "title": "Yunnan Department of Agriculture and Rural Affairs: Midu mustard greens and regional branding",
+          "url": "https://nync.yn.gov.cn/html/2024/zhoushilianbo-new_0228/404438.html",
+          "supports": "Identifies da qingcai mustard greens as the raw material for Midu’s dried vegetables, pickles and ingredient packs."
+        },
+        {
+          "title": "Yu Shuxiang: The taste of home — a first-person food account",
+          "url": "https://www.chinafabu.com/index.php?a=show&c=index&catid=48&id=1641&m=content&msite=1",
+          "supports": "A household account describes wilted and chopped mustard greens with chilies, salt, ginger, garlic, sugar and fennel, pressed into a sealed jar to ferment. It is not a universal Midu recipe."
+        },
+        {
+          "title": "Yunnan regional travel account: Midu, home of the song Xiaohe Tangshui",
+          "url": "https://yn.yunnan.cn/system/2023/09/11/032752013.shtml",
+          "supports": "Documents use in noodles, rice noodles, ersi, stir-fries and sour-pickle soup, including soup during the hottest summer period."
+        }
+      ],
+      "fermentation": "Chopped, seasoned mustard greens fermented in a jar.",
+      "scopeNote": "The household example illustrates one method; it should not become a claim that every Midu family follows one recipe.",
+      "texture": "Finely chopped and crisp, easy to mix through staple foods.",
+      "aroma": "Sour and chili aromas, sometimes with fennel.",
+      "local": "弥渡酸腌菜",
+      "variants": [
+        "Wetter shui yancai",
+        "Drier pucai intended for longer keeping"
+      ],
+      "occasions": [
+        {
+          "text": "Flavoring noodles, rice noodles and ersi across everyday meals.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A local travel account records sour-pickle soup during the hottest summer period.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:%E9%85%B8%E8%8F%9C%E9%AA%A8%E6%B1%A4%E7%B1%B3%E7%BA%BF%EF%BC%88%E6%9C%AA%E6%B7%B7%E5%90%88%EF%BC%89.jpg",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-yn-fuyuan",
@@ -320,9 +987,49 @@
       "sourceTitle": "Yunnan Provincial Library rural culture service: Fuyuan suancai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: pork trotters in Fuyuan sour soup.",
+      "photoCaption": "A shared pot of Fuyuan sour-soup pork trotters in Yunnan.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fuyuan sour greens"
+      "catalogName": "Fuyuan sour greens",
+      "references": [
+        {
+          "title": "Yunnan Provincial Library rural culture service: Fuyuan suancai",
+          "url": "https://ynscsp.cn/nd.jsp?fromColId=2&id=7110",
+          "supports": "Records the regional emphasis on original flavors and cooking with ham, pork trotters, chicken and fish. An indexed summary was read; full-text retrieval timed out."
+        },
+        {
+          "title": "Yunnan Department of Agriculture and Rural Affairs: Fuyuan suancai workshop",
+          "url": "https://nync.yn.gov.cn/html/2024/zhoushilianbo-new_1220/1416697.html",
+          "supports": "Describes sorting, washing, fermentation, desalting and packaging in Mohong, showing why commercial products should not all be called salt-free."
+        },
+        {
+          "title": "Qujing Municipal Government: Fuyuan sour greens and pork trotters sold nationwide",
+          "url": "https://www.qj.gov.cn/html/2026/xqdt2_0123/275670.html",
+          "supports": "Directly documents the local dish and commercial product of Fuyuan sour greens with pork trotters."
+        }
+      ],
+      "fermentation": "A regional sour-leaf fermentation tradition; the use of salt must be checked by method or producer.",
+      "scopeNote": "A place name alone does not establish a salt-free recipe, an additive-free product or a fixed fermentation time. Such attributes require a specific method.",
+      "texture": "Soft leaves and somewhat resilient, crisp stems, suited to simmered dishes.",
+      "aroma": "Sour-greens aromas that become part of a rich broth when cooked with meat.",
+      "local": "富源酸菜",
+      "variants": [
+        "Ayi suancai from Mohong",
+        "Tiechi caigangcai from Housuo"
+      ],
+      "occasions": [
+        {
+          "text": "Shared pot dishes simmered with pork trotters and other meats.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A home-style sour-greens and meat soup for cold weather.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:%E5%AF%8C%E6%BA%90%E9%85%B8%E6%B1%A4%E7%8C%AA%E8%84%9A_-_2024-05-22.jpg",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-yn-gan-yancai",
@@ -339,7 +1046,41 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Yunnan fermented dried greens"
+      "catalogName": "Yunnan fermented dried greens",
+      "references": [
+        {
+          "title": "Yunnan Health Commission: Explanatory notes for the dried fermented greens standard",
+          "url": "https://ynswsjkw.yn.gov.cn/html/2024/shipinganquandfbz_1127/4022000.html",
+          "supports": "Describes dried fermented vegetables in Baoshan, Qujing, Lincang and Dehong, with optional blanching, sealed fermentation and drying, usually little or no salt, regional rice-slurry or spice additions, and steeped or cooked uses."
+        },
+        {
+          "title": "Yunnan Health Commission: Publication of DBS 53/039-2025, Dried Fermented Greens",
+          "url": "https://ynswsjkw.yn.gov.cn/html/2025/shipinganquandfbz_0422/4023153.html",
+          "supports": "Confirms publication in 2025; the information is not based solely on a draft consultation document."
+        }
+      ],
+      "fermentation": "Vegetables fermented before drying, distinct from fresh vegetables that are simply sun-dried.",
+      "scopeNote": "Descriptions of low-salt traditions are not validation of every low-salt home method. The process is described here for identification, not as a recipe.",
+      "texture": "Light and shriveled when dry, becoming soft after soaking or cooking.",
+      "aroma": "Sour aromas shaped by both fermentation and drying.",
+      "local": "云南干腌菜",
+      "variants": [
+        "Spiced forms from Xuanwei and Zhaotong",
+        "Tengchong methods involving rice slurry"
+      ],
+      "occasions": [
+        {
+          "text": "Eaten after steeping or cooking.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A light soup ingredient for travel, or a quick weekday soup.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 895
     },
     {
       "id": "cn-yn-dai-suansun",
@@ -349,15 +1090,56 @@
       "process": "Shredded or otherwise cut shoots are treated with water, pressed into a vessel and sealed for natural souring. Research on traditional suansun includes salt-free methods.",
       "taste": "Clearly sour, becoming sour-hot when paired with chilies.",
       "eat": "Simmered with chicken, fish or pork ribs; Stir-fried with beef, snail meat or water spinach.",
-      "photo": "assets/photos/ingredient-bamboo-shoots.jpg",
-      "credit": "Fumikas Sagisavas · CC0 1.0 · https://commons.wikimedia.org/wiki/File:Bamboo_shoots.jpg",
+      "photo": "assets/photos/cn-yn-dai-suansun-reviewed.jpg",
+      "credit": "Pu Yaxin / Xinhua Yunnan · Copyright retained by the source; no open license stated · http://www.yn.xinhuanet.com/travel/2021-11/19/c_1310320776.htm",
       "sourceUrl": "https://www.neac.gov.cn/seac/ztzl/daiz/fsxg.shtml",
       "sourceTitle": "National Ethnic Affairs Commission: Dai customs",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: fresh bamboo shoots, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Serving example",
+      "photoCaption": "Dai-style fish cooked with sour bamboo shoots. A serving example rather than the preserved shoots alone.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Yunnan Dai-style fermented bamboo shoots"
+      "catalogName": "Yunnan Dai-style fermented bamboo shoots",
+      "references": [
+        {
+          "title": "National Ethnic Affairs Commission: Dai customs",
+          "url": "https://www.neac.gov.cn/seac/ztzl/daiz/fsxg.shtml",
+          "supports": "Documents Dai preferences for sour flavors, shredded fresh shoots treated with water and packed into sealed vessels to sour, and suansun as an everyday food."
+        },
+        {
+          "title": "Evaluation and comparison of microbial communities and volatile profiles in homemade suansun from Guangdong and Yunnan",
+          "url": "https://scijournals.onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.10569",
+          "supports": "Original research examines household suansun from Yunnan and Guangdong, including traditional salt-free bamboo-shoot fermentation and differences in microbes and volatile compounds."
+        },
+        {
+          "title": "Yunnan Provincial Library rural culture service: Dai food customs",
+          "url": "https://ynscsp.cn/nd.jsp?_ngc=-1&fromColId=-1&id=4178",
+          "supports": "Lists shoots simmered with chicken, fish, meat, ribs, beans and vegetables, or stir-fried with meats, snails and water spinach. An indexed summary was read; full-text retrieval timed out."
+        }
+      ],
+      "fermentation": "Acid-fermented bamboo shoots, including lactic fermentation. Yunnan and Guangxi forms are related but have different culinary settings.",
+      "scopeNote": "This can share a bamboo-shoot family label with Guangxi suansun while retaining Dai serving traditions. Salt-free descriptions do not apply automatically to every packaged product.",
+      "texture": "Tender, crisp bamboo fibers.",
+      "aroma": "A pronounced fermented-bamboo aroma that people respond to differently.",
+      "local": "云南傣味酸笋",
+      "variants": [
+        "Shredded shoots",
+        "Variations by bamboo species and household method"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday accompaniment and cooking ingredient in Dai communities.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Cooked with meat or vegetables in simmered dishes and stir-fries.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "http://www.yn.xinhuanet.com/travel/2021-11/19/c_1310320776.htm",
+      "photoWidth": 800,
+      "photoHeight": 600,
+      "photoFit": "contain"
     },
     {
       "id": "cn-gz-dushan",
@@ -367,15 +1149,45 @@
       "process": "Mustard greens are first wilted, salted and fermented. After trimming and pressing, they are combined with fermented glutinous rice and seasonings, then packed into jars for further fermentation. The rice component creates a flavor distinct from simple brined greens.",
       "taste": "Distinctively sweet and sour, with saltiness and heat.",
       "eat": "A small accompaniment to rice; Chopped into minced-meat or tofu dishes (serving idea).",
-      "photo": "assets/photos/ingredient-leaf-mustard.jpg",
-      "credit": "thebittenword.com · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg",
+      "photo": "assets/photos/cn-gz-dushan-reviewed.jpg",
+      "credit": "People’s Daily Online / Dushan County Integrated Media Center · Copyright retained by the source; no open license stated · https://gz.people.com.cn/n2/2026/0430/c406292-41568562.html",
       "sourceUrl": "https://cpgi.org.cn/?a=detail&c=i&cataid=3&id=1010",
       "sourceTitle": "AQSIQ Announcement 167 of 2013: Dushan yan suancai quality requirements",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: mustard greens, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Prepared food",
+      "photoCaption": "Dushan yan suancai, pictured with traditional pickle jars in the source report.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Dushan sweet-sour mustard greens"
+      "catalogName": "Dushan sweet-sour mustard greens",
+      "references": [
+        {
+          "title": "AQSIQ Announcement 167 of 2013: Dushan yan suancai quality requirements",
+          "url": "https://cpgi.org.cn/?a=detail&c=i&cataid=3&id=1010",
+          "supports": "Annex 10 identifies mustard, chili powder, glutinous rice, salt and rock sugar, with initial vegetable fermentation and later jar fermentation after mixing with fermented rice; describes sweet-sour, salty-hot flavors and tender crispness."
+        }
+      ],
+      "fermentation": "A composite fermented food combining mustard greens and fermented glutinous rice.",
+      "scopeNote": "Yan suancai is a regional food name; it does not mean hydrochloric acid is added. Non-hot and other commercial variants require their own label information.",
+      "texture": "Tender-crisp pieces of moderate size.",
+      "aroma": "A sweet-sour fermented-rice aroma alongside vegetable notes.",
+      "local": "独山盐酸菜",
+      "variants": [
+        "Products differing in heat, sweetness and cut"
+      ],
+      "occasions": [
+        {
+          "text": "A small sweet-sour, salty-hot side dish with a meal.",
+          "evidence_type": "editorial_suggestion"
+        },
+        {
+          "text": "Pair a small portion with richer main dishes at a shared meal.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://gz.people.com.cn/n2/2026/0430/c406292-41568562.html",
+      "photoFit": "contain",
+      "photoWidth": 860,
+      "photoHeight": 573
     },
     {
       "id": "cn-wuling-zha-guangjiao",
@@ -385,15 +1197,52 @@
       "process": "Chopped chilies are mixed with grain meal, salt and seasonings, packed in a jar and sealed for natural fermentation. Some communities use inverted water-sealed jars. The mixture is generally steamed or stir-fried before eating.",
       "taste": "Sour-hot flavors together with grain notes.",
       "eat": "Stir-fried with cured pork; Stir-fried with twice-cooked pork; Used beneath steamed meat or pork ribs.",
-      "photo": "assets/photos/ingredient-red-chilies.jpg",
-      "credit": "Nicholas Gemini (Nicholas Frisardi) · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Red_Chili_peppers.JPG",
+      "photo": "assets/photos/cn-wuling-zha-guangjiao-reviewed.webp",
+      "credit": "Tudaojia product photography / Yami · Copyright retained by the source; no open license stated · https://www.yami.com/zh/p/zha-pepper-14-11-oz/1148093001",
       "sourceUrl": "https://nyncw.cq.gov.cn/zwxx_161/qxlb/202201/t20220117_10306699.html",
       "sourceTitle": "Chongqing Agriculture and Rural Affairs Commission: Tujia inverted jars in Qianjiang",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: fresh chilies, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Product example",
+      "photoCaption": "Tudaojia zha guangjiao: a packaged chili-and-grain product with a serving suggestion, as shown by the retailer.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fermented chili and grain meal"
+      "catalogName": "Fermented chili and grain meal",
+      "references": [
+        {
+          "title": "Chongqing Agriculture and Rural Affairs Commission: Tujia inverted jars in Qianjiang",
+          "url": "https://nyncw.cq.gov.cn/zwxx_161/qxlb/202201/t20220117_10306699.html",
+          "supports": "Describes chilies with rice flour or cornmeal, ginger, garlic and spices in inverted water-sealed jars; cooked with lard or cured pork and eaten with rice or drinks. Indexed text was read; page retrieval timed out."
+        },
+        {
+          "title": "Microbial diversity and functions of zha guangjiao from different areas of Enshi",
+          "url": "https://manu61.magtech.com.cn/zgnz/fileup/0254-5071/HTML/%E4%B8%AD%E5%9B%BD%E9%85%BF%E9%80%A0202310017.html",
+          "supports": "Original research describes fresh red chilies and cornmeal or rice flour naturally fermented in sealed vessels, with regional ingredient and microbial variation."
+        }
+      ],
+      "fermentation": "A composite chili-and-grain fermentation, not the same product as plain chopped fermented chilies.",
+      "scopeNote": "Several local names overlap. Zha guangjiao and zha haijiao should not be presented as unrelated products merely because their names differ. Grain meal is the identifying ingredient.",
+      "texture": "Granular and meal-like; loose and oil-coated after stir-frying, softer after steaming.",
+      "aroma": "Sourness, chilies and grain.",
+      "local": "鲊广椒／鲊海椒",
+      "variants": [
+        "Cornmeal versions",
+        "Rice-flour versions",
+        "Inverted jars and upright water-sealed household jars"
+      ],
+      "occasions": [
+        {
+          "text": "Cooked and served with rice or alcoholic drinks.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Traditionally jarred after the autumn chili harvest; this is the making season.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://www.yami.com/zh/p/zha-pepper-14-11-oz/1148093001",
+      "photoWidth": 757,
+      "photoHeight": 757,
+      "photoFit": "contain"
     },
     {
       "id": "cn-hn-duolajiao",
@@ -403,15 +1252,56 @@
       "process": "Chilies are chopped, mixed with salt and other ingredients, and packed into jars. Traditional aged versions mature through fermentation and are used in cooking or as accompaniments.",
       "taste": "Hot, fresh-tasting and salty-savory; fermented versions can also be sour.",
       "eat": "Fish head steamed with chopped chilies; Seasoning for steamed dishes and other main courses.",
-      "photo": "assets/photos/ingredient-red-chilies.jpg",
-      "credit": "Nicholas Gemini (Nicholas Frisardi) · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Red_Chili_peppers.JPG",
+      "photo": "assets/photos/cn-hn-duolajiao-reviewed.jpg",
+      "credit": "ThomasYehYeh · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:A_bowlful_of_chopped_chilis_ready_to_cook_with_fish_head_DuoJiaoYuTou_in_Taipei.jpg",
       "sourceUrl": "https://hunan.gov.cn/hnszf/jxxx/hxwh/cwd/201711/t20171111_4685420.html",
       "sourceTitle": "Hunan Provincial Government: Duo jiao",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: fresh chilies, not a finished pickle or a sample from this region.",
+      "photoKind": "Prepared food",
+      "photoCaption": "Chopped chilies prepared for fish-head dishes at a Hunan restaurant in Taipei. A preparation example; the photograph does not establish fermentation time.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Hunan chopped salted chilies"
+      "catalogName": "Hunan chopped salted chilies",
+      "references": [
+        {
+          "title": "Hunan Provincial Government: Duo jiao",
+          "url": "https://hunan.gov.cn/hnszf/jxxx/hxwh/cwd/201711/t20171111_4685420.html",
+          "supports": "Records local names, red chilies and salt, optional ginger, garlic and baijiu, hot and savory flavors, and use as a condiment."
+        },
+        {
+          "title": "Hunan Agriculture Department: HNNY504-2026, Technical procedures for chopped chili production",
+          "url": "https://agri.hunan.gov.cn/agri/ztzl/nyjsgc/gcxz/202608/t20260826_34051243.html",
+          "supports": "Official entry point for the process document. The complete attachment was not extracted, so no numerical processing conditions were added."
+        },
+        {
+          "title": "National Standards Information Platform: Hunan-style fish head steamed with chopped chilies",
+          "url": "https://std.samr.gov.cn/db/search/stdDBDetailed?id=91D99E4D44082E24E05397BE0A0A3A10",
+          "supports": "The regional dish standard directly identifies steamed fish head with chopped chilies."
+        }
+      ],
+      "fermentation": "Aged fermented forms must be distinguished from briefly salted or acid-adjusted commercial products. The name alone does not establish fermentation.",
+      "scopeNote": "This and Guizhou zao lajiao belong to a related chopped-chili family, but retain local names and seasoning differences. Chili oil is not automatically part of this category.",
+      "texture": "Moist chili pieces with some fleshy bite.",
+      "aroma": "Chili, ginger, garlic and maturation aromas.",
+      "local": "湖南剁辣椒",
+      "variants": [
+        "Aged jar-fermented chilies",
+        "Different pepper varieties, particle sizes and maturation periods"
+      ],
+      "occasions": [
+        {
+          "text": "A central seasoning for shared Hunan dishes such as steamed fish head.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Use a little with noodles or stir-fried vegetables.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:A_bowlful_of_chopped_chilis_ready_to_cook_with_fish_head_DuoJiaoYuTou_in_Taipei.jpg",
+      "photoFit": "contain",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "cn-gz-zaolajiao",
@@ -421,15 +1311,57 @@
       "process": "Chilies are washed, drained, chopped and combined with other ingredients before sealed fermentation. Commercial products may be packaged and heat-treated afterward.",
       "taste": "Fresh-tasting, sour, hot and salty, often with ginger and garlic.",
       "eat": "Guizhou zao la fish; Seasoning for stir-fried and braised dishes.",
-      "photo": "assets/photos/ingredient-red-chilies.jpg",
-      "credit": "Nicholas Gemini (Nicholas Frisardi) · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Red_Chili_peppers.JPG",
-      "sourceUrl": "https://www.ttbz.org.cn/Home/PdfFileStreamGet/c3QsMTA3NDEz",
-      "sourceTitle": "T/QLY 190-2023: Guizhou zao lajiao",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: fresh chilies, not a finished pickle or a sample from this region.",
+      "photo": "assets/photos/cn-gz-zaolajiao-reviewed.jpg",
+      "credit": "Zhongwang News, republished by Guizhou University · Copyright retained by the source; no open license stated · https://www.gzu.edu.cn/2026/0614/c22305a275714/page.htm",
+      "sourceUrl": "https://www.gzu.edu.cn/2026/0614/c22305a275714/page.htm",
+      "sourceTitle": "Guizhou University and Jiangnan University: fermented chili production in Zunyi",
+      "licenseUrl": "",
+      "photoKind": "Preparation scene",
+      "photoCaption": "Zao lajiao fermenting in ceramic jars at a production site in Zunyi, photographed during a university-led technical visit.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Guizhou fermented chopped chilies"
+      "catalogName": "Guizhou fermented chopped chilies",
+      "references": [
+        {
+          "url": "https://www.gzu.edu.cn/2026/0614/c22305a275714/page.htm",
+          "title": "Guizhou University and Jiangnan University: fermented chili production in Zunyi",
+          "supports": "Documents Guizhou zao lajiao fermentation and the pictured production site."
+        },
+        {
+          "title": "T/QLY 190-2023: Guizhou zao lajiao",
+          "url": "https://www.ttbz.org.cn/Home/PdfFileStreamGet/c3QsMTA3NDEz",
+          "supports": "The original association standard defines a fermented chili product using red chilies, salt and optional sugar, baijiu, ginger and garlic; wine lees are not required.",
+          "accessNote": "Original document link currently unavailable."
+        },
+        {
+          "title": "National Standards Library: T/QLY 044-2023, Guizhou zao la fish",
+          "url": "https://www.ndls.org.cn/standard/detail/c536a757573bf4ffa138fdf22d8c8d5d",
+          "supports": "The dish specification identifies zao la fish as a representative regional serving method."
+        }
+      ],
+      "fermentation": "A fermented chopped-chili condiment. The word zao does not mean rice-wine lees are required.",
+      "scopeNote": "Do not infer rice-wine lees from the name. Use the product’s actual ingredients and process.",
+      "texture": "Moist chopped pieces or a more finely chopped paste.",
+      "aroma": "Chili, fermented acidity, ginger and garlic.",
+      "local": "贵州糟辣椒",
+      "variants": [
+        "Different chili varieties",
+        "Household differences in chop size and ginger-to-garlic balance"
+      ],
+      "occasions": [
+        {
+          "text": "Used to make regional main dishes such as zao la fish.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Add a little to home-style stir-fries or noodles.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://www.gzu.edu.cn/2026/0614/c22305a275714/page.htm",
+      "photoFit": "contain",
+      "photoWidth": 533,
+      "photoHeight": 400
     },
     {
       "id": "cn-sc-zizhong-dongjian",
@@ -439,15 +1371,45 @@
       "process": "The mustard tips are air-dried, salted and naturally fermented to maturity. The cited Fengyuan tradition emphasizes making them without added spices, allowing the greens and maturation to shape the flavor.",
       "taste": "Salty-savory and rounded, emphasizing aroma rather than strong acidity.",
       "eat": "A small seasoned accompaniment; Chopped into steamed meat or noodle dishes (serving idea).",
-      "photo": "assets/photos/ingredient-leaf-mustard.jpg",
-      "credit": "thebittenword.com · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg",
+      "photo": "assets/photos/cn-sc-zizhong-dongjian-reviewed.jpg",
+      "credit": "Intangible Cultural Heritage Food platform / Fengyuan listing · Copyright retained by the source; no open license stated · https://ichf.cn/fyms?id=156&lang=zh",
       "sourceUrl": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c58cf16bbecb458f812f5dad955f0d08",
       "sourceTitle": "Ministry of Commerce Time-honored Brands Digital Museum: Fengyuan",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: mustard greens, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Prepared food",
+      "photoCaption": "Zizhong dongjian, pictured in the regional food listing associated with Fengyuan.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Zizhong matured mustard tips"
+      "catalogName": "Zizhong matured mustard tips",
+      "references": [
+        {
+          "title": "Ministry of Commerce Time-honored Brands Digital Museum: Fengyuan",
+          "url": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c58cf16bbecb458f812f5dad955f0d08",
+          "supports": "Documents Zizhong mustard tips, including Pipaye and Qitouhuang varieties, air-dried, salted and naturally fermented; Fengyuan’s method uses no added spices and produces glossy yellow-brown, tender-crisp accompaniments."
+        }
+      ],
+      "fermentation": "Partly dried and salted mustard tips matured through natural fermentation.",
+      "scopeNote": "Related to, but distinct from, Nanchong dongcai and Yibin yacai. This entry emphasizes Zizhong, tender mustard tips and Fengyuan’s unspiced tradition; one producer’s method should not be generalized to every product.",
+      "texture": "Tender-crisp, glossy and yellow-brown.",
+      "aroma": "Naturally matured vegetable aromas; the cited Fengyuan method adds no spices.",
+      "local": "资中冬尖",
+      "variants": [
+        "Different producers’ dongjian products"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday accompaniment or a flavoring ingredient in cooking.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Add a little chopped dongjian to a mild noodle soup.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://ichf.cn/fyms?id=156&lang=zh",
+      "photoWidth": 600,
+      "photoHeight": 395,
+      "photoFit": "contain"
     },
     {
       "id": "cn-shaoxing-meigancai",
@@ -463,9 +1425,49 @@
       "sourceTitle": "Shaoxing Meigancai Receives a Common Standard — Zhejiang Daily",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Meigancai tied into a dried bundle.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Shaoxing Dried Mustard Greens"
+      "catalogName": "Shaoxing Dried Mustard Greens",
+      "references": [
+        {
+          "title": "Shaoxing Meigancai Receives a Common Standard — Zhejiang Daily",
+          "url": "https://zjnews.zjol.com.cn/zjnews/202411/t20241105_30623498.shtml",
+          "supports": "Standard drafters and market-regulation officials describe mustard-green ingredients, drying routes and the bamboo-shoot variant; a shared standard is not taken to mean identical household methods."
+        },
+        {
+          "title": "Hangzhou Speciality Dishes — Hangzhou Municipal Archives",
+          "url": "https://www.hzarchives.org.cn/info/6937",
+          "supports": "Records the local summer-breakfast pairing of rice in hot water with meigancai."
+        },
+        {
+          "title": "Ministry of Agriculture and Rural Affairs Agricultural Product Quality and Safety Centre: Shaoxing's Three Fermented Specialities",
+          "url": "https://www.aqsc.agri.cn/xxzl/qnllxxzn/202509/P020250922307984500227.pdf",
+          "supports": "Records meigancai with rice in hot water and household dishes layered and steamed with meat. Only culinary customs are used, not the source's health claims."
+        }
+      ],
+      "fermentation": "Traditionally fermented and then dried; the process of a particular commercial product should be checked separately.",
+      "scopeNote": "The traditional name containing mei does not mean that visible mold is required, nor that spoiled vegetables are suitable. A dried finished product is not necessarily a source of live microbes.",
+      "texture": "Dry and finely broken when sold; after soaking and cooking, the greens become supple and absorb meat juices.",
+      "aroma": "Dried-greens fragrance and the rounded aromas of steaming and drying.",
+      "local": "绍兴梅干菜",
+      "variants": [
+        "Dried greens combined with spring bamboo shoots",
+        "Shaoxing wu gancai and Hakka preserved greens should retain their own regional entries"
+      ],
+      "occasions": [
+        {
+          "text": "A Jiangnan breakfast accompaniment to paofan, recorded among Hangzhou's summer breakfast customs.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Home lunches and dinners with greens steamed or braised with pork; meigancai is also a Shaoxing specialty given to relatives and friends.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:MeiganCaiBundle.jpg",
+      "photoWidth": 1280,
+      "photoHeight": 960
     },
     {
       "id": "cn-ningbo-xianji",
@@ -481,9 +1483,44 @@
       "sourceTitle": "A Little Vegetable and Its Own Museum: Ningbo's Attachment to Xianji — Ningbo Archives, by the Xuecai Museum",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example; the photo does not establish the pickle’s origin or preparation method.",
+      "photoCaption": "A colorful plate of shredded pork stir-fried with xuecai, served beside rice.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Ningbo Salt-Fermented Mustard Greens"
+      "catalogName": "Ningbo Salt-Fermented Mustard Greens",
+      "references": [
+        {
+          "title": "A Little Vegetable and Its Own Museum: Ningbo's Attachment to Xianji — Ningbo Archives, by the Xuecai Museum",
+          "url": "https://www.nbdag.org.cn/art/2025/2/27/art_1229826643_26179.html",
+          "supports": "Describes potherb mustard, wilting, salting and weighting, sensory features, and uses in yellow-croaker soup, pork and edamame stir-fries, and rice-cake soup."
+        },
+        {
+          "title": "Have You Stocked Up on Ningbo's Winter Staples? — Xiangshan News",
+          "url": "https://www.cnxsg.cn/yw/202512/t20251227_6554924.shtml",
+          "supports": "Describes weighted potherb-mustard fermentation and its sour-salty flavour with a sweet finish."
+        }
+      ],
+      "fermentation": "Salt-fermented or matured mustard greens. The name xuecai alone does not guarantee one identical process.",
+      "scopeNote": "Fresh xuelihong is the ingredient; xianji is the preserved food. The word xuecai may refer to either fresh or preserved greens depending on context.",
+      "texture": "Crisp stems and supple leaves. Qiu'ai xianji is known for a yellow-gold color and tender crunch.",
+      "aroma": "A fresh, characteristic preserved-mustard aroma.",
+      "local": "宁波咸齑",
+      "variants": [
+        "Qiu'ai xianji is a recognized Ningbo regional branch",
+        "Xuelihong pickles from Yuyao and nearby areas are regional variants rather than wholly separate categories"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday Ningbo rice accompaniment within the local tradition of salty side dishes.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A home seafood meal in which xianji enhances yellow-croaker soup; rice-cake soup can become a complete one-bowl meal.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Xuecai_Rousi_on_K1035_(20260315124754).jpg",
+      "photoWidth": 960,
+      "photoHeight": 640
     },
     {
       "id": "cn-shaoxing-ningbo-fermented-amaranth-stalk",
@@ -500,7 +1537,40 @@
       "photoKind": "Prepared food",
       "photoCaption": "Serving example: fermented amaranth with tofu.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fermented Amaranth Stalks"
+      "catalogName": "Fermented Amaranth Stalks",
+      "references": [
+        {
+          "title": "Moldy Amaranth Stalks — Official Zhejiang English Website",
+          "url": "https://www.ezhejiang.gov.cn/2021-07/01/c_638401.htm",
+          "supports": "Supports the Shaoxing context, sealed salt fermentation, soft and slippery inner core, steaming, and cooking with tofu and other ingredients."
+        },
+        {
+          "title": "Late Summer and Early Autumn: Time to Make Ningbo's Three Pungent Preserves — Southeast Business Daily Field Report",
+          "url": "https://news.cnnb.com.cn/system/2016/09/07/008546603.shtml",
+          "supports": "Describes local methods, aged-brine variations, and market and eating contexts for Ningbo's three pungent vegetable preserves."
+        }
+      ],
+      "fermentation": "A local fermented vegetable. The traditional name does not establish that a single mold species drives the process.",
+      "scopeNote": "Local plant names vary. The botanical identity should be confirmed for the specific place; ordinary market red-amaranth stalks are not assumed to be interchangeable.",
+      "texture": "The outer stalk keeps its tube-like shape while the center can become soft, slippery and jelly-like; diners often suck out the tender core.",
+      "aroma": "A powerful, distinctive pungent fermentation aroma.",
+      "local": "霉苋菜梗",
+      "variants": [
+        "Shaoxing and Ningbo names, pre-treatment and brine use vary"
+      ],
+      "occasions": [
+        {
+          "text": "Small portions served with everyday Ningbo and Shaoxing family meals; a Zhejiang food account records their former frequent appearance beside other pickles.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A tasting focused on how a food's strong aroma differs from its texture and flavor.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "cn-ningbo-stinky-winter-melon",
@@ -510,15 +1580,51 @@
       "process": "Cut winter melon is salted and, in traditional versions, matured in an established pungent brine. Both raw-pickled and pre-cooked routes exist. Mild, briefly salted refrigerated melon should not be equated with long-matured brine versions.",
       "taste": "Salty and savory, sometimes mildly sour. The naturally mild melon takes on the flavor of its brine.",
       "eat": "A small portion dressed with sesame oil and served with rice; Steamed according to the local preparation or product instructions.",
-      "photo": "assets/photos/ingredient-winter-melon.jpg",
-      "credit": "WingkLEE · Public domain — author release (PD-self) · https://commons.wikimedia.org/wiki/File:Winter_melon.jpg",
+      "photo": "assets/photos/cn-ningbo-stinky-winter-melon-reviewed.jpg",
+      "credit": "China Ningbo Net · Copyright retained by the source; no open license stated · https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
       "sourceUrl": "https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
       "sourceTitle": "Ningbo's Flavourful Summer Rice Companions — China Ningbo Net",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Winter_melon.jpg#Licensing",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: winter melon, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Serving example",
+      "photoCaption": "Ningbo fermented winter melon served with fermented amaranth stalks; this photograph shows the two preserves together.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Ningbo Pungent Fermented Winter Melon"
+      "catalogName": "Ningbo Pungent Fermented Winter Melon",
+      "references": [
+        {
+          "title": "Ningbo's Flavourful Summer Rice Companions — China Ningbo Net",
+          "url": "https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
+          "supports": "Records summer household meals, the translucent jelly-like texture, pairing with hot rice, and the relationship to the three pungent preserves."
+        },
+        {
+          "title": "Winter Melon in the Kitchen: Chef Qian Yong on a Versatile Ingredient — Southeast Business Daily",
+          "url": "https://news.cnnb.com.cn/system/2014/07/31/008125611_01.shtml",
+          "supports": "Describes the traditional use of raw winter melon in pungent brine and variation in maturation time; it is not used to prescribe a single duration."
+        }
+      ],
+      "fermentation": "Established-brine fermentation; the broad name pickled winter melon also covers less-matured preparations.",
+      "scopeNote": "Pungency describes a particular fermentation tradition, not ordinary spoilage. There is no single household recipe suitable for every established brine.",
+      "texture": "Soft flesh, sometimes translucent and almost jelly-like, while the outline or skin may remain intact.",
+      "aroma": "A strong fermentation aroma from the mature brine, with intensity depending on the method.",
+      "local": "宁波臭冬瓜",
+      "variants": [
+        "Raw-pickled, pre-cooked and very briefly salted versions",
+        "Old-brine traditions may involve amaranth stalks, bean products or bamboo shoots"
+      ],
+      "occasions": [
+        {
+          "text": "A Ningbo summer household dish, with cool-feeling pickled melon beside hot rice: a pairing explicitly recorded in local reporting.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A small hometown-flavor side dish at a family meal after returning home.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
+      "photoFit": "contain",
+      "photoWidth": 530,
+      "photoHeight": 600
     },
     {
       "id": "cn-ningbo-fermented-taro-stalk",
@@ -528,15 +1634,46 @@
       "process": "One of Ningbo's three pungent vegetable specialties. Taro stalks are prepared, salted and matured in pungent brine. Household pre-cooking and brine methods differ.",
       "taste": "Salty and savory, with a pronounced fermented character.",
       "eat": "A small rice accompaniment; any further steaming or cooking should follow reliable local or product guidance.",
-      "photo": "assets/photos/ingredient-taro-leaf-stalks.jpg",
-      "credit": "Chiring chandan · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Stems_of_taro_leaves_ready_for_sale.jpg",
+      "photo": "assets/photos/cn-ningbo-fermented-taro-stalk-reviewed.jpg",
+      "credit": "Xiao Lao Peng Zuo Mei Shi / Sina Kandian · Copyright retained by the source; no open license stated · https://k.sina.com.cn/article_6443518981_180104c0500100jm7q.html",
       "sourceUrl": "https://news.cnnb.com.cn/system/2016/09/07/008546603.shtml",
       "sourceTitle": "Late Summer and Early Autumn: Time to Make Ningbo's Three Pungent Preserves — Southeast Business Daily Field Report",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: taro stalks, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Serving example",
+      "photoCaption": "Prepared taro stalks shown in a Ningbo fermented-taro-stalk photo essay. An individual serving example; recipes vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Ningbo Pungent Fermented Taro Stalks"
+      "catalogName": "Ningbo Pungent Fermented Taro Stalks",
+      "references": [
+        {
+          "title": "Late Summer and Early Autumn: Time to Make Ningbo's Three Pungent Preserves — Southeast Business Daily Field Report",
+          "url": "https://news.cnnb.com.cn/system/2016/09/07/008546603.shtml",
+          "supports": "Identifies taro stalks as one of the three pungent preserves, notes ingredient seasonality, and describes a salt-and-aged-brine system; quantitative household instructions are not reproduced."
+        },
+        {
+          "title": "Ningbo's Flavourful Summer Rice Companions — China Ningbo Net",
+          "url": "https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
+          "supports": "Lists taro stalks alongside winter melon and amaranth stalks and describes their shared system of preparation, salting and pungent brine."
+        }
+      ],
+      "fermentation": "A local vegetable fermented in established brine.",
+      "scopeNote": "This is not fermented taro corm. The edible plant and its preparation must be identified accurately; this entry does not provide a raw-eating or household-making recipe. Detailed sensory descriptions are less well documented than for the other two specialties.",
+      "texture": "Soft stalk segments after maturation, with firmness depending on the raw material and preparation.",
+      "aroma": "A brine aroma related to pungent winter melon and amaranth stalks, expressed through a different vegetable texture.",
+      "local": "臭芋艿蕻",
+      "variants": [
+        "Several local written forms name the stalk; they belong under one entry"
+      ],
+      "occasions": [
+        {
+          "text": "A traditional side dish in Ningbo homes and small restaurants. Late summer and early autumn also bring the seasonal ingredients for the three pungent specialties.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://k.sina.com.cn/article_6443518981_180104c0500100jm7q.html",
+      "photoWidth": 608,
+      "photoHeight": 334,
+      "photoFit": "contain"
     },
     {
       "id": "cn-xiaoshan-luobogan",
@@ -546,15 +1683,51 @@
       "process": "Skin-on strips alternate between drying, salting and pressing in crocks before sealed maturation. The traditional description is three dryings and three saltings. Craft interviews describe this alternating process as staged maturation or fermentation.",
       "taste": "Salty and savory with natural sweetness; modern versions may add chili seasoning.",
       "eat": "Dried radish scrambled with eggs; Dried radish stir-fried with edamame; Dried radish with cured pork; Sweet-and-sour seasoned dried radish.",
-      "photo": "assets/photos/ingredient-daikon-radish.jpg",
-      "credit": "Eric Polk (Epolk) · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Daikon_radish_-_Minowase.jpg",
+      "photo": "assets/photos/cn-xiaoshan-luobogan-reviewed.jpg",
+      "credit": "Zhejiang Party Building / Agricultural Bank of China Xiaoshan Branch · Copyright retained by the source; no open license stated · https://www.zjdj.com.cn/xbsydmtt/202411/t20241111_30637286_ext.shtml",
       "sourceUrl": "https://hznews.hangzhou.com.cn/xinzheng/quxian/content/2020-06/02/content_7746866.htm",
       "sourceTitle": "Guali's Intangible-Heritage Speciality: Xiaoshan Dried Radish Receives National Recognition — Xiaoshan Daily",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: white radish, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Preparation scene",
+      "photoCaption": "Radishes during Xiaoshan luobogan production. This is a preparation scene, not the finished dried preserve.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Xiaoshan Dried Radish"
+      "catalogName": "Xiaoshan Dried Radish",
+      "references": [
+        {
+          "title": "Guali's Intangible-Heritage Speciality: Xiaoshan Dried Radish Receives National Recognition — Xiaoshan Daily",
+          "url": "https://hznews.hangzhou.com.cn/xinzheng/quxian/content/2020-06/02/content_7746866.htm",
+          "supports": "Describes the Yidaozhong radish variety, repeated drying and salting, yellow colour and thick crisp texture, egg stir-fries and side-dish uses."
+        },
+        {
+          "title": "Xiaoshan Dried Radish: New Continuity for an Old Flavour — Interview with Heritage Bearer Wang Yuequan",
+          "url": "https://tidenews.com.cn/news.html?id=2533142",
+          "supports": "Describes drying, salting and storage, staged fermentation, processing and modern variations."
+        }
+      ],
+      "fermentation": "Salted, dehydrated and matured preserved vegetable; not every ordinary dried radish is necessarily lactic-fermented.",
+      "scopeNote": "Winter production does not mean it is eaten only in winter. Historical medicinal or heat-protection claims are not treated as established health effects.",
+      "texture": "Fairly even, fleshy strips combine the chew of a dried vegetable with a tender crunch.",
+      "aroma": "A concentrated, matured dried-radish aroma.",
+      "local": "萧山萝卜干",
+      "variants": [
+        "Plain and modern chili-seasoned products",
+        "Air-dehydrated and salt-dehydrated production routes"
+      ],
+      "occasions": [
+        {
+          "text": "A breakfast accompaniment, rice side or drinking snack; traditional harvesting and production are largely winter activities.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A little chopped radish in a lunchbox to add chew and crunch.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://www.zjdj.com.cn/xbsydmtt/202411/t20241111_30637286_ext.shtml",
+      "photoFit": "contain",
+      "photoWidth": 1280,
+      "photoHeight": 853
     },
     {
       "id": "cn-yuyao-zhacai",
@@ -570,9 +1743,40 @@
       "sourceTitle": "Yuyao Zhacai Geographical-Indication Protection Requirements — CNIPA Announcement Appendix",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Zhacai in a bowl with pieces of meat.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Yuyao Preserved Mustard Stem"
+      "catalogName": "Yuyao Preserved Mustard Stem",
+      "references": [
+        {
+          "title": "Yuyao Zhacai Geographical-Indication Protection Requirements — CNIPA Announcement Appendix",
+          "url": "https://www.cnipa.gov.cn/attach/0/20250826010509.pdf",
+          "supports": "Provides the designated origin, suitable cultivars, initial and repeated salting, and sensory-quality features; the Yuyao section is searchable within the larger PDF."
+        },
+        {
+          "title": "Yuyao Zhacai and Xiangshan Citrus Selected as Rural-Revitalisation Geographical-Indication Examples — China Ningbo Net",
+          "url": "https://news.cnnb.com.cn/system/2023/11/09/030539874.shtml",
+          "supports": "Describes the Zhejiang-style zhacai production area and its fresh-tasting, tender and crisp product characteristics."
+        }
+      ],
+      "fermentation": "Salt-fermented or matured preserved mustard stem.",
+      "scopeNote": "Compare Yuyao and Fuling through place, plant varieties, methods and product characteristics, without inventing a flavor ranking or a fixed salt difference. Inaccurate planting-season claims found in some reporting are not repeated.",
+      "texture": "Thick, crunchy stem flesh; a whole stem and fine shreds provide different bites.",
+      "aroma": "Matured mustard aroma, with additional notes reflecting any later seasonings.",
+      "local": "余姚榨菜",
+      "variants": [
+        "Whole, initially processed stems and ready-to-eat seasoned slices or shreds",
+        "A regional branch alongside Fuling within the zhacai family"
+      ],
+      "occasions": [
+        {
+          "text": "A quick home meal, noodle soup or small breakfast side.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Zhacai_in_a_bowl_(20210622125217).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 853
     },
     {
       "id": "cn-tianjin-dongcai",
@@ -588,9 +1792,44 @@
       "sourceTitle": "Tasting the Twenty-Four Solar Terms: Xiaohan and Tianjin Dongcai — Tianjin Library",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Tianjin preserved vegetable, dongcai.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Tianjin Garlic-Scented Preserved Cabbage"
+      "catalogName": "Tianjin Garlic-Scented Preserved Cabbage",
+      "references": [
+        {
+          "title": "Tasting the Twenty-Four Solar Terms: Xiaohan and Tianjin Dongcai — Tianjin Library",
+          "url": "https://www.tjl.tj.cn/ArticleContent.aspx?ChannelId=241&ID=29008",
+          "supports": "Describes dried cabbage mixed with salt and garlic and fermented in jars, golden colour and crisp tenderness, and use in wonton broth, noodle soups and stews; health claims are not adopted."
+        },
+        {
+          "title": "Tasting the Twenty-Four Solar Terms: Xiaohan — Zhejiang Social Sciences",
+          "url": "https://www.zjskw.gov.cn/art/2024/8/15/art_1229556995_60165.html",
+          "supports": "Describes the inner leaves of Tianjin Qingmaye cabbage, garlic paste, salt and jar storage, together with the winter-preservation context."
+        }
+      ],
+      "fermentation": "Dehydrated, salt-pickled cabbage fermented in jars.",
+      "scopeNote": "Dongcai names different foods in different places, so Tianjin and Nanchong retain separate regional entries. Traditional dongcai products are not assumed to contain live lactic acid bacteria.",
+      "texture": "Finely chopped, tender-crisp and slightly chewy from dehydration, sometimes golden-yellow.",
+      "aroma": "Garlic and mature fermented-vegetable aromas.",
+      "local": "天津冬菜",
+      "variants": [
+        "The Chenguantun local tradition",
+        "Five-spice product names should be checked against their actual seasonings"
+      ],
+      "occasions": [
+        {
+          "text": "An everyday Tianjin breakfast and snack-soup ingredient, including wonton and noodle soups.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Winter home stews and stir-fries; Tianjin Library introduces it in a seasonal account for Minor Cold.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:D%C5%8Dngc%C3%A0i.jpg",
+      "photoWidth": 946,
+      "photoHeight": 530
     },
     {
       "id": "cn-zhejiang-daoducai",
@@ -608,7 +1847,46 @@
       "photoCaption": "Daoducai sold at a market in Hangzhou.",
       "categoryLabel": "Regional pickle",
       "photoSource": "https://zjnews.zjol.com.cn/zjnews/202307/t20230704_25930877.shtml",
-      "catalogName": "Inverted-Jar Mustard Greens"
+      "catalogName": "Inverted-Jar Mustard Greens",
+      "references": [
+        {
+          "title": "A Hundred Counties, a Thousand Bowls — Hangzhou Culture and Tourism Bureau",
+          "url": "https://wgly.hangzhou.gov.cn/art/2022/11/24/art_1229696390_58943042.html",
+          "supports": "Describes washing, wilting, yellowing and chopping winter mustard greens, inverted-jar fermentation, and pairing with bamboo shoots in spring in the Qiantang area."
+        },
+        {
+          "title": "Watching a Farm Household Make Daoducai — Hangzhou Net Field Report",
+          "url": "https://ori.hangzhou.com.cn/ornews/content/2015-03/30/content_5709817.htm",
+          "supports": "Records Jiande Jiutoujie mustard, packing with a wooden stick and dry salting in an inverted jar, and distinctions from xuecai and winter-pickled greens."
+        },
+        {
+          "title": "Hangzhou Food Enthusiasts Explain Pickled Greens — Zhejiang Online Interviews with Sellers and Noodle-Supply Traders",
+          "url": "https://zjnews.zjol.com.cn/zjnews/hznews/201911/t20191119_11374145.shtml",
+          "supports": "Documents use in pian'erchuan noodles, summer steaming and soups, and a sliced-root-mustard variation."
+        }
+      ],
+      "fermentation": "Low-moisture jar-fermented mustard greens.",
+      "scopeNote": "Keep this distinct from wet salted xianji and dried meigancai. They may share mustard as an ingredient while differing in process, form and uses. Origin legends are not treated as verified history.",
+      "texture": "Fine, supple pieces, with some crunch remaining in the stems.",
+      "aroma": "Concentrated vegetable fragrance and mature jar-aged notes.",
+      "local": "倒笃菜",
+      "variants": [
+        "Local mustard-variety names differ between producing areas",
+        "Some contemporary recipes add sliced preserved mustard root"
+      ],
+      "occasions": [
+        {
+          "text": "With fresh bamboo shoots in spring, described by Hangzhou cultural tourism materials as a spring flavor of the Qiantang plain.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Summer home cooking with edamame, steamed dishes or soup; noodle shops may switch between xuecai and daoducai according to availability.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 720,
+      "photoHeight": 425
     },
     {
       "id": "cn-yangzhou-jiangcai",
@@ -627,7 +1905,45 @@
       "categoryLabel": "Sauce-pickled cousin",
       "photoFit": "contain",
       "photoSource": "https://product.suning.com/0070096370/172125930.html",
-      "catalogName": "Yangzhou Sauce-Pickled Vegetables"
+      "catalogName": "Yangzhou Sauce-Pickled Vegetables",
+      "references": [
+        {
+          "title": "Four Field Examples of Yangzhou's Rural Industries — Ministry of Agriculture and Rural Affairs",
+          "url": "https://xccys.moa.gov.cn/ncpjg/201907/t20190716_6320998.htm",
+          "supports": "Describes the local sauce-pickle industry and fresh-tasting, sweet, crisp and tender product characteristics."
+        },
+        {
+          "title": "An Intangible-Heritage Visit to the Sanhe Simei Pickle Factory — Modern Express",
+          "url": "https://szb.xdplus.cn/xdkb/pc/content/202411/01/content_51066.html",
+          "supports": "Field interviews with a heritage bearer and quality-control manager record vegetable varieties, processing, everyday side dishes and banquet uses."
+        },
+        {
+          "title": "Yangzhou Sauce-Pickle Making — Encyclopedia of China",
+          "url": "https://www.zgbk.com/ecph/words?ID=604452&SiteID=1&SubID=1271&Type=bkztb",
+          "supports": "Confirms the local tradition and ingredients including baby cucumbers, Chinese artichokes and small radishes."
+        }
+      ],
+      "fermentation": "Sauce-pickled comparison entry: fermented sauce is involved, while vegetable fermentation must be confirmed for each method.",
+      "scopeNote": "Yangzhou sauce pickles are not all sour, and not all can be called lactic-fermented vegetables. They remain a comparison category when the focus is fermentation of the vegetables themselves.",
+      "texture": "Varies with the vegetable: tender-crisp cucumber, firm crosnes or delicate ginger.",
+      "aroma": "A pronounced fermented-sauce fragrance.",
+      "local": "扬州酱菜",
+      "variants": [
+        "Baby cucumber, crosnes, tender ginger and mixed vegetables are ingredient branches, not separate fermentation mechanisms"
+      ],
+      "occasions": [
+        {
+          "text": "Small everyday rice accompaniments and banquet side dishes used to season or complement the meal.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A breakfast side with plain congee or steamed buns.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 800,
+      "photoHeight": 800
     },
     {
       "id": "cn-beijing-jiangcai",
@@ -644,7 +1960,41 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Sauce-pickled cousin",
-      "catalogName": "Beijing Traditional Sauce Pickles"
+      "catalogName": "Beijing Traditional Sauce Pickles",
+      "references": [
+        {
+          "title": "Craftspeople Around Us: Liubiju Heritage Bearer Yang Yinxi — China Intangible Cultural Heritage",
+          "url": "https://www.ihchina.cn/art/detail/id/10242.html",
+          "supports": "A field interview describes salting, desalting, cloth bags placed in sweet wheat or soybean paste, and stirring; photographs identify shredded kohlrabi and cucumber products."
+        },
+        {
+          "title": "Yang Yinxi — National Intangible-Heritage Bearer Profile",
+          "url": "https://www.ihchina.cn/ccr_detail/3173/",
+          "supports": "Supports the sauce aroma and crisp-tender character, and developed products such as baby cucumbers and long vegetable shreds."
+        }
+      ],
+      "fermentation": "Sauce pickles flavored by fermented sauce; this does not automatically mean lactic fermentation of the vegetable.",
+      "scopeNote": "Sauce aroma is not the same as sourness, and fermentation of a sauce is not proof of fermentation of its vegetables. A brand's entire range should not be treated as one fixed recipe.",
+      "texture": "Tender-crisp, in forms including fine shreds, cucumber strips and small whole cucumbers.",
+      "aroma": "Mellow sweet-wheat-paste or soybean-sauce aroma.",
+      "local": "北京传统酱菜",
+      "variants": [
+        "Different vegetables and cuts form product variants",
+        "Vinegar-only sweet-and-sour garlic should be identified separately as a non-fermented comparison"
+      ],
+      "occasions": [
+        {
+          "text": "Small side dishes on Beijing family tables; official heritage accounts also record banquet use.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A breakfast side with congee or steamed buns.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 640
     },
     {
       "id": "cn-hangzhou-shuangchagua",
@@ -661,7 +2011,40 @@
       "photoKind": "Prepared food",
       "photoCaption": "A related cucumber pickle, rather than Hangzhou shuangchagua itself.",
       "categoryLabel": "Sauce-pickled cousin",
-      "catalogName": "Hangzhou Sauce-Pickled Cucumber"
+      "catalogName": "Hangzhou Sauce-Pickled Cucumber",
+      "references": [
+        {
+          "title": "Remembering Jingyangguan Sauce Cucumbers — Hangzhou Net Interview with Shop Manager Yuan Penghong",
+          "url": "https://hznews.hangzhou.com.cn/chengshi/content/2025-07/20/content_9042580.htm",
+          "supports": "The manager describes cucumber varieties, two salting stages and transfer to sauce jars; the report records pairing with rice in hot water at breakfast."
+        },
+        {
+          "title": "Remembering Jingyangguan Sauce Cucumbers: The First-Fu Summer Opening — Hangzhou Images",
+          "url": "https://pic.hangzhou.com.cn/hzyx/content/content_9042584_0.html",
+          "supports": "Cites the memoir Shan Ju Za Yi on the seasonal opening of pickle jars and records residents' accounts of buying and drying the cucumbers again."
+        }
+      ],
+      "fermentation": "Sauce-pickled comparison entry; whether the vegetable itself ferments depends on the specific production route.",
+      "scopeNote": "Its clearest seasonal settings are the opening of pickle crocks at the start of the dog days and summer breakfasts. Stories about imperial gifts should be labeled as legends rather than verified history. This entry belongs in the sauce-pickle comparison group.",
+      "texture": "Crunchy strips or whole cucumbers. Historical accounts describe some buyers drying them further for a chewier bite.",
+      "aroma": "Fermented-sauce fragrance.",
+      "local": "杭州双插瓜",
+      "variants": [
+        "Modern cucumber varieties may differ from historical ones; identify the actual producer's ingredient rather than assuming one unchanged ancient variety"
+      ],
+      "occasions": [
+        {
+          "text": "Hangzhou's traditional first-dog-days opening of sauce-pickle crocks and seasonal buying custom, recorded in local memoirs and residents' accounts.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A breakfast accompaniment to Hangzhou paofan; reporting includes a producer's explanation of salting and sauce-pickling.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 960
     },
     {
       "id": "cn-chaoshan-xiancai",
@@ -677,9 +2060,44 @@
       "sourceTitle": "Longhu District Cultural Center: The Traditional Craft of Preserving Chaoshan Xiancai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: fish with pickled mustard greens, not photographed in Chaoshan.",
+      "photoCaption": "White fish and golden pickled mustard greens in a savory home-cooked dish.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Chaoshan Sour Mustard Greens"
+      "catalogName": "Chaoshan Sour Mustard Greens",
+      "references": [
+        {
+          "title": "Longhu District Cultural Center: The Traditional Craft of Preserving Chaoshan Xiancai",
+          "url": "https://www.gdlonghu.gov.cn/lh/ztzl/lhwhg/fywh/lhfy/content/post_2241326.html",
+          "supports": "Identifies mustard greens, sun-wilting, salting and fermentation, with golden color and a sour-sweet, crisp texture; describes local production and transmission of the craft."
+        },
+        {
+          "title": "Lingnan Food Writing: Assorted Salted Accompaniments and Their Many Flavors",
+          "url": "https://ysln.ycwb.com/content/2021-12/25/content_40474179.html",
+          "supports": "Firsthand food-culture writing records plain porridge accompaniments, pork-stomach soup with xiancai, and sour mustard-green fish soup."
+        }
+      ],
+      "fermentation": "Core fermented tradition: salt-fermented mustard greens.",
+      "scopeNote": "In the Chaoshan context, xiancai usually means this preserved mustard-green food. It should not be used as a name for every kind of Chinese salted vegetable.",
+      "texture": "Crisp stalks and softer leaves, typically golden yellow or yellow-brown.",
+      "aroma": "A rounded, sour aroma of preserved mustard greens.",
+      "local": "Xiancai",
+      "variants": [
+        "Whole, cut and seasoned packaged versions",
+        "Acidity and the extent of desalting vary between households and producers."
+      ],
+      "occasions": [
+        {
+          "text": "A small dish of assorted salty accompaniments beside everyday rice porridge; also used in home-cooked soups and Chaoshan restaurants.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Breakfast, or a small side dish with a lightly seasoned staple.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Flake_and_Pickled_Mustard_Greens_(3697782134).jpg",
+      "photoWidth": 960,
+      "photoHeight": 642
     },
     {
       "id": "cn-chaoshan-ganlancai",
@@ -695,9 +2113,49 @@
       "sourceTitle": "Guangdong Local Food-Safety Standard DBS 44/014—2019: Ganlancai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: green beans stir-fried with olive and mustard-green relish.",
+      "photoCaption": "A glossy green-bean stir-fry seasoned with olive-and-mustard relish and red chili.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Chaoshan Olive and Mustard-Green Relish"
+      "catalogName": "Chaoshan Olive and Mustard-Green Relish",
+      "references": [
+        {
+          "title": "Guangdong Local Food-Safety Standard DBS 44/014—2019: Ganlancai",
+          "url": "https://wsjkw.gd.gov.cn/attachment/0/398/398120/3056237.pdf",
+          "supports": "Defines the ingredients and processing steps, including mustard-green preparation, fried olives and cooking, helping identify the finished product."
+        },
+        {
+          "title": "A Tour of Shantou Provincial Intangible Cultural Heritage, Part Four",
+          "url": "https://www.shantou.gov.cn/hqsyq/hqxx/content/post_2200094.html",
+          "supports": "The official heritage account describes Chaoshan relish-making traditions, including mustard greens and olives, salting and fermentation, desalting and subsequent cooking."
+        },
+        {
+          "title": "National Forestry and Grassland Administration: Green Gems and Black Agates Among Chinese Olives",
+          "url": "https://www.forestry.gov.cn/c/www/smcqzt/146123.jhtml",
+          "supports": "Describes mustard leaves, Chinese olive flesh, cooking and flavor, and distinguishes Chinese olive types."
+        }
+      ],
+      "fermentation": "Fermentation-derived product: fermented vegetable material is subsequently cooked; it is not equivalent to an unheated ferment.",
+      "scopeNote": "The olives are Chinese olive fruits, not Mediterranean table olives. Fermentation during production does not mean that the cooked relish retains live fermentation microbes.",
+      "texture": "Finely chopped, soft and oily; usually dark green to dark brown.",
+      "aroma": "A rich cooked aroma from the olives and slow cooking in oil.",
+      "local": "Ganlancai",
+      "variants": [
+        "The proportions of oil, olives and mustard greens vary.",
+        "Plain versions and additional seasonings such as chili"
+      ],
+      "occasions": [
+        {
+          "text": "One of the assorted salty accompaniments served with everyday Chaoshan porridge.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A quick spoonful of flavor for a bowl of rice or fried rice.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Green_beans_with_olive_vegetable.jpg",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-huizhou-meicai",
@@ -713,9 +2171,49 @@
       "sourceTitle": "Guangdong Local Food-Safety Standard DBS 44/015—2019: Huizhou Meicai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: pork belly with preserved mustard greens in Meizhou, not Huizhou.",
+      "photoCaption": "Sliced pork belly arranged over dark preserved greens in Meizhou.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Huizhou Preserved Mustard Greens"
+      "catalogName": "Huizhou Preserved Mustard Greens",
+      "references": [
+        {
+          "title": "Guangdong Local Food-Safety Standard DBS 44/015—2019: Huizhou Meicai",
+          "url": "https://wsjkw.gd.gov.cn/attachment/0/398/398121/3056236.pdf",
+          "supports": "Defines mustard-green raw materials, dry salting, drying and piled maturation; distinguishes sweet and salted types and identifies the product as not ready to eat."
+        },
+        {
+          "title": "Twenty-Four Flavors of Huizhou Heritage: Learn Meicai Kourou for Lunar New Year's Eve",
+          "url": "https://static.nfnews.com/content/202402/04/c8574144.html?enterColumnId=78",
+          "supports": "A Dongjiang Hakka cuisine heritage practitioner demonstrates meicai kourou for a Lunar New Year's Eve meal."
+        },
+        {
+          "title": "China Energy News: Huizhou Meicai",
+          "url": "https://paper.people.com.cn/zgnyb/html/2024-01/29/content_26041085.htm",
+          "supports": "The author records local uses with steamed meat, steamed fish, rice and porridge."
+        }
+      ],
+      "fermentation": "Salt-preserved, matured vegetables. The local food standard defines the raw product as not ready to eat; the name alone does not establish every producer's fermentation method.",
+      "scopeNote": "Preserve the differences between Huizhou meicai, Shaoxing meigancai and Taiwanese Hakka dried mustard greens. Uncooked meicai sold as an ingredient should not be described as a ready-to-eat snack.",
+      "texture": "The heart and leaves differ in texture and absorb meat juices when cooked. Colors can include dark green, yellow, yellow-brown and brown.",
+      "aroma": "A concentrated sun-dried and salt-preserved mustard-green aroma.",
+      "local": "Meicai",
+      "variants": [
+        "Sweet and salted meicai",
+        "Different portions of the plant, including the heart and leaves"
+      ],
+      "occasions": [
+        {
+          "text": "Meicai kourou is part of Hakka dining; a heritage practitioner also demonstrates it as a Lunar New Year's Eve dish.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A shared family dish of steamed meat and greens with rice.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Steamed_Sliced_Pork_Belly_with_Preserved_Vegetable_in_Meizhou_(20200928174231).jpg",
+      "photoWidth": 960,
+      "photoHeight": 640
     },
     {
       "id": "cn-hakka-suancai-taiwan",
@@ -725,15 +2223,51 @@
       "process": "Sun-wilted greens are rubbed with salt to release liquid, packed firmly and fermented. This is the wetter stage in a related mustard-green preservation sequence; further dehydration and maturation can produce fucai and meigancai.",
       "taste": "Sour and salty, with a gently sweet-sour character in soup.",
       "eat": "Pork stomach braised with suancai; Suancai and pork-rib soup; Suancai stewed with duck.",
-      "photo": "assets/photos/ingredient-leaf-mustard.jpg",
-      "credit": "thebittenword.com · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg",
+      "photo": "assets/photos/cn-hakka-suancai-taiwan-reviewed.jpg",
+      "credit": "New Taipei City Hakka Affairs Department · Copyright retained by the source; no open license stated · https://www.hakka-portal.ntpc.gov.tw/article/%E9%B9%B9%E8%8F%9C08015743118873669",
       "sourceUrl": "https://fae.moa.gov.tw/map/food_item.php?id=42&type=AS08",
       "sourceTitle": "Ministry of Agriculture Food Education Platform: Mustard Greens and Their Pickled-Preserve Family",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: mustard greens, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Prepared food",
+      "photoCaption": "Hakka preserved mustard greens (xiancai), as identified by the New Taipei City Hakka Affairs Department.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Hakka Sour Mustard Greens"
+      "catalogName": "Hakka Sour Mustard Greens",
+      "references": [
+        {
+          "title": "Ministry of Agriculture Food Education Platform: Mustard Greens and Their Pickled-Preserve Family",
+          "url": "https://fae.moa.gov.tw/map/food_item.php?id=42&type=AS08",
+          "supports": "Describes the production of suancai and its uses with pork stomach, pork ribs and duck, while comparing stages such as suancai and fucai."
+        },
+        {
+          "title": "Hakka Cloud: The Origins and Characteristics of Hakka Food Culture",
+          "url": "https://cloud.hakka.gov.tw/Details?p=9226&pid=156302",
+          "supports": "Explains salt-rubbing and packing the greens, the subsequent semi-dried and fully dried stages, and regional differences."
+        }
+      ],
+      "fermentation": "Core fermented tradition: salt-fermented mustard greens.",
+      "scopeNote": "This entry follows Taiwanese Hakka sources. Neither this banquet repertoire nor one fermentation duration should be presented as a uniform practice across all Hakka regions.",
+      "texture": "Crisper stalks, softer leaves and relatively high moisture.",
+      "aroma": "The sour aroma of fermented mustard greens.",
+      "local": "Suancai / Xiancai",
+      "variants": [
+        "Mustard cultivars, salting and sun-drying vary by production area.",
+        "Suancai, fucai and meigancai are related but distinct finished foods."
+      ],
+      "occasions": [
+        {
+          "text": "Braised pork stomach with suancai belongs to the traditional Hakka banquet repertoire of four braised and four stir-fried dishes; the greens also appear in everyday meat soups.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A warming, sour soup for a family lunch or dinner.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://www.hakka-portal.ntpc.gov.tw/article/%E9%B9%B9%E8%8F%9C08015743118873669",
+      "photoWidth": 949,
+      "photoHeight": 745,
+      "photoFit": "contain"
     },
     {
       "id": "cn-hakka-fucai",
@@ -743,15 +2277,56 @@
       "process": "Suancai is further processed through repeated drying, salting and firm packing into jars or bottles, then sealed for maturation. Containers were traditionally sometimes inverted. The product is drier than suancai but less dry than meigancai.",
       "taste": "Salty-sour with a rounded, mellow finish.",
       "eat": "Fucai and sliced-pork soup; Fucai and sliced pork-stomach soup; Fucai simmered with meat.",
-      "photo": "assets/photos/ingredient-leaf-mustard.jpg",
-      "credit": "thebittenword.com · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Mustardgreensraw.jpg",
+      "photo": "assets/photos/cn-hakka-fucai-reviewed.jpg",
+      "credit": "New Taipei City Hakka Affairs Department · Copyright retained by the source; no open license stated · https://www.hakka-portal.ntpc.gov.tw/article/%E7%A6%8F%E8%8F%9C08015756947214201",
       "sourceUrl": "https://www.mdares.gov.tw/ws.php?id=1372",
       "sourceTitle": "Miaoli District Agricultural Research and Extension Station: Mustard Greens, Fragrant Fucai and Agricultural Heritage",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-      "photoKind": "Ingredient example",
-      "photoCaption": "Ingredient example: mustard greens, not a finished pickle or a sample from this region.",
+      "licenseUrl": "",
+      "photoKind": "Prepared food",
+      "photoCaption": "Hakka fucai: semi-dried, preserved mustard greens, as identified by the New Taipei City Hakka Affairs Department.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Hakka Semi-Dried Mustard Greens"
+      "catalogName": "Hakka Semi-Dried Mustard Greens",
+      "references": [
+        {
+          "title": "Hakka fucai — New Taipei City Hakka Affairs Department",
+          "url": "https://www.hakka-portal.ntpc.gov.tw/article/%E7%A6%8F%E8%8F%9C08015756947214201",
+          "supports": "Describes semi-drying, jar maturation and culinary uses; identifies the photographed fucai."
+        },
+        {
+          "title": "Miaoli District Agricultural Research and Extension Station: Mustard Greens, Fragrant Fucai and Agricultural Heritage",
+          "url": "https://www.mdares.gov.tw/ws.php?id=1372",
+          "supports": "Identifies mustard greens as the source of Hakka suancai, fucai and meigancai, and describes fucai in hospitality and banquet culture."
+        },
+        {
+          "title": "Food Education Platform: Miaoli Mustard Greens",
+          "url": "https://fae.moa.gov.tw/map/food_item.php?local_id=294&type=AS02",
+          "supports": "Identifies Gongguan in Miaoli as a representative fucai area and records fucai with sliced pork in soup."
+        }
+      ],
+      "fermentation": "Core fermented tradition: further fermentation and maturation of semi-dried salted mustard greens.",
+      "scopeNote": "Fucai is a preserved product, not a fresh vegetable species. Regional names can overlap, so this entry defines it by its intermediate processing stage between wet suancai and fully dried meigancai.",
+      "texture": "Semi-dried and chewy before cooking; softens in soup.",
+      "aroma": "A deeper matured-green aroma than fresh, wet suancai.",
+      "local": "Fucai",
+      "variants": [
+        "Bottle-packed and jar-packed forms",
+        "Household differences in drying and maturation"
+      ],
+      "occasions": [
+        {
+          "text": "Everyday Hakka soups; agricultural accounts also describe home-preserved fucai being served to relatives, friends and banquet guests.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A shared pot of hot soup at a family meal.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://www.hakka-portal.ntpc.gov.tw/article/%E7%A6%8F%E8%8F%9C08015756947214201",
+      "photoFit": "contain",
+      "photoWidth": 498,
+      "photoHeight": 843
     },
     {
       "id": "cn-hakka-meigancai-taiwan",
@@ -767,9 +2342,44 @@
       "sourceTitle": "Food Education Platform: Mustard Greens, the Long-Life Vegetable",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Meigancai tied into a dried bundle.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Hakka Dried Mustard Greens"
+      "catalogName": "Hakka Dried Mustard Greens",
+      "references": [
+        {
+          "title": "Food Education Platform: Mustard Greens, the Long-Life Vegetable",
+          "url": "https://fae.moa.gov.tw/theme_data.php?id=41&sub_theme=knowledge&theme=topics",
+          "supports": "Explains meigancai as further-dried fucai and describes its flavor and use with pork belly."
+        },
+        {
+          "title": "Hakka Cloud: The Origins and Characteristics of Hakka Food Culture",
+          "url": "https://cloud.hakka.gov.tw/Details?p=9226&pid=156302",
+          "supports": "Lists regional dishes such as meigancai pork belly and distinguishes wet pickled greens, semi-dried fucai and fully dried meigancai."
+        }
+      ],
+      "fermentation": "Fermentation-derived dried vegetables; a dry finished product is not synonymous with a food containing live microbes.",
+      "scopeNote": "Keep the Taiwanese Hakka regional label when comparing this food with Shaoxing meigancai and Huizhou meicai. Similar names do not establish identical processing.",
+      "texture": "Dry and chewy before preparation; becomes tender after soaking, steaming or stewing.",
+      "aroma": "A concentrated sun-dried, matured mustard-green fragrance.",
+      "local": "Meigancai",
+      "variants": [
+        "Whole rolled bundles and cut pieces",
+        "Differences in saltiness, drying and mustard cultivar"
+      ],
+      "occasions": [
+        {
+          "text": "A representative Hakka meat dish on home and restaurant tables.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A shared main dish for a family gathering, or a pork-and-greens topping for an everyday rice bowl.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:MeiganCaiBundle.jpg",
+      "photoWidth": 1280,
+      "photoHeight": 960
     },
     {
       "id": "cn-chaoshan-caipu",
@@ -785,9 +2395,40 @@
       "sourceTitle": "Shantou Agriculture and Rural Affairs Bureau: New Flavors for Chaoshan Aged Caipu",
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoCaption": "Preserved dried radish, a form known as chaipo or caipu.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Chaoshan Preserved Radish and Aged Radish"
+      "catalogName": "Chaoshan Preserved Radish and Aged Radish",
+      "references": [
+        {
+          "title": "Shantou Agriculture and Rural Affairs Bureau: New Flavors for Chaoshan Aged Caipu",
+          "url": "https://www.shantou.gov.cn/nyj/zwgk/gzdt/content/post_2120531.html",
+          "supports": "An interview with a provincial heritage practitioner records white radish, salting, drying, pressing and storage, plus porridge and rice-dumpling uses; unverified health claims were excluded."
+        },
+        {
+          "title": "Chenghai Publicity Department and Photographers Association: Preserved Radish in Chenghai, Shantou",
+          "url": "https://ysln.ycwb.com/content/2021-12/23/content_40469939.html",
+          "supports": "Original photo documentation shows the winter radish harvest, salting and drying, storage and everyday porridge accompaniments."
+        }
+      ],
+      "fermentation": "Process-dependent: salted and dried radish; traditionally aged jar-stored forms have a fermentation and maturation stage.",
+      "scopeNote": "Age describes a storage and maturation stage, not a guarantee of safety or medicinal value. The food should not be presented with treatment claims or unlimited aging advice.",
+      "texture": "Newer radish is crisp-chewy. Long-stored versions tend to darken and become softer.",
+      "aroma": "Dried-radish fragrance, deepening into an aged aroma in lao caipu.",
+      "local": "Caipu / Lao caipu",
+      "variants": [
+        "Younger preserved radish and long-aged lao caipu",
+        "Chopped, whole-strip and relish-like product forms"
+      ],
+      "occasions": [
+        {
+          "text": "A familiar accompaniment to everyday rice porridge. Contemporary cooks also use aged caipu in clay-pot porridge and rice dumplings.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Dried_radishes_(20240929).jpg",
+      "photoWidth": 1280,
+      "photoHeight": 1280
     },
     {
       "id": "cn-guangxi-suansun",
@@ -803,9 +2444,44 @@
       "sourceTitle": "Liuzhou Quality Inspection and Testing Research Center: Understanding Sour Bamboo Shoots",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example; the photo does not establish the pickle’s origin or preparation method.",
+      "photoCaption": "Rice noodles with rich broth and generous toppings, photographed in Liuzhou.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Guangxi Sour Bamboo Shoots"
+      "catalogName": "Guangxi Sour Bamboo Shoots",
+      "references": [
+        {
+          "title": "Liuzhou Quality Inspection and Testing Research Center: Understanding Sour Bamboo Shoots",
+          "url": "https://lzqsi.org.cn/a/1084.html",
+          "supports": "Describes this luosifen ingredient, soaking and fermentation, and characteristic volatile aromas; generalized probiotic and disease claims were excluded."
+        },
+        {
+          "title": "Guangxi Standardization Association: Processing Rules for Sour Bamboo-Shoot Packs in Prepackaged Nanning Laoyoufen",
+          "url": "https://gxxzbzh.com/a/3580.html",
+          "supports": "The original industry-standard publication identifies sour bamboo-shoot ingredient packs for laoyoufen."
+        }
+      ],
+      "fermentation": "Core fermented tradition: acid fermentation of bamboo shoots.",
+      "scopeNote": "Whether a packaged product is ready to eat depends on its processing and instructions. A strong smell alone does not establish either safety or spoilage.",
+      "texture": "Crisp-tender and fibrous, with the eating texture affected by slicing or shredding.",
+      "aroma": "A distinctive, powerful fermented aroma, sometimes described as pungent or stinky-fragrant; its intensity varies with processing.",
+      "local": "Suansun",
+      "variants": [
+        "Water-fermented and brine-fermented forms",
+        "Shreds, slices and whole shoots; different bamboo species and harvest stages"
+      ],
+      "occasions": [
+        {
+          "text": "A bowl of luosifen at a Liuzhou noodle shop, or a characteristic ingredient in Nanning laoyoufen.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "Stir-fries or noodle soups that benefit from a small amount of strong sour aroma.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Luosifen_at_Guangya,_Liuzhou_(20190420141814).jpg",
+      "photoWidth": 960,
+      "photoHeight": 647
     },
     {
       "id": "cn-nanning-suanye-adjacent",
@@ -822,7 +2498,37 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Vinegar-pickled cousin",
-      "catalogName": "Nanning Vinegar-Pickled Fruit and Vegetables"
+      "catalogName": "Nanning Vinegar-Pickled Fruit and Vegetables",
+      "references": [
+        {
+          "title": "Jiangnan District Cultural Center, Nanning: The Traditional Craft of Making Suanye",
+          "url": "https://nnsjnqwhg.org.cn/Intangible/zzqj/578.html",
+          "supports": "The heritage body identifies seasonal produce, rice vinegar, salt and sugar, cutting and pickling, and the typical sour-sweet, crisp and spicy character."
+        },
+        {
+          "title": "A Heritage Class at the Nanning Branch of Guangxi Veterans University",
+          "url": "https://www.mva.gov.cn/sy/zt/qmshggzxd/gx/jxzx/gxsy/202604/t20260401_536232.html",
+          "supports": "An official account records a heritage practitioner demonstrating mango, papaya and radish suanye as a local snack and cultural experience."
+        }
+      ],
+      "fermentation": "Neighboring preserve: vinegar or sweet-sour pickled produce. The name alone does not establish lactic fermentation.",
+      "scopeNote": "This entry belongs in the vinegar-pickled or process-unconfirmed comparison group. Some longer-acidified local foods may also ferment, so this one description must not be applied to every Guangxi suanye.",
+      "texture": "A pronounced fresh, crisp bite.",
+      "aroma": "Fruit, vinegar and chili-seasoning aromas.",
+      "local": "Suanye",
+      "variants": [
+        "Vegetable and fruit versions",
+        "Quick mixed pickles and longer-stored products; their processes require separate identification."
+      ],
+      "occasions": [
+        {
+          "text": "Choosing a snack at a street stall, casual snacking and experiencing a local flavor.",
+          "evidence_type": "documented"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "cn-minqing-zaocai",
@@ -838,9 +2544,48 @@
       "sourceTitle": "Minqing County Government: Local Products, Zaocai",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "photoKind": "Serving example",
-      "photoCaption": "Serving example: wine-lees mustard greens with rice noodles in Sibu, not Minqing.",
+      "photoCaption": "A bowl of zaocai rice-noodle soup photographed in Sibu, Sarawak.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Minqing Red Wine-Lees Mustard Greens"
+      "catalogName": "Minqing Red Wine-Lees Mustard Greens",
+      "references": [
+        {
+          "title": "Minqing County Government: Local Products, Zaocai",
+          "url": "https://www.fzmq.gov.cn/xjwz/zjmq/zrdl/201704/t20170413_391146.htm",
+          "supports": "Identifies mustard greens, red wine lees, salt and fermentation, and its place among Minqing's characteristic products."
+        },
+        {
+          "title": "Fuzhou Government: CCTV Covers the Opening of Minqing's Shibaban Market",
+          "url": "https://www.fuzhou.gov.cn/zgfzzt/shfgfgg/zxdt/202502/t20250221_4979147.htm",
+          "supports": "Directly records zaocai rice-vermicelli stalls at the traditional market."
+        },
+        {
+          "title": "Fuzhou City of Gastronomy: Heritage Foods in Shenghuang, Minqing",
+          "url": "https://www.fuzhoumeishi.cn/node/21579/20240322/65fd3ed9888fe.shtml",
+          "supports": "Describes pork-rib soup and crisp stalks; the page can be unstable, although indexed text is available."
+        }
+      ],
+      "fermentation": "Core fermented tradition: preserved vegetables made with wine lees.",
+      "scopeNote": "Zaocai can mean different wine-lees preserves in different places. This entry describes the Minqing tradition and does not treat every lees-preserved vegetable as the same recipe.",
+      "texture": "Stalks can retain a crisp bite while leaves are softer; preparation and cooking affect the final form.",
+      "aroma": "Fermented mustard-green acidity combined with the aroma of red wine lees.",
+      "local": "Zaocai",
+      "variants": [
+        "Household and producer differences in the amount of red lees, the form of the greens and maturation"
+      ],
+      "occasions": [
+        {
+          "text": "Zaocai rice vermicelli is sold at the Shibaban market around the eighteenth day of the first lunar month; the greens also appear in local family soups.",
+          "evidence_type": "documented"
+        },
+        {
+          "text": "A Minqing-style meal of rice vermicelli or pork-rib soup.",
+          "evidence_type": "editorial_suggestion"
+        }
+      ],
+      "contentReviewed": "2026-10-31",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:%E7%B3%9F_%E8%8F%9C_%E7%B2%89_%E5%B9%B2.jpg",
+      "photoWidth": 960,
+      "photoHeight": 540
     }
   ],
   "world": [
@@ -860,7 +2605,26 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Kimchi"
+      "catalogName": "Kimchi",
+      "references": [
+        {
+          "url": "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?vcontsId=140728",
+          "title": "Kimchi — Korea Tourism Organization"
+        },
+        {
+          "url": "https://ich.unesco.org/en/RL/kimjang-00881",
+          "title": "Kimjang, making and sharing kimchi — UNESCO"
+        },
+        {
+          "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=179894",
+          "title": "Radish Water Kimchi — Korea Tourism Organization"
+        }
+      ],
+      "fermentation": "Recipes vary; freshly dressed geotjeori is not necessarily fully fermented.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "WORLD-02",
@@ -878,7 +2642,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "A related preparation: fermented sauerkraut, photographed outside Germany.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Sauerkraut"
+      "catalogName": "Sauerkraut",
+      "references": [
+        {
+          "url": "https://ask.ifas.ufl.edu/publication/FS474",
+          "title": "Fermented Foods: Sauerkraut — University of Florida IFAS"
+        },
+        {
+          "url": "https://www.lebeaujardin.alsace/en/alsatian-sauerkraut-a-dish-from-the-heart-and-the-land/",
+          "title": "Alsatian sauerkraut: a dish from the heart and the land — Office de Tourisme Le Beau Jardin"
+        }
+      ],
+      "fermentation": "Sauerkraut spans several regional traditions; the prepared Alsatian meat dish is a separate serving form.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 785,
+      "photoHeight": 808
     },
     {
       "id": "WORLD-03",
@@ -896,7 +2675,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Brine-fermented cucumber pickles"
+      "catalogName": "Brine-fermented cucumber pickles",
+      "references": [
+        {
+          "url": "https://nchfp.uga.edu/how/ferment/general-information-on-fermenting/",
+          "title": "General Information on Fermenting — National Center for Home Food Preservation"
+        },
+        {
+          "url": "https://ncez.pzh.gov.pl/przepisy/zupa-ogorkowa/",
+          "title": "Cucumber Soup — Polish National Centre for Nutrition Education"
+        }
+      ],
+      "fermentation": "“Dill pickle” does not guarantee fermentation; some products are directly vinegar-pickled.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 699
     },
     {
       "id": "WORLD-04",
@@ -914,7 +2708,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Nukazuke"
+      "catalogName": "Nukazuke",
+      "references": [
+        {
+          "url": "https://www.maff.go.jp/j/heya/kodomo_sodan/0102/04.html",
+          "title": "What happens when vegetables are pickled in rice bran? — Japan Ministry of Agriculture, Forestry and Fisheries"
+        },
+        {
+          "url": "https://www.maff.go.jp/e/policies/market/dento_syoku/bunrui/tukemono.html",
+          "title": "Pickled — Traditional Foods in Japan — MAFF"
+        }
+      ],
+      "fermentation": "Nukazuke is one fermentation-based tradition within the much wider tsukemono category.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "WORLD-05",
@@ -932,7 +2741,18 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Sugukizuke"
+      "catalogName": "Sugukizuke",
+      "references": [
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/sugukizuke_kyoto.html",
+          "title": "Sugukizuke, Kyoto Prefecture — Japan Ministry of Agriculture, Forestry and Fisheries"
+        }
+      ],
+      "fermentation": "It names a specific local turnip tradition, not every fermented turnip.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 640
     },
     {
       "id": "WORLD-06",
@@ -947,10 +2767,25 @@
       "credit": "Vegan Feast Catering · CC BY 2.0 · https://commons.wikimedia.org/wiki/File:Shibazuke_(4357771471).jpg",
       "sourceUrl": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/shibazuke_kyoto.html",
       "sourceTitle": "Shibazuke, Kyoto Prefecture — Japan Ministry of Agriculture, Forestry and Fisheries",
-      "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoKind": "Representative food",
+      "photoCaption": "Shibazuke serving example. The photograph does not distinguish traditionally fermented nama-shibazuke from vinegar-acidified versions.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Nama-shibazuke"
+      "catalogName": "Nama-shibazuke",
+      "references": [
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/shibazuke_kyoto.html",
+          "title": "Shibazuke, Kyoto Prefecture — Japan Ministry of Agriculture, Forestry and Fisheries"
+        },
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/kyo_tukemono.html",
+          "title": "Kyoto Pickles — Japan Ministry of Agriculture, Forestry and Fisheries"
+        }
+      ],
+      "fermentation": "Modern shibazuke may use added acidic seasonings rather than the same fermentation route.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "WORLD-07",
@@ -968,7 +2803,18 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Takanazuke"
+      "catalogName": "Takanazuke",
+      "references": [
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/takana_zuke.html",
+          "title": "Takanazuke — Japan Ministry of Agriculture, Forestry and Fisheries"
+        }
+      ],
+      "fermentation": "Distinguish longer-fermented furuzuke from fresher, briefly pickled asazuke.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "WORLD-08",
@@ -986,7 +2832,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Vietnamese fermented mustard greens"
+      "catalogName": "Vietnamese fermented mustard greens",
+      "references": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23500611/",
+          "title": "A description of the lactic acid bacteria microbiota associated with the production of traditional fermented vegetables in Vietnam"
+        },
+        {
+          "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/view/1711",
+          "title": "Effects of heat pretreatment and initial brine salt concentration on fermented mustard-green quality — Can Tho University"
+        }
+      ],
+      "fermentation": "Ingredients and maturation vary; fermented eggplant, cà muối, is a related but separate food.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "WORLD-09",
@@ -1006,7 +2867,18 @@
       "categoryLabel": "Regional pickle",
       "licenseUrl": "https://www.jircas.go.jp/en/about/guide",
       "photoSource": "https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
-      "catalogName": "Pak-sian-dorng"
+      "catalogName": "Pak-sian-dorng",
+      "references": [
+        {
+          "url": "https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
+          "title": "Pak-sian-dorng — JIRCAS Database of Fermented Foods of Thailand"
+        }
+      ],
+      "fermentation": "The botanical name matters: similarly translated common plant names may refer to different species.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 1201,
+      "photoHeight": 1280
     },
     {
       "id": "WORLD-10",
@@ -1024,7 +2896,26 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Gundruk"
+      "catalogName": "Gundruk",
+      "references": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33133561/",
+          "title": "Kinetics and modeling of growth and lactic acid production in Gundruk, a Himalayan fermented vegetable dish"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0168160505003351",
+          "title": "Identification of predominant lactic acid bacteria isolated from traditionally fermented vegetable products of the Eastern Himalayas"
+        },
+        {
+          "url": "https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/gangtok/food-and-cuisine/gundruk-and-sinki-soup.html",
+          "title": "Gundruk and Sinki Soup — Incredible India"
+        }
+      ],
+      "fermentation": "Fermentation before drying distinguishes gundruk from vegetables that are simply sun-dried.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "WORLD-11",
@@ -1039,10 +2930,29 @@
       "credit": "Eastern Himalayas · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:Sinki_ko_jhol_(Fermented_radish_soup).jpg",
       "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0168160505003351",
       "sourceTitle": "Identification of predominant lactic acid bacteria isolated from traditionally fermented vegetable products of the Eastern Himalayas",
-      "photoKind": "Prepared food",
-      "photoCaption": "Serving example: sour soup with sinki, fermented radish.",
+      "photoKind": "Serving example",
+      "photoCaption": "Sinki ko jhol: a soup made with fermented radish, rather than the dried sinki alone.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Sinki"
+      "catalogName": "Sinki",
+      "references": [
+        {
+          "title": "Identification of predominant lactic acid bacteria isolated from traditionally fermented vegetable products of the Eastern Himalayas — PubMed abstract",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16055218/"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0168160505003351",
+          "title": "Identification of predominant lactic acid bacteria isolated from traditionally fermented vegetable products of the Eastern Himalayas"
+        },
+        {
+          "url": "https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/gangtok/food-and-cuisine/gundruk-and-sinki-soup.html",
+          "title": "Gundruk and Sinki Soup — Incredible India"
+        }
+      ],
+      "fermentation": "Sinki is not another name for gundruk: the raw material and traditional processing differ.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1247
     },
     {
       "id": "WORLD-12",
@@ -1060,7 +2970,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Soibum"
+      "catalogName": "Soibum",
+      "references": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4252422/",
+          "title": "Phenotypic identification and technological attributes of native lactic acid bacteria present in fermented bamboo shoot products from North-East India"
+        },
+        {
+          "url": "https://nopr.niscpr.res.in/handle/123456789/2982",
+          "title": "Traditional fermented foods of Manipur — Indian Journal of Traditional Knowledge"
+        }
+      ],
+      "fermentation": "Soidon and soijim are related named products, not interchangeable aliases for soibum.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 720,
+      "photoHeight": 540
     },
     {
       "id": "WORLD-13",
@@ -1075,10 +3000,25 @@
       "credit": "PattayaPatrol · CC BY-SA 4.0 · https://commons.wikimedia.org/wiki/File:DFC_3933_A_close-up_of_a_pile_of_pitted_green_olives_showing_their_smooth_glossy_skins_and_hollow_centers.jpg",
       "sourceUrl": "https://www.internationaloliveoil.org/olive-world/table-olives/",
       "sourceTitle": "Table olives — International Olive Council",
-      "photoKind": "Prepared food",
-      "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
+      "photoKind": "Representative food",
+      "photoCaption": "Prepared green table olives. The photograph does not establish the fermentation method of this particular batch.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Fermented table olives"
+      "catalogName": "Fermented table olives",
+      "references": [
+        {
+          "url": "https://www.internationaloliveoil.org/olive-world/table-olives/",
+          "title": "Table olives — International Olive Council"
+        },
+        {
+          "url": "https://www.agmrc.org/commodities-products/fruits/olives",
+          "title": "Olives — Agricultural Marketing Resource Center"
+        }
+      ],
+      "fermentation": "Not all table olives are fermented; these fruits are included as a culinary extension, distinct from Chinese olives.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 640
     },
     {
       "id": "WORLD-B01",
@@ -1096,7 +3036,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "A related preparation: mixed vegetable pickles, not photographed in Türkiye.",
       "categoryLabel": "Regional pickle",
-      "catalogName": "Turşu"
+      "catalogName": "Turşu",
+      "references": [
+        {
+          "url": "https://www.kulturportali.gov.tr/turkiye/van/neyenir/tursu",
+          "title": "Turşu — Türkiye Culture Portal"
+        },
+        {
+          "url": "https://sakarya.ktb.gov.tr/TR-190589/tursu-kavurma.html",
+          "title": "Turşu Kavurma — Sakarya provincial culture and tourism directorate"
+        }
+      ],
+      "fermentation": "Record the actual process rather than classifying every turşu as fermented.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 582
     },
     {
       "id": "WORLD-B02",
@@ -1114,7 +3069,18 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Vinegar-pickled cousin",
-      "catalogName": "Pikliz"
+      "catalogName": "Pikliz",
+      "references": [
+        {
+          "url": "https://kanpe.org/en/news/haitian-pikliz-a-taste-of-haitis-warmth-to-your-holiday/",
+          "title": "Haitian Pikliz: a taste of Haiti’s warmth to your holiday! — KANPE"
+        }
+      ],
+      "fermentation": "Included as a neighbouring pickle tradition, not a core fermented-vegetable entry.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 1280
     },
     {
       "id": "WORLD-B03",
@@ -1132,7 +3098,22 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Vinegar-pickled cousin",
-      "catalogName": "Gari"
+      "catalogName": "Gari",
+      "references": [
+        {
+          "url": "https://www.nsouzai-kyoukai.or.jp/pickled-ginger/",
+          "title": "Gari — Japan Ready-made Meal Association"
+        },
+        {
+          "url": "https://www.maff.go.jp/e/policies/market/dento_syoku/bunrui/tukemono.html",
+          "title": "Pickled — Traditional Foods in Japan — MAFF"
+        }
+      ],
+      "fermentation": "Fermented vinegar as an ingredient does not mean the ginger itself has undergone vegetable fermentation.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 960,
+      "photoHeight": 720
     },
     {
       "id": "WORLD-14",
@@ -1150,7 +3131,26 @@
       "photoKind": "Prepared food",
       "photoCaption": "Photographed preparation; regional recipes, maturity and serving styles may vary.",
       "categoryLabel": "Fermented-leaf cousin",
-      "catalogName": "Kawal"
+      "catalogName": "Kawal",
+      "references": [
+        {
+          "url": "https://scijournals.onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.2740360919",
+          "title": "Biochemical and microbiological studies on kawal, a meat substitute derived by fermentation of Cassia obtusifolia leaves"
+        },
+        {
+          "url": "https://academic.oup.com/ijfst/article/45/1/124/7865108",
+          "title": "Fermentation and cooking of sicklepod (Cassia obtusifolia) leaves: changes in chemical and amino acid composition, antinutrients and protein fractions and digestibility"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK234668/?report=reader",
+          "title": "Leaf and Seed Fermentations of Western Sudan — Applications of Biotechnology to Fermented Foods"
+        }
+      ],
+      "fermentation": "Not a typical lactic ferment; its specialised processing should not be treated as a home recipe.",
+      "scopeNote": "",
+      "contentReviewed": "2026-10-31",
+      "photoWidth": 608,
+      "photoHeight": 546
     }
   ]
 }

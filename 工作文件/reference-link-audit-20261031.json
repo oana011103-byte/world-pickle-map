@@ -1,0 +1,968 @@
+{
+  "note": "Reachability only, not verification of every claim. Supplied source references retained for traceability.",
+  "results": [
+    {
+      "url": "https://manu61.magtech.com.cn/zgnz/fileup/0254-5071/HTML/中国酿造201907020.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "襄阳传统发酵大头菜生产过程中理化特性的变化"
+      ]
+    },
+    {
+      "url": "https://www.hj.cn/content/2026-06/22/content_20158429.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "舌尖上的襄阳非遗"
+      ]
+    },
+    {
+      "url": "https://www.dc.gov.cn/cydc/pin/201805/t20180529_218976.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "畅游东昌"
+      ]
+    },
+    {
+      "url": "https://www.hbkc.gov.cn/art/2018/6/13/art_3679_519913.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "宽城满族饮食习俗(一)"
+      ]
+    },
+    {
+      "url": "https://benxi.gov.cn/ly/bxms/content_255787",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "本溪杀猪大菜_本溪美食_旅游_本溪市人民政府"
+      ]
+    },
+    {
+      "url": "https://www.spkx.net.cn/fileup/HTML/201607015.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "PCR-DGGE分析东北传统发酵酸菜中乳酸菌多样性"
+      ]
+    },
+    {
+      "url": "https://www.wltqq.gov.cn/zjqq/aswltqq/mswltqq/202609/t20260929_605383.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n    美食乌拉特前旗__\n    美食乌拉特前旗__乌拉特前旗人民政府\n  "
+      ]
+    },
+    {
+      "url": "https://inews.nmgnews.com.cn/system/2020/12/30/013045063.shtml",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14752/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "泡菜制作技艺（朝鲜族泡菜制作技艺） - 中国非物质文化遗产网·中国非物质文化遗产数字博物馆 - 中国非物质文化遗产网非遗"
+      ]
+    },
+    {
+      "url": "https://www.neac.gov.cn/seac/ztzl/cxz/fsxg.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "风俗习惯"
+      ]
+    },
+    {
+      "url": "https://www.panjin.gov.cn/html/2009/2020-06-11/content-121833.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "喜迎 6.13 “文化和自然遗产日” 荣兴准备好了！ - 公共文化服务 - 盘锦市人民政府"
+      ]
+    },
+    {
+      "url": "https://www.tianshui.gov.cn/wlj/info/2462/155422.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "舌尖上的天水-天水市人民政府 文化和旅游局"
+      ]
+    },
+    {
+      "url": "https://www.tianshui.gov.cn/wlj/info/2732/246062.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "以麻辣烫之名 嗨玩秦安“两日游”攻略-天水市人民政府 文化和旅游局"
+      ]
+    },
+    {
+      "url": "https://www.cppcc.gov.cn/zxww/2025/10/23/ARTI1761178194717119.shtml",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.cppcc.gov.cn'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://amr.hanzhong.gov.cn/hzsjgj/gsgg/202401/f82107e44b0747db9bb2bf0cff0aa461/files/%E6%B1%89%E4%B8%AD%E7%89%B9%E8%89%B2%E5%B0%8F%E5%90%83%E5%88%B6%E4%BD%9C%E5%B7%A5%E8%89%BA%E8%A7%84%E7%A8%8B%20%E7%95%A5%E9%98%B3%E8%8F%9C%E8%B1%86%E8%85%90%E8%8A%82%E8%8A%82.pdf.pdf",
+      "status": 200,
+      "result": "reachable",
+      "title": []
+    },
+    {
+      "url": "https://jhj.hanzhong.gov.cn/hzjhjwz/hzms/202105/ca1a68f49a5b4b509093f4aba006f399.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "汉中浆水面_汉中市经济合作局"
+      ]
+    },
+    {
+      "url": "https://www.hanzhong.gov.cn/hzszf/xwzx/qxdt/202402/f281ffc9da534b2fab7fdaf65aef759f.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "留坝：在老街打造非遗美食基地 - 区县动态 - 汉中市人民政府"
+      ]
+    },
+    {
+      "url": "https://jhj.hanzhong.gov.cn/hzjhjwz/hzms/202010/f559ac15ab0441eeb3bf7e300dbcf404.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "菜豆腐_汉中市经济合作局"
+      ]
+    },
+    {
+      "url": "https://www.zyx.gov.cn/Content-2823125.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "一坛“撩酸菜”的好滋味——紫阳地方特色风味出圈记-紫阳县人民政府"
+      ]
+    },
+    {
+      "url": "https://sxwjw.shaanxi.gov.cn/hdjl/dczj/202509/P020250928597415914287.pdf",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.zyx.gov.cn/Content-2710403.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "焕古镇：传承非遗文化  赋能乡村振兴-紫阳县人民政府"
+      ]
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7590268/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n            Sichuan paocai fermented by mixed‐starter culture of lactic acid bacteria - PMC\n        "
+      ]
+    },
+    {
+      "url": "https://www.cib.cas.cn/kxcb/kpwz/bsyc/202408/t20240807_7258696.html",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://manu61.magtech.com.cn/zgnz/article/2024/0254-5071/2024-10-178.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "不同品种和变种芥菜发酵制备酸菜的品质及风味特征差异分析"
+      ]
+    },
+    {
+      "url": "https://www.jiangjin.gov.cn/jrjj/fycp/202208/t20220809_10988856.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n        非遗产品_\n        重庆市江津区人民政府\n    "
+      ]
+    },
+    {
+      "url": "https://cpgi.org.cn/?a=detail&c=i&cataid=15&id=3115",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "四川泡菜"
+      ]
+    },
+    {
+      "url": "https://www.yankitchen.com/blog/stir-fried-sichuan-style-pickled-string-beans-and-ground-pork",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "泡豇豆炒肉末 &mdash; Yankitchen"
+      ]
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14641/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "榨菜传统制作技艺（涪陵榨菜传统制作技艺） - 中国非物质文化遗产网·中国非物质文化遗产数字博物馆 - 中国非物质文化遗产网非遗"
+      ]
+    },
+    {
+      "url": "https://zscqj.cq.gov.cn/zwfw/bmfw/dlbzfw/cqdbml/202403/t20240313_13034064.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n        涪陵榨菜 （FULING ZHACAI） - 重庆市知识产权局\n    "
+      ]
+    },
+    {
+      "url": "https://patents.google.com/patent/CN106616676A/zh",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "CN106616676A - 一种碎米芽菜的制作方法 \n        - Google Patents"
+      ]
+    },
+    {
+      "url": "https://dbba.sacinfo.org.cn/stdDetail/da53aca352ed2f939bf1e2b685acc0ed6fa35d621ba3edd6e3f6b923fcd6db66",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "全国标准信息公共服务平台"
+      ]
+    },
+    {
+      "url": "https://yibinrm.cn/cms/a/122817800/content",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n     “宜宾燃起”！这些非遗美食都申请上总台春晚！ -  宜宾新闻网\r\n"
+      ]
+    },
+    {
+      "url": "https://www.xinhuanet.com/tech/2020-10/21/c_1126635258.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n国味之宴：坝坝宴-新华网\r\n"
+      ]
+    },
+    {
+      "url": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c633dffca9d9493faccf8994a6b31706",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "烟山-老字号数字博物馆"
+      ]
+    },
+    {
+      "url": "https://nync.yn.gov.cn/html/2024/zhoushilianbo-new_0228/404438.html",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.chinafabu.com/index.php?a=show&c=index&catid=48&id=1641&m=content&msite=1",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "《老余头白子国文化探寻之旅》——故乡的味道 - 推介中国 - 中国文信网"
+      ]
+    },
+    {
+      "url": "https://yn.yunnan.cn/system/2023/09/11/032752013.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "霞客行之江山多娇·游学云南｜弥渡：去有风的地方寻觅小河淌水的故乡_文娱_云南频道_云南网"
+      ]
+    },
+    {
+      "url": "https://ynscsp.cn/nd.jsp?fromColId=2&id=7110",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://nync.yn.gov.cn/html/2024/zhoushilianbo-new_1220/1416697.html",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.qj.gov.cn/html/2026/xqdt2_0123/275670.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "富源酸菜猪脚“云上”卖全国 - 县区动态 - 曲靖市人民政府门户网"
+      ]
+    },
+    {
+      "url": "https://ynswsjkw.yn.gov.cn/html/2024/shipinganquandfbz_1127/4022000.html",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 404: Not Found",
+      "followup": "Page successfully retrieved through web tool; direct proxy fetch returned 404."
+    },
+    {
+      "url": "https://ynswsjkw.yn.gov.cn/html/2025/shipinganquandfbz_0422/4023153.html",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 404: Not Found",
+      "followup": "Page successfully retrieved through web tool; direct proxy fetch returned 404."
+    },
+    {
+      "url": "https://www.neac.gov.cn/seac/ztzl/daiz/fsxg.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "风俗习惯"
+      ]
+    },
+    {
+      "url": "https://scijournals.onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.10569",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ynscsp.cn/nd.jsp?_ngc=-1&fromColId=-1&id=4178",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://cpgi.org.cn/?a=detail&c=i&cataid=3&id=1010",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "质检总局关于批准对都安野生山葡萄酒等产品实施地理标志产品保护的公告（2013年第167号）"
+      ]
+    },
+    {
+      "url": "https://nyncw.cq.gov.cn/zwxx_161/qxlb/202201/t20220117_10306699.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n    黔江：土家倒扑坛“倒”出多个舌尖上的美食_重庆市农业农村委员会\n  "
+      ]
+    },
+    {
+      "url": "https://manu61.magtech.com.cn/zgnz/fileup/0254-5071/HTML/%E4%B8%AD%E5%9B%BD%E9%85%BF%E9%80%A0202310017.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "恩施州不同地区鲊广椒微生物多样性与功能分析"
+      ]
+    },
+    {
+      "url": "https://hunan.gov.cn/hnszf/jxxx/hxwh/cwd/201711/t20171111_4685420.html",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://agri.hunan.gov.cn/agri/ztzl/nyjsgc/gcxz/202608/t20260826_34051243.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n        HNNY504-2026 剁辣椒生产技术规程 -\r\n        湖南省农业农村厅\r\n    "
+      ]
+    },
+    {
+      "url": "https://std.samr.gov.cn/db/search/stdDBDetailed?id=91D99E4D44082E24E05397BE0A0A3A10",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "地方标准 - 全国标准信息公共服务平台"
+      ]
+    },
+    {
+      "url": "https://www.gzu.edu.cn/2026/0614/c22305a275714/page.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "众望新闻：贵州大学联合江南大学到遵义开展辣椒加工技术培训"
+      ]
+    },
+    {
+      "url": "https://www.ttbz.org.cn/Home/PdfFileStreamGet/c3QsMTA3NDEz",
+      "status": 200,
+      "result": "error-page",
+      "title": [
+        "系统错误"
+      ]
+    },
+    {
+      "url": "https://www.ndls.org.cn/standard/detail/c536a757573bf4ffa138fdf22d8c8d5d",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "T/QLY 044-2023-生态黔菜 贵州糟辣鱼-国家标准馆·国家数字标准馆"
+      ]
+    },
+    {
+      "url": "https://lzhbwg.mofcom.gov.cn/edi_ecms_web_front/thb/detail/c58cf16bbecb458f812f5dad955f0d08",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "丰源-老字号数字博物馆"
+      ]
+    },
+    {
+      "url": "https://zjnews.zjol.com.cn/zjnews/202411/t20241105_30623498.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "绍兴梅干菜有了统一标准"
+      ]
+    },
+    {
+      "url": "https://www.hzarchives.org.cn/info/6937",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "特产风俗 -- 杭州市档案馆"
+      ]
+    },
+    {
+      "url": "https://www.aqsc.agri.cn/xxzl/qnllxxzn/202509/P020250922307984500227.pdf",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.aqsc.agri.cn'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.nbdag.org.cn/art/2025/2/27/art_1229826643_26179.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "小小一株菜开出一家博物馆！看老宁波的“咸齑情结”......"
+      ]
+    },
+    {
+      "url": "https://www.cnxsg.cn/yw/202512/t20251227_6554924.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n\t\t宁波这些冬日标配，你囤了吗-象山新闻门户网站\n\t"
+      ]
+    },
+    {
+      "url": "https://www.ezhejiang.gov.cn/2021-07/01/c_638401.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n      Moldy amaranth stalks\r\n    "
+      ]
+    },
+    {
+      "url": "https://news.cnnb.com.cn/system/2016/09/07/008546603.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "����֮����������������������ʱ �����������-��������-�й�������"
+      ]
+    },
+    {
+      "url": "https://news.cnnb.com.cn/system/2025/06/29/030679860.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "�������������ա��·��� ��Թ�������-��������-�й�������"
+      ]
+    },
+    {
+      "url": "https://news.cnnb.com.cn/system/2014/07/31/008125611_01.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "�嵭��ζ���ǰٴ��ʳ�� ���Ŵ��ѧ�����ϲ�-��ʳ��,��Ƣ��θ,��ζ����,����Ƥ,ϲ����-�й�������-��������"
+      ]
+    },
+    {
+      "url": "https://hznews.hangzhou.com.cn/xinzheng/quxian/content/2020-06/02/content_7746866.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "瓜沥非遗名片—— 萧山萝卜干获国家认证"
+      ]
+    },
+    {
+      "url": "https://tidenews.com.cn/news.html?id=2533142",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "萧山萝卜干：老味道新传承 - 潮新闻"
+      ]
+    },
+    {
+      "url": "https://www.cnipa.gov.cn/attach/0/20250826010509.pdf",
+      "status": 200,
+      "result": "reachable",
+      "title": []
+    },
+    {
+      "url": "https://news.cnnb.com.cn/system/2023/11/09/030539874.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "��Ҧե�ˡ���ɽ��������ѡ�ڶ���������־����������˵��Ͱ���-��������-�й�������"
+      ]
+    },
+    {
+      "url": "https://www.tjl.tj.cn/ArticleContent.aspx?ChannelId=241&ID=29008",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "天图简讯-天津图书馆"
+      ]
+    },
+    {
+      "url": "https://www.zjskw.gov.cn/art/2024/8/15/art_1229556995_60165.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "寻味二十四节气・小寒"
+      ]
+    },
+    {
+      "url": "https://wgly.hangzhou.gov.cn/art/2022/11/24/art_1229696390_58943042.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "百县千碗"
+      ]
+    },
+    {
+      "url": "https://ori.hangzhou.com.cn/ornews/content/2015-03/30/content_5709817.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "目击农家小菜倒笃菜的制作过程 - 杭网原创 - 杭州网"
+      ]
+    },
+    {
+      "url": "https://zjnews.zjol.com.cn/zjnews/hznews/201911/t20191119_11374145.shtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "听杭州老饕讲述腌菜的小秘密-浙江新闻-浙江在线"
+      ]
+    },
+    {
+      "url": "https://xccys.moa.gov.cn/ncpjg/201907/t20190716_6320998.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "实地考察丨扬州振兴乡村产业的四个样本"
+      ]
+    },
+    {
+      "url": "https://szb.xdplus.cn/xdkb/pc/content/202411/01/content_51066.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "邂逅家乡味道，探索酱香工艺"
+      ]
+    },
+    {
+      "url": "https://www.zgbk.com/ecph/words?ID=604452&SiteID=1&SubID=1271&Type=bkztb",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "中国百科网"
+      ]
+    },
+    {
+      "url": "https://www.ihchina.cn/art/detail/id/10242.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "寻找身边的工匠——六必居非遗传承人：杨银喜 - 中国非物质文化遗产网·中国非物质文化遗产数字博物馆 - 中国非物质文化遗产网非遗"
+      ]
+    },
+    {
+      "url": "https://www.ihchina.cn/ccr_detail/3173/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "杨银喜 - 中国非物质文化遗产网·中国非物质文化遗产数字博物馆 - 中国非物质文化遗产网非遗"
+      ]
+    },
+    {
+      "url": "https://hznews.hangzhou.com.cn/chengshi/content/2025-07/20/content_9042580.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "景阳观酱瓜往事 知道吗？走红100多年的“双插瓜”曾是慈禧和光绪的早餐搭子"
+      ]
+    },
+    {
+      "url": "https://pic.hangzhou.com.cn/hzyx/content/content_9042584_0.html",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.gdlonghu.gov.cn/lh/ztzl/lhwhg/fywh/lhfy/content/post_2241326.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "龙湖非遗_汕头市龙湖区人民政府门户网站"
+      ]
+    },
+    {
+      "url": "https://ysln.ycwb.com/content/2021-12/25/content_40474179.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "【名家说岭南】“杂咸” 和百味——谈 “杂咸” 之于潮人日常生活的重要性"
+      ]
+    },
+    {
+      "url": "https://wsjkw.gd.gov.cn/attachment/0/398/398120/3056237.pdf",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.shantou.gov.cn/hqsyq/hqxx/content/post_2200094.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "汕头市省级非物质文化遗产巡礼（四）_华侨信息_汕头经济文化合作试验区"
+      ]
+    },
+    {
+      "url": "https://www.forestry.gov.cn/c/www/smcqzt/146123.jhtml",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "橄榄中的“绿宝石”与“黑玛瑙”_国家林业和草原局政府网"
+      ]
+    },
+    {
+      "url": "https://wsjkw.gd.gov.cn/attachment/0/398/398121/3056236.pdf",
+      "status": 200,
+      "result": "reachable",
+      "title": []
+    },
+    {
+      "url": "https://static.nfnews.com/content/202402/04/c8574144.html?enterColumnId=78",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "惠州非遗廿四味｜立春学做梅菜扣肉，年夜饭露一手！_南方+_南方plus"
+      ]
+    },
+    {
+      "url": "https://paper.people.com.cn/zgnyb/html/2024-01/29/content_26041085.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "惠州梅菜（百味）"
+      ]
+    },
+    {
+      "url": "https://fae.moa.gov.tw/map/food_item.php?id=42&type=AS08",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://cloud.hakka.gov.tw/Details?p=9226&pid=156302",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n\t客家飲食文化的成因與特色-客家雲 Hakka Cloud\r\n"
+      ]
+    },
+    {
+      "url": "https://www.mdares.gov.tw/ws.php?id=1372",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://fae.moa.gov.tw/map/food_item.php?local_id=294&type=AS02",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://fae.moa.gov.tw/theme_data.php?id=41&sub_theme=knowledge&theme=topics",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.shantou.gov.cn/nyj/zwgk/gzdt/content/post_2120531.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "“预”汕“味”来②|从百菜之头到搭“百”味，潮汕老菜脯“预”出新“味”来_工作动态_汕头市农业农村局（乡村振兴局）"
+      ]
+    },
+    {
+      "url": "https://ysln.ycwb.com/content/2021-12/23/content_40469939.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "汕头澄海菜脯：历经时间沉淀的味道"
+      ]
+    },
+    {
+      "url": "https://lzqsi.org.cn/a/1084.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "探究柳州螺蛳粉的灵魂配料——酸笋知多少 - 柳州市质量检验检测研究中心"
+      ]
+    },
+    {
+      "url": "https://gxxzbzh.com/a/3580.html",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'gxxzbzh.com'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://nnsjnqwhg.org.cn/Intangible/zzqj/578.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "南宁酸嘢制作技艺"
+      ]
+    },
+    {
+      "url": "https://www.mva.gov.cn/sy/zt/qmshggzxd/gx/jxzx/gxsy/202604/t20260401_536232.html",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.fzmq.gov.cn/xjwz/zjmq/zrdl/201704/t20170413_391146.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n        自然地理_自然地理_闽清县人民政府\n    "
+      ]
+    },
+    {
+      "url": "https://www.fuzhou.gov.cn/zgfzzt/shfgfgg/zxdt/202502/t20250221_4979147.htm",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n        央视关注闽清“十八坂”开圩\n        _\n        资讯动态\n        _ 福州市人民政府门户网站\n    "
+      ]
+    },
+    {
+      "url": "https://www.fuzhoumeishi.cn/node/21579/20240322/65fd3ed9888fe.shtml",
+      "result": "unconfirmed",
+      "reason": "Remote end closed connection without response"
+    },
+    {
+      "url": "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?vcontsId=140728",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Kimchi-  VISITKOREA"
+      ]
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/kimjang-00881",
+      "status": 200,
+      "result": "reachable",
+      "title": []
+    },
+    {
+      "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=179894",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Radish Water Kimchi (동치미 / Dongchimi)-  VISITKOREA"
+      ]
+    },
+    {
+      "url": "https://ask.ifas.ufl.edu/publication/FS474",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nTemporary Redirect"
+    },
+    {
+      "url": "https://www.lebeaujardin.alsace/en/alsatian-sauerkraut-a-dish-from-the-heart-and-the-land/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Alsatian sauerkraut: a dish from the heart and the land - Office de Tourisme Le Beau Jardin - Kochersberg"
+      ]
+    },
+    {
+      "url": "https://nchfp.uga.edu/how/ferment/general-information-on-fermenting/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        " | National Center for Home Food Preservation"
+      ]
+    },
+    {
+      "url": "https://ncez.pzh.gov.pl/przepisy/zupa-ogorkowa/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Zupa ogórkowa - Narodowe Centrum Edukacji Żywieniowej"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/j/heya/kodomo_sodan/0102/04.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "野菜をぬか漬けにするとどんないいことがありますか。：農林水産省"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/e/policies/market/dento_syoku/bunrui/tukemono.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Pickled ｜ Traditional Foods in Japan : MAFF"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/sugukizuke_kyoto.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "すぐき漬け 京都府 | うちの郷土料理：農林水産省"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/search_menu/menu/shibazuke_kyoto.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "しば漬け 京都府 | うちの郷土料理：農林水産省"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/kyo_tukemono.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "京漬物（きょうつけもの）｜にっぽん伝統食図鑑：農林水産省"
+      ]
+    },
+    {
+      "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/takana_zuke.html",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "高菜漬け（たかなづけ）｜にっぽん伝統食図鑑：農林水産省"
+      ]
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23500611/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "A description of the lactic acid bacteria microbiota associated with the production of traditional fermented vegetables in Vietnam - PubMed"
+      ]
+    },
+    {
+      "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/view/1711",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n\t\tXáC ĐịNH CHế Độ TIềN Xử Lý NHIệT NGUYÊN LIệU Và NồNG Độ MUốI BAN ĐầU CủA DịCH LÊN MEN ĐếN CHấT LƯợNG DƯA CảI\n\t\t\t\t\t\t\t| Tạp chí Khoa học Đại học Cần Thơ\n\t\t\t"
+      ]
+    },
+    {
+      "url": "https://www.jircas.go.jp/en/database/thaifermented/pak-sian-dorng",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Pak-sian-dorng | Japan International Research Center for Agricultural Sciences | JIRCAS"
+      ]
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33133561/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Kinetics and modeling of growth and lactic acid production in Gundruk, a Himalayan fermented vegetable dish - PubMed"
+      ]
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168160505003351",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/gangtok/food-and-cuisine/gundruk-and-sinki-soup.html",
+      "result": "unconfirmed",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.prod.incredibleindia.gov.in'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4252422/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\n            Phenotypic identification and technological attributes of native lactic acid bacteria present in fermented bamboo shoot products from North-East India - PMC\n        "
+      ]
+    },
+    {
+      "url": "https://nopr.niscpr.res.in/handle/123456789/2982",
+      "result": "unconfirmed",
+      "reason": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.internationaloliveoil.org/olive-world/table-olives/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Table olives - International Olive Council"
+      ]
+    },
+    {
+      "url": "https://www.agmrc.org/commodities-products/fruits/olives",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Olives | Agricultural Marketing Resource Center"
+      ]
+    },
+    {
+      "url": "https://www.kulturportali.gov.tr/turkiye/van/neyenir/tursu",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "\r\n\tTURŞU | Kültür Portalı\r\n"
+      ]
+    },
+    {
+      "url": "https://sakarya.ktb.gov.tr/TR-190589/tursu-kavurma.html",
+      "result": "unconfirmed",
+      "reason": "Remote end closed connection without response"
+    },
+    {
+      "url": "https://kanpe.org/en/news/haitian-pikliz-a-taste-of-haitis-warmth-to-your-holiday/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Haitian Pikliz: a taste of Haiti’s warmth to your holiday! &#8211; La Fondation KANPE"
+      ]
+    },
+    {
+      "url": "https://www.nsouzai-kyoukai.or.jp/pickled-ginger/",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "ガリ | （一社）日本惣菜協会"
+      ]
+    },
+    {
+      "url": "https://scijournals.onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.2740360919",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://academic.oup.com/ijfst/article/45/1/124/7865108",
+      "result": "unconfirmed",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK234668/?report=reader",
+      "status": 200,
+      "result": "reachable",
+      "title": [
+        "Checking your browser - reCAPTCHA"
+      ]
+    }
+  ]
+}
